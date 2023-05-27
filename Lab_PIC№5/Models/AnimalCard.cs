@@ -8,12 +8,8 @@ namespace Lab_PIC_5.Models
 {
     class AnimalCard
     {
-        string kind;
         public string Kind
-        {
-            set { kind = value; }
-            get { return kind; }
-        }
+        { set; get; }
         string animalSpecificarion { get; set; }
         string specialSigns;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_PIC_5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,15 @@ namespace Lab_PIC_5.Data
 {
     class ActRepository
     {
-        //public Act[] acts = new Act();
+        public static List<AnimalCard> animalCards = new List<AnimalCard>();
+        public static List<Act> acts = new List<Act>();
+
+        public static void AddTestActs()
+        {
+            animalCards.Add(new AnimalCard("Кот", "1", "1"));
+
+
+            acts.Add(new Act(1, DateTime.Parse("02-02-02"), "OOO", "99999", "123", animalCards[0]));
+        }
     }
 }

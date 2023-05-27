@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActService.cs" />
     <Compile Include="Data\ActRepository.cs" />
     <Compile Include="Models\Act.cs" />
     <Compile Include="Models\AnimalCard.cs" />
