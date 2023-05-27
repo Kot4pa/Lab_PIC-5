@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_PIC_5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,9 @@ namespace Lab_PIC_5
         string organization;
         string contracts;
         string application;
-        string animalCard;
+        AnimalCard animalCard;
 
-        public Act(int actNumberTake, DateTime dateTake, string organizationTake, string contractsTake, string applicationTake, string animalCardTake)
+        public Act(int actNumberTake, DateTime dateTake, string organizationTake, string contractsTake, string applicationTake, AnimalCard animalCardTake)
         {
             actNumber = actNumberTake;
             date = dateTake;
