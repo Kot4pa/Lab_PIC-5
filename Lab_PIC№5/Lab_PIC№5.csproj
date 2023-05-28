@@ -50,6 +50,12 @@
     <Compile Include="Data\ActRepository.cs" />
     <Compile Include="Models\Act.cs" />
     <Compile Include="Models\AnimalCard.cs" />
+    <Compile Include="Views\ActEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ActEdit.Designer.cs">
+      <DependentUpon>ActEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AutorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\ActEdit.resx">
+      <DependentUpon>ActEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AutorizationForm.resx">
       <DependentUpon>AutorizationForm.cs</DependentUpon>
     </EmbeddedResource>

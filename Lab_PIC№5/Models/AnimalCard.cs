@@ -8,16 +8,17 @@ namespace Lab_PIC_5.Models
 {
     class AnimalCard
     {
-        public string Kind
-        { set; get; }
-        string animalSpecificarion { get; set; }
-        string specialSigns;
+        public int IdAnimalCard { set; get; }
+        public string Kind { set; get; }
+        public string AnimalSpecificarion { get; set; }
+        public string SpecialSigns { get; set; }
 
-        public AnimalCard(string kindTake, string animalSpecificarionTake, string specialSignsTake)
+        public AnimalCard(int idAnimalCard, string kind, string animalSpecificarion, string specialSigns)
         {
-            Kind = kindTake;
-            animalSpecificarion = animalSpecificarionTake;
-            specialSigns = specialSignsTake;
+            IdAnimalCard = idAnimalCard;
+            Kind = kind;
+            AnimalSpecificarion = animalSpecificarion;
+            SpecialSigns = specialSigns;
         }
     }
 }

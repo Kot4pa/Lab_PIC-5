@@ -10,20 +10,20 @@ namespace Lab_PIC_5
     class Act
     {
         public int ActNumber { get; set; }
-        public DateTime date { get; set; }
-        public string organization { get; set; }
-        public string contracts { get; set; }
-        public string application { get; set; }
-        public AnimalCard animalCard { get; set; }
+        public DateTime Date { get; set; }
+        public string Organization { get; set; }
+        public string Contracts { get; set; }
+        public string Application { get; set; }
+        public AnimalCard AnimalCard { get; set; }
 
-        public Act(int actNumberTake, DateTime dateTake, string organizationTake, string contractsTake, string applicationTake, AnimalCard animalCardTake)
+        public Act(int actNumber, DateTime date, string organization, string contracts, string application, AnimalCard animalCard)
         {
-            ActNumber = actNumberTake;
-            date = dateTake;
-            organization = organizationTake;
-            contracts = contractsTake;
-            application = applicationTake;
-            animalCard = animalCardTake;
+            ActNumber = actNumber;
+            Date = date;
+            Organization = organization;
+            Contracts = contracts;
+            Application = application;
+            AnimalCard = animalCard;
         }
 
     }

@@ -14,10 +14,16 @@ namespace Lab_PIC_5.Data
 
         public static void AddTestActs()
         {
-            animalCards.Add(new AnimalCard("Кот", "1", "1"));
+            animalCards.Add(new AnimalCard(1, "Кот", "1", "1"));
 
 
             acts.Add(new Act(1, DateTime.Parse("02-02-02"), "OOO", "99999", "123", animalCards[0]));
+        }
+        
+        public static void SaveActData(Act actData)
+        {
+            var index = acts.FindIndex(x => x.ActNumber == actData.ActNumber);
+            acts[index] = actData;
         }
     }
 }

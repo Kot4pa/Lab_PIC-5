@@ -15,6 +15,11 @@ namespace Lab_PIC_5
             return acts;
         }
 
+        public static void EditAct(Act actData)
+        {
+            ActRepository.SaveActData(actData);
+        }
+
         private static List<string[]> stringMassChencher(List<Act> acts)
         {
             List<string[]> result = new List<string[]>();
@@ -23,11 +28,11 @@ namespace Lab_PIC_5
                 var oldAct = new List<string>
                 {
                     act.ActNumber.ToString(),
-                    act.date.ToString(),
-                    act.organization,
-                    act.contracts,
-                    act.application,
-                    act.animalCard.Kind
+                    act.Date.ToString(),
+                    act.Organization,
+                    act.Contracts,
+                    act.Application,
+                    act.AnimalCard.Kind
                 };
                 result.Add(oldAct.ToArray());
             }
