@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActService.cs" />
+    <Compile Include="Controllers\ActService.cs" />
     <Compile Include="Data\ActRepository.cs" />
     <Compile Include="Models\Act.cs" />
     <Compile Include="Models\AnimalCard.cs" />
@@ -92,8 +92,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
