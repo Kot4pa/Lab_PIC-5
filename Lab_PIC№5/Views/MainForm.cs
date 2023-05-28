@@ -1,4 +1,5 @@
 ﻿using Lab_PIC_5.Data;
+using Lab_PIC_5.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace Lab_PIC_5
 
         private void SetDataGrid()
         {
+            actsGridView.Rows.Clear();
             var actss = ActService.ShowAct();
             foreach (var organization in actss)
             {
@@ -41,7 +43,16 @@ namespace Lab_PIC_5
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            ActEdit editWindow = new ActEdit();
+            editWindow.ShowDialog();
+            SetDataGrid();
+        }
 
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            ActEdit editWindow = new ActEdit(int.Parse(actsGridView.CurrentRow.Cells[0].Value.ToString()));
+            editWindow.ShowDialog();
+            SetDataGrid();
         }
     }
 }

@@ -119,6 +119,7 @@
             this.UpdateButton.TabIndex = 5;
             this.UpdateButton.Text = "Изменить";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // DeleteButton
             // 
@@ -403,7 +404,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Заявки на отлов";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
