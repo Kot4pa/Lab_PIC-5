@@ -28,11 +28,11 @@ namespace Lab_PIC_5
 
         private void SetDataGrid()
         {
-            actsGridView.Rows.Clear();
+            DataGridViewActs.Rows.Clear();
             var actss = ActService.ShowAct();
             foreach (var organization in actss)
             {
-                actsGridView.Rows.Add(organization);
+                DataGridViewActs.Rows.Add(organization);
             }
         }
 
@@ -50,7 +50,7 @@ namespace Lab_PIC_5
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            ActEdit editWindow = new ActEdit(int.Parse(actsGridView.CurrentRow.Cells[0].Value.ToString()));
+            ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
             editWindow.ShowDialog();
             SetDataGrid();
         }

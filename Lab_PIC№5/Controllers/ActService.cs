@@ -1,4 +1,5 @@
 ﻿using Lab_PIC_5.Data;
+using Lab_PIC_5.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,12 @@ namespace Lab_PIC_5
         public static void EditAct(Act actData)
         {
             ActRepository.SaveActData(actData);
+        }
+
+        private AnimalCard FindAnimalCard(int idAnimalCard)
+        {
+            var index = ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == idAnimalCard);
+            return ActRepository.animalCards[index];
         }
 
         private static List<string[]> stringMassChencher(List<Act> acts)

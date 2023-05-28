@@ -35,7 +35,7 @@
             this.DeleteButton = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.actsGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridViewActs = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Organization = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             this.UserButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.actsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -89,7 +89,7 @@
             this.tabPage1.Controls.Add(this.DeleteButton);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.actsGridView);
+            this.tabPage1.Controls.Add(this.DataGridViewActs);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -149,30 +149,30 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Акты от:";
             // 
-            // actsGridView
+            // DataGridViewActs
             // 
-            this.actsGridView.AllowUserToAddRows = false;
-            this.actsGridView.AllowUserToDeleteRows = false;
-            this.actsGridView.AllowUserToResizeColumns = false;
-            this.actsGridView.AllowUserToResizeRows = false;
-            this.actsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.actsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.actsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewActs.AllowUserToAddRows = false;
+            this.DataGridViewActs.AllowUserToDeleteRows = false;
+            this.DataGridViewActs.AllowUserToResizeColumns = false;
+            this.DataGridViewActs.AllowUserToResizeRows = false;
+            this.DataGridViewActs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridViewActs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridViewActs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Date,
             this.Organization,
             this.Kontracts,
             this.Application,
             this.animalCard});
-            this.actsGridView.Location = new System.Drawing.Point(4, 5);
-            this.actsGridView.Margin = new System.Windows.Forms.Padding(2);
-            this.actsGridView.Name = "actsGridView";
-            this.actsGridView.ReadOnly = true;
-            this.actsGridView.RowHeadersVisible = false;
-            this.actsGridView.RowHeadersWidth = 51;
-            this.actsGridView.RowTemplate.Height = 24;
-            this.actsGridView.Size = new System.Drawing.Size(906, 386);
-            this.actsGridView.TabIndex = 0;
+            this.DataGridViewActs.Location = new System.Drawing.Point(4, 5);
+            this.DataGridViewActs.Margin = new System.Windows.Forms.Padding(2);
+            this.DataGridViewActs.Name = "DataGridViewActs";
+            this.DataGridViewActs.ReadOnly = true;
+            this.DataGridViewActs.RowHeadersVisible = false;
+            this.DataGridViewActs.RowHeadersWidth = 51;
+            this.DataGridViewActs.RowTemplate.Height = 24;
+            this.DataGridViewActs.Size = new System.Drawing.Size(906, 386);
+            this.DataGridViewActs.TabIndex = 0;
             // 
             // Id
             // 
@@ -408,7 +408,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.actsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -428,7 +428,7 @@
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView actsGridView;
+        private System.Windows.Forms.DataGridView DataGridViewActs;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;

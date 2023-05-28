@@ -1,4 +1,5 @@
 ﻿using Lab_PIC_5.Data;
+using Lab_PIC_5.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,12 @@ namespace Lab_PIC_5.Views
             FillEditor();
         }
 
+        private AnimalCard FindAnimalCard(int idAnimalCard)
+        {
+            var index = ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == idAnimalCard);
+            return ActRepository.animalCards[index];
+        }
+
         private void FillEditor()
         {
             if (actToEdit)
@@ -37,21 +44,31 @@ namespace Lab_PIC_5.Views
                 var index = ActRepository.acts.FindIndex(x => x.ActNumber == actId);
                 Act act = ActRepository.acts[index];
                 dateAct.Value = act.Date;
-                organizationTextBox.Text = act.Organization;
-                contractsTextBox.Text = act.Contracts;
-                applicationTextBox.Text = act.Application;
-                animalCardComboBox.DataSource = new BindingSource(
+                TextBoxOrganization.Text = act.Organization;
+                TextBoxContracts.Text = act.Contracts;
+                TextBoxApplication.Text = act.Application;
+                ComboBoxAnimalCard.DataSource = new BindingSource(
                         ActRepository.animalCards, null);
-                animalCardComboBox.DisplayMember = "Kind";
-                animalCardComboBox.ValueMember = "IdAnimalCard";
-                animalCardComboBox.Text = act.AnimalCard.Kind;
+                ComboBoxAnimalCard.DisplayMember = "Kind";
+                ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
+                ComboBoxAnimalCard.Text = act.AnimalCard.Kind;
             }
             else
             {
-                animalCardComboBox.DataSource = new BindingSource(
+                ComboBoxAnimalCard.DataSource = new BindingSource(
                         ActRepository.animalCards, null);
-                animalCardComboBox.DisplayMember = "Kind";
-                animalCardComboBox.ValueMember = "IdAnimalCard";
+                ComboBoxAnimalCard.DisplayMember = "Kind";
+                ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
+            }
+        }
+
+        private void OK_Click(object sender, EventArgs e)
+        {
+            if (actToEdit)
+            {
+                var act = new Act(actId, dateAct.Value, TextBoxOrganization.Text, TextBoxContracts.Text, 
+                                  TextBoxApplication.Text, FindAnimalCard((int)ComboBoxAnimalCard.SelectedValue));
+                ActService.EditAct(act);
             }
         }
     }

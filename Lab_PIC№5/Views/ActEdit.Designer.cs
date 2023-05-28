@@ -32,15 +32,15 @@ namespace Lab_PIC_5.Views
             this.label1 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
-            this.organizationTextBox = new System.Windows.Forms.TextBox();
-            this.contractsTextBox = new System.Windows.Forms.TextBox();
-            this.applicationTextBox = new System.Windows.Forms.TextBox();
+            this.TextBoxOrganization = new System.Windows.Forms.TextBox();
+            this.TextBoxContracts = new System.Windows.Forms.TextBox();
+            this.TextBoxApplication = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateAct = new System.Windows.Forms.DateTimePicker();
-            this.animalCardComboBox = new System.Windows.Forms.ComboBox();
+            this.ComboBoxAnimalCard = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -71,27 +71,28 @@ namespace Lab_PIC_5.Views
             this.OK.TabIndex = 2;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
-            // organizationTextBox
+            // TextBoxOrganization
             // 
-            this.organizationTextBox.Location = new System.Drawing.Point(131, 46);
-            this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(121, 20);
-            this.organizationTextBox.TabIndex = 4;
+            this.TextBoxOrganization.Location = new System.Drawing.Point(131, 46);
+            this.TextBoxOrganization.Name = "TextBoxOrganization";
+            this.TextBoxOrganization.Size = new System.Drawing.Size(121, 20);
+            this.TextBoxOrganization.TabIndex = 4;
             // 
-            // contractsTextBox
+            // TextBoxContracts
             // 
-            this.contractsTextBox.Location = new System.Drawing.Point(131, 74);
-            this.contractsTextBox.Name = "contractsTextBox";
-            this.contractsTextBox.Size = new System.Drawing.Size(121, 20);
-            this.contractsTextBox.TabIndex = 5;
+            this.TextBoxContracts.Location = new System.Drawing.Point(131, 74);
+            this.TextBoxContracts.Name = "TextBoxContracts";
+            this.TextBoxContracts.Size = new System.Drawing.Size(121, 20);
+            this.TextBoxContracts.TabIndex = 5;
             // 
-            // applicationTextBox
+            // TextBoxApplication
             // 
-            this.applicationTextBox.Location = new System.Drawing.Point(131, 100);
-            this.applicationTextBox.Name = "applicationTextBox";
-            this.applicationTextBox.Size = new System.Drawing.Size(121, 20);
-            this.applicationTextBox.TabIndex = 6;
+            this.TextBoxApplication.Location = new System.Drawing.Point(131, 100);
+            this.TextBoxApplication.Name = "TextBoxApplication";
+            this.TextBoxApplication.Size = new System.Drawing.Size(121, 20);
+            this.TextBoxApplication.TabIndex = 6;
             // 
             // label2
             // 
@@ -138,28 +139,28 @@ namespace Lab_PIC_5.Views
             this.dateAct.TabIndex = 11;
             this.dateAct.Value = new System.DateTime(2023, 5, 29, 1, 20, 48, 0);
             // 
-            // animalCardComboBox
+            // ComboBoxAnimalCard
             // 
-            this.animalCardComboBox.FormattingEnabled = true;
-            this.animalCardComboBox.Location = new System.Drawing.Point(131, 127);
-            this.animalCardComboBox.Name = "animalCardComboBox";
-            this.animalCardComboBox.Size = new System.Drawing.Size(121, 21);
-            this.animalCardComboBox.TabIndex = 12;
+            this.ComboBoxAnimalCard.FormattingEnabled = true;
+            this.ComboBoxAnimalCard.Location = new System.Drawing.Point(131, 127);
+            this.ComboBoxAnimalCard.Name = "ComboBoxAnimalCard";
+            this.ComboBoxAnimalCard.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxAnimalCard.TabIndex = 12;
             // 
             // ActEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 210);
-            this.Controls.Add(this.animalCardComboBox);
+            this.Controls.Add(this.ComboBoxAnimalCard);
             this.Controls.Add(this.dateAct);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.applicationTextBox);
-            this.Controls.Add(this.contractsTextBox);
-            this.Controls.Add(this.organizationTextBox);
+            this.Controls.Add(this.TextBoxApplication);
+            this.Controls.Add(this.TextBoxContracts);
+            this.Controls.Add(this.TextBoxOrganization);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label1);
@@ -177,14 +178,14 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button OK;
-        private System.Windows.Forms.TextBox organizationTextBox;
-        private System.Windows.Forms.TextBox contractsTextBox;
-        private System.Windows.Forms.TextBox applicationTextBox;
+        private System.Windows.Forms.TextBox TextBoxOrganization;
+        private System.Windows.Forms.TextBox TextBoxContracts;
+        private System.Windows.Forms.TextBox TextBoxApplication;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateAct;
-        private System.Windows.Forms.ComboBox animalCardComboBox;
+        private System.Windows.Forms.ComboBox ComboBoxAnimalCard;
     }
 }
