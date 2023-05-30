@@ -47,9 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ActService.cs" />
+    <Compile Include="Controllers\AppService.cs" />
+    <Compile Include="Controllers\OrgService.cs" />
     <Compile Include="Data\ActRepository.cs" />
+    <Compile Include="Data\AppRepository.cs" />
+    <Compile Include="Data\OrgRepository.cs" />
     <Compile Include="Models\Act.cs" />
     <Compile Include="Models\AnimalCard.cs" />
+    <Compile Include="Models\App.cs" />
+    <Compile Include="Models\Organization.cs" />
     <Compile Include="Views\ActEdit.cs">
       <SubType>Form</SubType>
     </Compile>
