@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Lab_PIC_5.Data
 {
@@ -11,16 +12,22 @@ namespace Lab_PIC_5.Data
     {
         public static Organization[] OrganizationsMas =
         {
-            new Organization("МКУ «ЛесПаркХоз»", "3664069397", "770201001", "г. Москва, ул. Ленина 56", "Коммерческий", "действующее"),
-            new Organization("ГосОтлов", "9574637594","770495001", "г. Москва, ул. Абрамцевская 34", "Государственная организация", "действующее"),
-            new Organization("ПРОО «Общество защиты животных»", "5769384756", "720294631", "г. Тюмень ул. Мельникайте 48", "Коммерческий", "действующее")
+            new Organization("1","МКУ «ЛесПаркХоз»", "3664069397", "770201001", "г. Москва, ул. Ленина 56", "Коммерческий", "действующее"),
+            new Organization("2","ГосОтлов", "9574637594","770495001", "г. Москва, ул. Абрамцевская 34", "Государственная организация", "действующее"),
+            new Organization("3","ПРОО «Общество защиты животных»", "5769384756", "720294631", "г. Тюмень ул. Мельникайте 48", "Коммерческий", "действующее")
         };
 
         public static List<Organization> Organizations = new List<Organization>(OrganizationsMas);
 
-        public static void Save()
+        public static void Save(Organization Org)
         {
-
+            var IdOrg = Organizations.FindIndex(x => x.idOrg == Org.idOrg);
+            
+            Organizations[IdOrg] = Org;
+        }
+        public static void SaveAdd(Organization Org)
+        {
+            Organizations.Add(Org);
         }
 
         public static void Del(Organization organization)

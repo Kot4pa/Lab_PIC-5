@@ -15,7 +15,7 @@ namespace Lab_PIC_5.Controllers
     {
         public static void AddApplication(App App)
         {
-
+            AppRepository.SaveAdd(App);
         }
 
         public static void EditApplication(App app)

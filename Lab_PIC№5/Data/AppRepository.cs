@@ -25,6 +25,10 @@ namespace Lab_PIC_5.Data
             var id = Applicatiions.FindIndex(x => x.number == app.number);
             Applicatiions[id] = app;
         }
+        public static void SaveAdd(App app)
+        {
+            Applicatiions.Add(app);
+        }
 
         public static void Del(App app)
         {

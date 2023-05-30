@@ -24,7 +24,7 @@ namespace Lab_PIC_5
             
             SetDataGridApp();
             SetDataGridOrg();
-            
+
         }
         DataSet dsApplication = new DataSet();
         DataSet dsOrganization = new DataSet();
@@ -45,6 +45,7 @@ namespace Lab_PIC_5
 
             dsOrganization.Tables.Clear();
             dsOrganization.Tables.Add("Score");
+            dsOrganization.Tables[0].Columns.Add("Номер");
             dsOrganization.Tables[0].Columns.Add("Наименование");
             dsOrganization.Tables[0].Columns.Add("ИНН");
             dsOrganization.Tables[0].Columns.Add("КПП");
@@ -120,18 +121,50 @@ namespace Lab_PIC_5
 
         private void AppEdit_Click(object sender, EventArgs e)
         {
-            //AppService.EditApplication(app);
-            //SetDataGridApp();
+            if (dataGridViewApp.CurrentRow != null)
+            {
+                string app = dataGridViewApp.CurrentRow.Cells[1].Value.ToString();
+                AppEdit appEdit = new AppEdit(app);
+                appEdit.ShowDialog();
+                SetDataGridApp();
+            }
         }
 
         private void OrgDelete_Click(object sender, EventArgs e)
         {
             if (dataGridViewOrg.CurrentRow != null)
             {
-                string org = dataGridViewOrg.CurrentRow.Cells[1].Value.ToString();
+                string org = dataGridViewOrg.CurrentRow.Cells[2].Value.ToString();
                 OrgService.DeleteOrganization(org);
                 SetDataGridOrg();
             }
+        }
+
+        private void OrgEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewOrg.CurrentRow != null)
+            {
+                //int IdOrg = Convert.ToInt32(dataGridViewApp.CurrentRow.Cells[0].Value.ToString());
+                //OrgEdit orgEdit = new OrgEdit(Convert.ToInt32(dataGridViewApp.CurrentRow.Cells[0].Value.ToString()));
+                string org = dataGridViewOrg.CurrentRow.Cells[0].Value.ToString();
+                OrgEdit orgEdit = new OrgEdit(org);
+                orgEdit.ShowDialog();
+                SetDataGridOrg();
+            }
+        }
+
+        private void OrgAdd_Click(object sender, EventArgs e)
+        {
+            OrgAdd orgAdd = new OrgAdd();
+            orgAdd.ShowDialog();
+            SetDataGridOrg();
+        }
+
+        private void AppAdd_Click(object sender, EventArgs e)
+        {
+            AppAdd appAdd = new AppAdd();
+            appAdd.ShowDialog();
+            SetDataGridApp();
         }
     }
 }

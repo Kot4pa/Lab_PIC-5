@@ -397,9 +397,12 @@
             // 
             // dataGridViewApp
             // 
+            this.dataGridViewApp.AllowUserToAddRows = false;
+            this.dataGridViewApp.AllowUserToDeleteRows = false;
             this.dataGridViewApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewApp.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewApp.Name = "dataGridViewApp";
+            this.dataGridViewApp.ReadOnly = true;
             this.dataGridViewApp.RowHeadersWidth = 62;
             this.dataGridViewApp.RowTemplate.Height = 28;
             this.dataGridViewApp.Size = new System.Drawing.Size(1368, 599);
@@ -413,6 +416,7 @@
             this.AppAdd.TabIndex = 16;
             this.AppAdd.Text = "Добавить";
             this.AppAdd.UseVisualStyleBackColor = true;
+            this.AppAdd.Click += new System.EventHandler(this.AppAdd_Click);
             // 
             // AppEdit
             // 
@@ -442,6 +446,7 @@
             this.OrgAdd.TabIndex = 16;
             this.OrgAdd.Text = "Добавить";
             this.OrgAdd.UseVisualStyleBackColor = true;
+            this.OrgAdd.Click += new System.EventHandler(this.OrgAdd_Click);
             // 
             // OrgEdit
             // 
@@ -451,6 +456,7 @@
             this.OrgEdit.TabIndex = 15;
             this.OrgEdit.Text = "Изменить";
             this.OrgEdit.UseVisualStyleBackColor = true;
+            this.OrgEdit.Click += new System.EventHandler(this.OrgEdit_Click);
             // 
             // OrgDelete
             // 
@@ -464,9 +470,12 @@
             // 
             // dataGridViewOrg
             // 
+            this.dataGridViewOrg.AllowUserToAddRows = false;
+            this.dataGridViewOrg.AllowUserToDeleteRows = false;
             this.dataGridViewOrg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrg.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewOrg.Name = "dataGridViewOrg";
+            this.dataGridViewOrg.ReadOnly = true;
             this.dataGridViewOrg.RowHeadersWidth = 62;
             this.dataGridViewOrg.RowTemplate.Height = 28;
             this.dataGridViewOrg.Size = new System.Drawing.Size(1368, 593);

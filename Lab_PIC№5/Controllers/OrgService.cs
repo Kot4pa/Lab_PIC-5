@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Lab_PIC_5.Controllers
 {
@@ -17,6 +18,7 @@ namespace Lab_PIC_5.Controllers
             {
                 var tempOrg = new List<string>
                 {
+                    org.idOrg,
                     org.name,
                     org.INN,
                     org.KPP,
@@ -29,14 +31,14 @@ namespace Lab_PIC_5.Controllers
             return orgs;
         }
 
-        public static void AddOrganization()
+        public static void AddOrganization(Organization Org)
         {
-
+            OrgRepository.SaveAdd(Org);
         }
 
-        public static void EditOrganization()
+        public static void EditOrganization(Organization Org)
         {
-
+            OrgRepository.Save(Org);
         }
 
         public static void DeleteOrganization(string org)
