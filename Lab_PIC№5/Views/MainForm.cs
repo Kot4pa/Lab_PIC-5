@@ -38,13 +38,12 @@ namespace Lab_PIC_5
 
         private void CreateData()
         {
-            ActRepository.AddTestActs();
+
             ContractRepository.AddTestContract();
         }
         private void SetDataGridOrg()
         {
             /*-Organization-------------------------*/
-
             dsOrganization.Tables.Clear();
             dsOrganization.Tables.Add("Score");
             dsOrganization.Tables[0].Columns.Add("Номер");
@@ -106,6 +105,7 @@ namespace Lab_PIC_5
 
         }
 
+        /* ------ACT------- */
         private void AddButton_Click(object sender, EventArgs e)
         {
             ActEdit editWindow = new ActEdit();
@@ -119,6 +119,12 @@ namespace Lab_PIC_5
             editWindow.ShowDialog();
             SetDataGrid();
         }
+
+        private void DeleteActButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*------------------------------------------------------------------*/
         private void AppDelete_Click(object sender, EventArgs e)
         {
@@ -177,5 +183,6 @@ namespace Lab_PIC_5
             appAdd.ShowDialog();
             SetDataGridApp();
         }
+
     }
 }
