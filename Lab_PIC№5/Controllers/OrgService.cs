@@ -54,6 +54,5 @@ namespace Lab_PIC_5.Controllers
             }
         }
 
-        
     }
 }

@@ -19,7 +19,7 @@ namespace Lab_PIC_5
         public MainForm()
         {
             InitializeComponent();
-            CreateData();
+            //CreateData();
             SetDataGrid();
             
             SetDataGridApp();
@@ -35,10 +35,10 @@ namespace Lab_PIC_5
             
         }
 
-        private void CreateData()
-        {
-            ActRepository.AddTestActs();
-        }
+        //private void CreateData()
+        //{
+        //    ActRepository.AddTestActs();
+        //}
         private void SetDataGridOrg()
         {
             /*-Organization-------------------------*/

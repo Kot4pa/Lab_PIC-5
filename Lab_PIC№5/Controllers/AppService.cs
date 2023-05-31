@@ -32,7 +32,6 @@ namespace Lab_PIC_5.Controllers
                     AppRepository.Del(applic);
                     break; 
                 }
-
             }
         }
 
@@ -56,9 +55,5 @@ namespace Lab_PIC_5.Controllers
             }
             return apps;
         }
-
-        
-
-
     }
 }
