@@ -10,9 +10,9 @@ namespace Lab_PIC_5
 {
     internal class ActService
     {
-        public static List<string[]> ShowAct()
+        public static List<string[]> ShowAct(string filter)
         {
-            List<string[]> acts = stringMassChencher(ActRepository.acts);
+            List<string[]> acts = stringMassChencher(ActRepository.ShowAct(filter));
             return acts;
         }
 

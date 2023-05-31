@@ -20,7 +20,7 @@ namespace Lab_PIC_5
         {
             InitializeComponent();
             CreateData();
-            SetDataGrid();
+            SetDataGridAct();
             ShowContract();
             
             SetDataGridApp();
@@ -90,39 +90,46 @@ namespace Lab_PIC_5
             }
         }
 
-        private void SetDataGrid()
-        {
-            DataGridViewActs.Rows.Clear();
-            var actss = ActService.ShowAct();
-            foreach (var organization in actss)
-            {
-                DataGridViewActs.Rows.Add(organization);
-            }
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
 
         }
 
-        /* ------ACT------- */
+        /* ------ACT---------- */
+
+        private void SetDataGridAct()
+        {
+            DataGridViewActs.Rows.Clear();
+            var actss = ActService.ShowAct(dateTimePickerAct.Value.ToString());
+            foreach (var organization in actss)
+            {
+                DataGridViewActs.Rows.Add(organization);
+            }
+        }
+
         private void AddButton_Click(object sender, EventArgs e)
         {
             ActEdit editWindow = new ActEdit();
             editWindow.ShowDialog();
-            SetDataGrid();
+            SetDataGridAct();
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
             editWindow.ShowDialog();
-            SetDataGrid();
+            SetDataGridAct();
         }
 
         private void DeleteActButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePickerAct_ValueChanged(object sender, EventArgs e)
+        {
+            SetDataGridAct();
         }
 
         /*------------------------------------------------------------------*/
