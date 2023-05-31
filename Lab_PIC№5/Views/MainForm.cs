@@ -21,6 +21,7 @@ namespace Lab_PIC_5
             InitializeComponent();
             CreateData();
             SetDataGrid();
+            ShowContract();
             
             SetDataGridApp();
             SetDataGridOrg();
@@ -38,6 +39,7 @@ namespace Lab_PIC_5
         private void CreateData()
         {
             ActRepository.AddTestActs();
+            ContractRepository.AddTestContract();
         }
         private void SetDataGridOrg()
         {
@@ -78,6 +80,15 @@ namespace Lab_PIC_5
                 dsApplication.Tables[0].Rows.Add(app);
             }
             dataGridViewApp.DataSource = dsApplication.Tables[0];
+        }
+        private void ShowContract()
+        {
+            ContractTable.Rows.Clear();
+            var contract = ContractService.ShowContract();
+            foreach (var i in contract)
+            {
+                ContractTable.Rows.Add(i);
+            }
         }
 
         private void SetDataGrid()
