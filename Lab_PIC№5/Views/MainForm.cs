@@ -38,9 +38,46 @@ namespace Lab_PIC_5
 
         private void CreateData()
         {
-
             ContractRepository.AddTestContract();
         }
+
+        /* -----------------------------------ACT----------------------------------------------------- */
+
+        private void SetDataGridAct()
+        {
+            DataGridViewActs.Rows.Clear();
+            var actss = ActService.ShowAct(dateTimePickerAct.Value.ToString());
+            foreach (var organization in actss)
+            {
+                DataGridViewActs.Rows.Add(organization);
+            }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            ActEdit editWindow = new ActEdit();
+            editWindow.ShowDialog();
+            SetDataGridAct();
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
+            editWindow.ShowDialog();
+            SetDataGridAct();
+        }
+
+        private void DeleteActButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerAct_ValueChanged(object sender, EventArgs e)
+        {
+            SetDataGridAct();
+        }
+
+
         private void SetDataGridOrg()
         {
             /*-Organization-------------------------*/
@@ -96,41 +133,6 @@ namespace Lab_PIC_5
 
         }
 
-        /* ------ACT---------- */
-
-        private void SetDataGridAct()
-        {
-            DataGridViewActs.Rows.Clear();
-            var actss = ActService.ShowAct(dateTimePickerAct.Value.ToString());
-            foreach (var organization in actss)
-            {
-                DataGridViewActs.Rows.Add(organization);
-            }
-        }
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            ActEdit editWindow = new ActEdit();
-            editWindow.ShowDialog();
-            SetDataGridAct();
-        }
-
-        private void UpdateButton_Click(object sender, EventArgs e)
-        {
-            ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
-            editWindow.ShowDialog();
-            SetDataGridAct();
-        }
-
-        private void DeleteActButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerAct_ValueChanged(object sender, EventArgs e)
-        {
-            SetDataGridAct();
-        }
 
         /*------------------------------------------------------------------*/
         private void AppDelete_Click(object sender, EventArgs e)
