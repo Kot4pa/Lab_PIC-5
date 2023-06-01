@@ -31,12 +31,6 @@ namespace Lab_PIC_5.Views
             FillEditor();
         }
 
-        private AnimalCard FindAnimalCard(int idAnimalCard)
-        {
-            var index = ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == idAnimalCard);
-            return ActRepository.animalCards[index];
-        }
-
         private void FillEditor()
         {
             if (actToEdit)
@@ -74,15 +68,15 @@ namespace Lab_PIC_5.Views
         }
 
         private void OK_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //if (actToEdit)
-            //{
-            //    var act = new Act(actId, dateAct.Value, TextBoxOrganization.Text, TextBoxContracts.Text, 
-            //                      TextBoxApplication.Text, FindAnimalCard((int)ComboBoxAnimalCard.SelectedValue));
-            //    ActService.EditAct(act);
-            //}
+        { 
+            if (actToEdit)
+            {
+                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(), TextBoxContracts.Text,
+                                  TextBoxApplication.Text, ComboBoxAnimalCard.SelectedValue.ToString() };
+                ActService.EditAct(act);
+            }
+            else
+                MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

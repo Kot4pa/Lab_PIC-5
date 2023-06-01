@@ -16,8 +16,13 @@ namespace Lab_PIC_5
             return acts;
         }
 
-        public static void EditAct(Act actData)
+        public static void EditAct(string[] takedActData)
         {
+            var actData = new Act(int.Parse(takedActData[0]), DateTime.Parse(takedActData[1]), 
+                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == takedActData[2])],
+                                  takedActData[3],
+                                  takedActData[4],
+                                  ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(takedActData[5]))]);
             ActRepository.SaveActData(actData);
         }
 
