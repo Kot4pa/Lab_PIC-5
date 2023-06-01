@@ -8,8 +8,8 @@ namespace Lab_PIC_5.Models
 {
     internal class Organization
     {
-        public string idOrg;
-        public string name;
+        public string idOrg { get; set; }
+        public string name { get; set; }
         public string INN;
         public string KPP;
         public string registrationAdress;

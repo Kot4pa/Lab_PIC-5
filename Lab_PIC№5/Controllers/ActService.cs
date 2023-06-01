@@ -36,7 +36,7 @@ namespace Lab_PIC_5
                 {
                     act.ActNumber.ToString(),
                     act.Date.ToString(),
-                    act.Organization,
+                    act.Organization.name,
                     act.Contracts,
                     act.Application,
                     act.AnimalCard.Kind

@@ -74,6 +74,7 @@
             this.OrgEdit = new System.Windows.Forms.Button();
             this.OrgDelete = new System.Windows.Forms.Button();
             this.UserButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApp)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -109,6 +111,7 @@
             this.tabPage1.Controls.Add(this.dateTimePickerAct);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.DataGridViewActs);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -189,11 +192,13 @@
             this.animalCard});
             this.DataGridViewActs.Location = new System.Drawing.Point(4, 5);
             this.DataGridViewActs.Margin = new System.Windows.Forms.Padding(2);
+            this.DataGridViewActs.MultiSelect = false;
             this.DataGridViewActs.Name = "DataGridViewActs";
             this.DataGridViewActs.ReadOnly = true;
             this.DataGridViewActs.RowHeadersVisible = false;
             this.DataGridViewActs.RowHeadersWidth = 51;
             this.DataGridViewActs.RowTemplate.Height = 24;
+            this.DataGridViewActs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewActs.Size = new System.Drawing.Size(906, 386);
             this.DataGridViewActs.TabIndex = 0;
             // 
@@ -589,6 +594,14 @@
             this.UserButton.Text = "Сменить пользователя";
             this.UserButton.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(908, 391);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -615,6 +628,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApp)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -667,6 +681,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

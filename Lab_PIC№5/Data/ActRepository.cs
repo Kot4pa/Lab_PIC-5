@@ -13,10 +13,10 @@ namespace Lab_PIC_5.Data
                                                           { new AnimalCard(1, "Кот", "1", "1"),
                                                           new AnimalCard(2, "Собака", "2", "2")};
         public static List<Act> acts = new List<Act>
-                                            { new Act(1, DateTime.Parse("01-01-23"), "OOO", "99999", "123", animalCards[0]),
-                                            new Act(2, DateTime.Parse("02-01-23"), "AAA", "00000", "321", animalCards[1]),
-                                            new Act(3, DateTime.Parse("05-01-23"), "EEEE", "4444", "321", animalCards[1]),
-                                            new Act(4, DateTime.Parse("10-01-23"), "TTTT", "666", "435", animalCards[0])};
+                                            { new Act(1, DateTime.Parse("01-01-23"), OrgRepository.Organizations[0], "99999", "123", animalCards[0]),
+                                            new Act(2, DateTime.Parse("02-01-23"), OrgRepository.Organizations[1], "00000", "321", animalCards[1]),
+                                            new Act(3, DateTime.Parse("05-01-23"), OrgRepository.Organizations[2], "4444", "321", animalCards[1]),
+                                            new Act(4, DateTime.Parse("10-01-23"), OrgRepository.Organizations[0], "666", "435", animalCards[0])};
         
         public static void SaveActData(Act actData)
         {

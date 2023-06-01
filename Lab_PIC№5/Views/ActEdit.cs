@@ -44,9 +44,15 @@ namespace Lab_PIC_5.Views
                 var index = ActRepository.acts.FindIndex(x => x.ActNumber == actId);
                 Act act = ActRepository.acts[index];
                 dateAct.Value = act.Date;
-                TextBoxOrganization.Text = act.Organization;
                 TextBoxContracts.Text = act.Contracts;
                 TextBoxApplication.Text = act.Application;
+
+                comboBoxOrganization.DataSource = new BindingSource(
+                        OrgRepository.Organizations, null);
+                comboBoxOrganization.DisplayMember = "name";
+                comboBoxOrganization.ValueMember = "idOrg";
+                comboBoxOrganization.Text = act.Organization.name;
+                
                 ComboBoxAnimalCard.DataSource = new BindingSource(
                         ActRepository.animalCards, null);
                 ComboBoxAnimalCard.DisplayMember = "Kind";
@@ -55,6 +61,11 @@ namespace Lab_PIC_5.Views
             }
             else
             {
+                comboBoxOrganization.DataSource = new BindingSource(
+                        OrgRepository.Organizations, null);
+                comboBoxOrganization.DisplayMember = "name";
+                comboBoxOrganization.ValueMember = "idOrg";
+
                 ComboBoxAnimalCard.DataSource = new BindingSource(
                         ActRepository.animalCards, null);
                 ComboBoxAnimalCard.DisplayMember = "Kind";
@@ -64,12 +75,14 @@ namespace Lab_PIC_5.Views
 
         private void OK_Click(object sender, EventArgs e)
         {
-            if (actToEdit)
-            {
-                var act = new Act(actId, dateAct.Value, TextBoxOrganization.Text, TextBoxContracts.Text, 
-                                  TextBoxApplication.Text, FindAnimalCard((int)ComboBoxAnimalCard.SelectedValue));
-                ActService.EditAct(act);
-            }
+            MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //if (actToEdit)
+            //{
+            //    var act = new Act(actId, dateAct.Value, TextBoxOrganization.Text, TextBoxContracts.Text, 
+            //                      TextBoxApplication.Text, FindAnimalCard((int)ComboBoxAnimalCard.SelectedValue));
+            //    ActService.EditAct(act);
+            //}
         }
     }
 }
