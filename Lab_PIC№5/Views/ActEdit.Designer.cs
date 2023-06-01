@@ -32,8 +32,6 @@ namespace Lab_PIC_5.Views
             this.label1 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.Button();
             this.OK = new System.Windows.Forms.Button();
-            this.TextBoxContracts = new System.Windows.Forms.TextBox();
-            this.TextBoxApplication = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +39,8 @@ namespace Lab_PIC_5.Views
             this.dateAct = new System.Windows.Forms.DateTimePicker();
             this.ComboBoxAnimalCard = new System.Windows.Forms.ComboBox();
             this.comboBoxOrganization = new System.Windows.Forms.ComboBox();
+            this.comboBoxContract = new System.Windows.Forms.ComboBox();
+            this.comboBoxApp = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -72,20 +72,6 @@ namespace Lab_PIC_5.Views
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
-            // 
-            // TextBoxContracts
-            // 
-            this.TextBoxContracts.Location = new System.Drawing.Point(131, 74);
-            this.TextBoxContracts.Name = "TextBoxContracts";
-            this.TextBoxContracts.Size = new System.Drawing.Size(175, 20);
-            this.TextBoxContracts.TabIndex = 5;
-            // 
-            // TextBoxApplication
-            // 
-            this.TextBoxApplication.Location = new System.Drawing.Point(131, 100);
-            this.TextBoxApplication.Name = "TextBoxApplication";
-            this.TextBoxApplication.Size = new System.Drawing.Size(175, 20);
-            this.TextBoxApplication.TabIndex = 6;
             // 
             // label2
             // 
@@ -148,11 +134,29 @@ namespace Lab_PIC_5.Views
             this.comboBoxOrganization.Size = new System.Drawing.Size(175, 21);
             this.comboBoxOrganization.TabIndex = 13;
             // 
+            // comboBoxContract
+            // 
+            this.comboBoxContract.FormattingEnabled = true;
+            this.comboBoxContract.Location = new System.Drawing.Point(131, 73);
+            this.comboBoxContract.Name = "comboBoxContract";
+            this.comboBoxContract.Size = new System.Drawing.Size(175, 21);
+            this.comboBoxContract.TabIndex = 14;
+            // 
+            // comboBoxApp
+            // 
+            this.comboBoxApp.FormattingEnabled = true;
+            this.comboBoxApp.Location = new System.Drawing.Point(131, 100);
+            this.comboBoxApp.Name = "comboBoxApp";
+            this.comboBoxApp.Size = new System.Drawing.Size(175, 21);
+            this.comboBoxApp.TabIndex = 15;
+            // 
             // ActEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 210);
+            this.Controls.Add(this.comboBoxApp);
+            this.Controls.Add(this.comboBoxContract);
             this.Controls.Add(this.comboBoxOrganization);
             this.Controls.Add(this.ComboBoxAnimalCard);
             this.Controls.Add(this.dateAct);
@@ -160,8 +164,6 @@ namespace Lab_PIC_5.Views
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TextBoxApplication);
-            this.Controls.Add(this.TextBoxContracts);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label1);
@@ -179,8 +181,6 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button OK;
-        private System.Windows.Forms.TextBox TextBoxContracts;
-        private System.Windows.Forms.TextBox TextBoxApplication;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -188,5 +188,7 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.DateTimePicker dateAct;
         private System.Windows.Forms.ComboBox ComboBoxAnimalCard;
         private System.Windows.Forms.ComboBox comboBoxOrganization;
+        private System.Windows.Forms.ComboBox comboBoxContract;
+        private System.Windows.Forms.ComboBox comboBoxApp;
     }
 }

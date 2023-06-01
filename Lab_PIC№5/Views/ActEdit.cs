@@ -38,41 +38,47 @@ namespace Lab_PIC_5.Views
                 var index = ActRepository.acts.FindIndex(x => x.ActNumber == actId);
                 Act act = ActRepository.acts[index];
                 dateAct.Value = act.Date;
-                TextBoxContracts.Text = act.Contracts;
-                TextBoxApplication.Text = act.Application;
-
-                comboBoxOrganization.DataSource = new BindingSource(
-                        OrgRepository.Organizations, null);
-                comboBoxOrganization.DisplayMember = "name";
-                comboBoxOrganization.ValueMember = "idOrg";
+                FullComboBox();
                 comboBoxOrganization.Text = act.Organization.name;
-                
-                ComboBoxAnimalCard.DataSource = new BindingSource(
-                        ActRepository.animalCards, null);
-                ComboBoxAnimalCard.DisplayMember = "Kind";
-                ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
+                comboBoxContract.Text = act.Contracts.Executer;
+                comboBoxApp.Text = act.Application.animalHabiat;
                 ComboBoxAnimalCard.Text = act.AnimalCard.Kind;
             }
             else
             {
-                comboBoxOrganization.DataSource = new BindingSource(
-                        OrgRepository.Organizations, null);
-                comboBoxOrganization.DisplayMember = "name";
-                comboBoxOrganization.ValueMember = "idOrg";
-
-                ComboBoxAnimalCard.DataSource = new BindingSource(
-                        ActRepository.animalCards, null);
-                ComboBoxAnimalCard.DisplayMember = "Kind";
-                ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
+                FullComboBox();
             }
+        }
+
+        private void FullComboBox()
+        {
+            comboBoxOrganization.DataSource = new BindingSource(
+                                    OrgRepository.Organizations, null);
+            comboBoxOrganization.DisplayMember = "name";
+            comboBoxOrganization.ValueMember = "idOrg";
+
+            comboBoxContract.DataSource = new BindingSource(
+                    ContractRepository.contract, null);
+            comboBoxContract.DisplayMember = "Executer";
+            comboBoxContract.ValueMember = "IdContract";
+
+            comboBoxApp.DataSource = new BindingSource(
+                    AppRepository.Applicatiions, null);
+            comboBoxApp.DisplayMember = "animalHabiat";
+            comboBoxApp.ValueMember = "number";
+
+            ComboBoxAnimalCard.DataSource = new BindingSource(
+                    ActRepository.animalCards, null);
+            ComboBoxAnimalCard.DisplayMember = "Kind";
+            ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
         }
 
         private void OK_Click(object sender, EventArgs e)
         { 
             if (actToEdit)
             {
-                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(), TextBoxContracts.Text,
-                                  TextBoxApplication.Text, ComboBoxAnimalCard.SelectedValue.ToString() };
+                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(), 
+                                    comboBoxContract.SelectedValue.ToString(), comboBoxApp.SelectedValue.ToString(), ComboBoxAnimalCard.SelectedValue.ToString() };
                 ActService.EditAct(act);
             }
             else

@@ -9,10 +9,10 @@ namespace Lab_PIC_5.Models
     internal class App
     {
         public string date;
-        public string number;
+        public string number { set; get; }
         public string locality;
         public string territory;
-        public string animalHabiat;
+        public string animalHabiat { set; get; }
         public string urgencyOfExecution;
         public string animaldescription;
         public string applicantCategory;
