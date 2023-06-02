@@ -193,5 +193,20 @@ namespace Lab_PIC_5
             SetDataGridApp();
         }
 
+        private void AddContractButton_Click(object sender, EventArgs e)
+        {
+            AddContractForm contAdd = new AddContractForm();
+            contAdd.ShowDialog();
+            ShowContract();
+        }
+
+        private void DeleteContractButton_Click(object sender, EventArgs e)
+        {
+            if (ContractTable.CurrentRow != null)
+            {
+                ContractService.DeleteContract(ContractTable.CurrentRow.Cells[0].Value.ToString());
+                ShowContract();
+            }
+        }
     }
 }

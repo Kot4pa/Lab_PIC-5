@@ -66,6 +66,12 @@
     <Compile Include="Views\ActEdit.Designer.cs">
       <DependentUpon>ActEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddContractForm.Designer.cs">
+      <DependentUpon>AddContractForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="Views\AutorizationForm.Designer.cs">
       <DependentUpon>AutorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContractEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ContractEdit.Designer.cs">
+      <DependentUpon>ContractEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
@@ -107,6 +119,9 @@
     <EmbeddedResource Include="Views\ActEdit.resx">
       <DependentUpon>ActEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddContractForm.resx">
+      <DependentUpon>AddContractForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AppAdd.resx">
       <DependentUpon>AppAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AutorizationForm.resx">
       <DependentUpon>AutorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContractEdit.resx">
+      <DependentUpon>ContractEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

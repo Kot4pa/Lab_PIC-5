@@ -50,9 +50,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.AddContractButton = new System.Windows.Forms.Button();
+            this.EditContractButton = new System.Windows.Forms.Button();
+            this.DeleteContractButton = new System.Windows.Forms.Button();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.ContractTable = new System.Windows.Forms.DataGridView();
@@ -96,8 +96,8 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(9, 10);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(921, 465);
@@ -264,8 +264,8 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(636, 407);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(848, 501);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 29);
             this.button5.TabIndex = 12;
@@ -323,9 +323,9 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.AddContractButton);
+            this.tabPage3.Controls.Add(this.EditContractButton);
+            this.tabPage3.Controls.Add(this.DeleteContractButton);
             this.tabPage3.Controls.Add(this.dateTimePicker3);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.ContractTable);
@@ -337,32 +337,32 @@
             this.tabPage3.Text = "Муниципальные контракты";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AddContractButton
             // 
-            this.button1.Location = new System.Drawing.Point(631, 405);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(841, 498);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 29);
+            this.button1.Size = new System.Drawing.Size(117, 36);
             this.button1.TabIndex = 13;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // EditContractButton
             // 
-            this.button2.Location = new System.Drawing.Point(724, 405);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(965, 498);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 29);
+            this.button2.Size = new System.Drawing.Size(117, 36);
             this.button2.TabIndex = 12;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // DeleteContractButton
             // 
-            this.button3.Location = new System.Drawing.Point(818, 405);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(1090, 498);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 29);
+            this.button3.Size = new System.Drawing.Size(117, 36);
             this.button3.TabIndex = 11;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
@@ -555,6 +555,69 @@
             this.dataGridViewOrg.RowTemplate.Height = 28;
             this.dataGridViewOrg.Size = new System.Drawing.Size(1368, 593);
             this.dataGridViewOrg.TabIndex = 17;
+            this.UserButton.Location = new System.Drawing.Point(9, 479);
+            this.UserButton.Margin = new System.Windows.Forms.Padding(2);
+            this.UserButton.Name = "UserButton";
+            this.UserButton.Size = new System.Drawing.Size(154, 29);
+            this.UserButton.TabIndex = 3;
+            this.UserButton.Text = "Сменить пользователя";
+            this.UserButton.UseVisualStyleBackColor = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Номер контракта";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Дата заключения";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Дата действия";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Город";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Цена";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Заказчик";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Исполнитель";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
             // 
             // MainForm
             // 
@@ -609,9 +672,9 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button UserButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button AddContractButton;
+        private System.Windows.Forms.Button EditContractButton;
+        private System.Windows.Forms.Button DeleteContractButton;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
