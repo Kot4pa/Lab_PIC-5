@@ -19,9 +19,9 @@ namespace Lab_PIC_5
         public static void EditAct(string[] takedActData)
         {
             var actData = new Act(int.Parse(takedActData[0]), DateTime.Parse(takedActData[1]), 
-                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(takedActData[2]))],
+                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == takedActData[2])],
                                   ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(takedActData[3]))],
-                                  AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(takedActData[4]))],
+                                  AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == takedActData[4])],
                                   ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(takedActData[5]))]);
             ActRepository.SaveActData(actData);
         }
