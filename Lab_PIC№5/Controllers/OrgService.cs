@@ -18,7 +18,7 @@ namespace Lab_PIC_5.Controllers
             {
                 var tempOrg = new List<string>
                 {
-                    org.idOrg,
+                    org.idOrg.ToString(),
                     org.name,
                     org.INN,
                     org.KPP,

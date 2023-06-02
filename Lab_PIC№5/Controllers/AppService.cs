@@ -43,7 +43,7 @@ namespace Lab_PIC_5.Controllers
                 var tempApp = new List<string>
                 {
                     app.date,
-                    app.number,
+                    app.number.ToString(),
                     app.locality,
                     app.territory,
                     app.animalHabiat,

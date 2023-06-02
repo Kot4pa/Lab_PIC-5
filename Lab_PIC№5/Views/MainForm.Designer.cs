@@ -115,8 +115,8 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(913, 439);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1374, 682);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Акты";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -201,6 +201,7 @@
             this.DataGridViewActs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewActs.Size = new System.Drawing.Size(906, 386);
             this.DataGridViewActs.TabIndex = 0;
+            this.DataGridViewActs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewActs_CellContentClick);
             // 
             // Id
             // 
@@ -255,8 +256,8 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(913, 439);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(1374, 682);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Реестр организаций";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -509,48 +510,6 @@
             this.AppDelete.UseVisualStyleBackColor = true;
             this.AppDelete.Click += new System.EventHandler(this.AppDelete_Click);
             // 
-            // dataGridViewApp
-            // 
-            this.dataGridViewApp.AllowUserToAddRows = false;
-            this.dataGridViewApp.AllowUserToDeleteRows = false;
-            this.dataGridViewApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewApp.Location = new System.Drawing.Point(2, 2);
-            this.dataGridViewApp.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewApp.Name = "dataGridViewApp";
-            this.dataGridViewApp.ReadOnly = true;
-            this.dataGridViewApp.RowHeadersWidth = 62;
-            this.dataGridViewApp.RowTemplate.Height = 28;
-            this.dataGridViewApp.Size = new System.Drawing.Size(912, 389);
-            this.dataGridViewApp.TabIndex = 0;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.dataGridViewOrg);
-            this.tabPage5.Controls.Add(this.OrgAdd);
-            this.tabPage5.Controls.Add(this.OrgEdit);
-            this.tabPage5.Controls.Add(this.OrgDelete);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(913, 439);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewOrg
-            // 
-            this.dataGridViewOrg.AllowUserToAddRows = false;
-            this.dataGridViewOrg.AllowUserToDeleteRows = false;
-            this.dataGridViewOrg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrg.Location = new System.Drawing.Point(2, 2);
-            this.dataGridViewOrg.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewOrg.Name = "dataGridViewOrg";
-            this.dataGridViewOrg.ReadOnly = true;
-            this.dataGridViewOrg.RowHeadersWidth = 62;
-            this.dataGridViewOrg.RowTemplate.Height = 28;
-            this.dataGridViewOrg.Size = new System.Drawing.Size(912, 385);
-            this.dataGridViewOrg.TabIndex = 17;
-            // 
             // OrgAdd
             // 
             this.OrgAdd.Location = new System.Drawing.Point(634, 401);
@@ -584,23 +543,18 @@
             this.OrgDelete.UseVisualStyleBackColor = true;
             this.OrgDelete.Click += new System.EventHandler(this.OrgDelete_Click);
             // 
-            // UserButton
+            // dataGridViewOrg
             // 
-            this.UserButton.Location = new System.Drawing.Point(9, 479);
-            this.UserButton.Margin = new System.Windows.Forms.Padding(2);
-            this.UserButton.Name = "UserButton";
-            this.UserButton.Size = new System.Drawing.Size(154, 29);
-            this.UserButton.TabIndex = 3;
-            this.UserButton.Text = "Сменить пользователя";
-            this.UserButton.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(908, 391);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.dataGridViewOrg.AllowUserToAddRows = false;
+            this.dataGridViewOrg.AllowUserToDeleteRows = false;
+            this.dataGridViewOrg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrg.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewOrg.Name = "dataGridViewOrg";
+            this.dataGridViewOrg.ReadOnly = true;
+            this.dataGridViewOrg.RowHeadersWidth = 62;
+            this.dataGridViewOrg.RowTemplate.Height = 28;
+            this.dataGridViewOrg.Size = new System.Drawing.Size(1368, 593);
+            this.dataGridViewOrg.TabIndex = 17;
             // 
             // MainForm
             // 

@@ -31,7 +31,7 @@ namespace Lab_PIC_5.Views
         }
         private void FillAppEdit()
         {
-            var NumAppId = AppRepository.Applicatiions.FindIndex(x => x.number == AppNum);
+            var NumAppId = AppRepository.Applicatiions.FindIndex(x => x.number == Convert.ToInt32(AppNum));
             App app = AppRepository.Applicatiions[NumAppId];
             date.Text = app.date;
             loc.Text = app.locality;
@@ -44,7 +44,7 @@ namespace Lab_PIC_5.Views
 
         private void OkAppEdit_Click(object sender, EventArgs e)
         {
-            var app = new App(date.Text, AppNum, loc.Text, territory.Text, animalHabbiat.Text, urgency.Text, descrip.Text, categoryApp.Text);
+            var app = new App(date.Text, Convert.ToInt32(AppNum), loc.Text, territory.Text, animalHabbiat.Text, urgency.Text, descrip.Text, categoryApp.Text);
             AppService.EditApplication(app);
             this.Close();
         }

@@ -30,7 +30,7 @@ namespace Lab_PIC_5.Views
 
         private void FillOrgEdit()
         {
-            var Idorg = OrgRepository.Organizations.FindIndex(x => x.idOrg == OrgId);
+            var Idorg = OrgRepository.Organizations.FindIndex(x => x.idOrg == Convert.ToInt32(OrgId));
             Organization org = OrgRepository.Organizations[Idorg];
             name.Text = org.name;
             INN.Text = org.INN;
@@ -42,7 +42,7 @@ namespace Lab_PIC_5.Views
 
         private void OKorgEdit_Click(object sender, EventArgs e)
         {
-            var org = new Organization(OrgId, name.Text, INN.Text, KPP.Text, AdressReg.Text, Type.Text, Status.Text);
+            var org = new Organization(Convert.ToInt32(OrgId), name.Text, INN.Text, KPP.Text, AdressReg.Text, Type.Text, Status.Text);
             OrgService.EditOrganization(org);
             this.Close();
         }
