@@ -15,19 +15,29 @@ namespace Lab_PIC_5.Controllers
             List<string[]> contracts = stringMassChencher(ContractRepository.contract);
             return contracts;
         }
+        public static void AddContract(Contract cont)
+        {
+            ContractRepository.SaveAdd(cont);
+        }
 
         public static void EditAct(Contract cont)
         {
             ContractRepository.SaveContractData(cont);
         }
-
-        private LocationCost FindLocation(int idLocation)
+        public static void DeleteContract(string cont)
         {
-            var index = ContractRepository.locationCost.FindIndex(x => x.IdLocation == idLocation);
-            return ContractRepository.locationCost[index];
+            foreach (Contract contract in ContractRepository.contract)
+            {
+                if (contract.IdContract == int.Parse(cont))
+                {
+                    ContractRepository.Del(contract);
+                    break;
+                }
+
+            }
         }
 
-        private static List<string[]> stringMassChencher(List<Contract> contracts)
+        public static List<string[]> stringMassChencher(List<Contract> contracts)
         {
             List<string[]> result = new List<string[]>();
             foreach (Contract contract in contracts)

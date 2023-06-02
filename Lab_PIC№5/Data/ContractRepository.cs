@@ -27,5 +27,13 @@ namespace Lab_PIC_5.Data
             var index = contract.FindIndex(x => x.IdContract == cont.IdContract);
             contract[index] = cont;
         }
+        public static void SaveAdd(Contract cont)
+        {
+            contract.Add(cont);
+        }
+        public static void Del(Contract cont)
+        {
+            contract.Remove(cont);
+        }
     }
 }
