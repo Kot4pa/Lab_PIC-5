@@ -21,8 +21,8 @@ namespace Lab_PIC_5.Controllers
             var contData = new Contract(int.Parse(ContData[0]), DateTime.Parse(ContData[1]), DateTime.Parse(ContData[2]),
                                   LocationCostReposiroty.locationCosts[LocationCostReposiroty.locationCosts.FindIndex(x => x.IdLocation == int.Parse(ContData[3]))],
                                   LocationCostReposiroty.locationCosts[LocationCostReposiroty.locationCosts.FindIndex(x => x.IdLocation == int.Parse(ContData[4]))],
-                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == ContData[5])],
-                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == ContData[6])]);
+                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(ContData[5]))],
+                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(ContData[6]))]);
             ContractRepository.SaveContractData(contData);
         }
         public static void DeleteContract(string cont)
