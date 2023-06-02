@@ -115,8 +115,8 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1374, 682);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1220, 543);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Акты";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -263,8 +263,8 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1374, 682);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1220, 543);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Реестр организаций";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -380,6 +380,7 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(153, 22);
             this.dateTimePicker3.TabIndex = 10;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label3
             // 
@@ -394,6 +395,8 @@
             // 
             this.ContractTable.AllowUserToAddRows = false;
             this.ContractTable.AllowUserToDeleteRows = false;
+            this.ContractTable.AllowUserToResizeColumns = false;
+            this.ContractTable.AllowUserToResizeRows = false;
             this.ContractTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ContractTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -409,11 +412,13 @@
             this.ContractTable.ReadOnly = true;
             this.ContractTable.RowHeadersWidth = 51;
             this.ContractTable.RowTemplate.Height = 24;
+            this.ContractTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ContractTable.Size = new System.Drawing.Size(1208, 475);
             this.ContractTable.TabIndex = 8;
             // 
             // Column1
             // 
+            this.Column1.FillWeight = 75.75759F;
             this.Column1.HeaderText = "Номер контракта";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -422,51 +427,57 @@
             // 
             // Column2
             // 
+            this.Column2.FillWeight = 85.40144F;
             this.Column2.HeaderText = "Дата заключения";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.Column2.Width = 141;
             // 
             // Column3
             // 
+            this.Column3.FillWeight = 94.00158F;
             this.Column3.HeaderText = "Дата действия";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
+            this.Column3.Width = 155;
             // 
             // Column4
             // 
+            this.Column4.FillWeight = 101.671F;
             this.Column4.HeaderText = "Город";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
+            this.Column4.Width = 168;
             // 
             // Column7
             // 
+            this.Column7.FillWeight = 108.5103F;
             this.Column7.HeaderText = "Цена";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
+            this.Column7.Width = 179;
             // 
             // Column5
             // 
+            this.Column5.FillWeight = 114.6095F;
             this.Column5.HeaderText = "Заказчик";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
+            this.Column5.Width = 189;
             // 
             // Column6
             // 
+            this.Column6.FillWeight = 120.0486F;
             this.Column6.HeaderText = "Исполнитель";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 125;
+            this.Column6.Width = 198;
             // 
             // tabPage4
             // 
@@ -548,13 +559,13 @@
             this.dataGridViewOrg.AllowUserToAddRows = false;
             this.dataGridViewOrg.AllowUserToDeleteRows = false;
             this.dataGridViewOrg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrg.Location = new System.Drawing.Point(3, 2);
+            this.dataGridViewOrg.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewOrg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewOrg.Name = "dataGridViewOrg";
             this.dataGridViewOrg.ReadOnly = true;
             this.dataGridViewOrg.RowHeadersWidth = 62;
             this.dataGridViewOrg.RowTemplate.Height = 28;
-            this.dataGridViewOrg.Size = new System.Drawing.Size(1216, 474);
+            this.dataGridViewOrg.Size = new System.Drawing.Size(1368, 593);
             this.dataGridViewOrg.TabIndex = 17;
             // 
             // OrgAdd
@@ -590,18 +601,8 @@
             this.OrgDelete.UseVisualStyleBackColor = true;
             this.OrgDelete.Click += new System.EventHandler(this.OrgDelete_Click);
             // 
-            // dataGridViewOrg
+            // UserButton
             // 
-            this.dataGridViewOrg.AllowUserToAddRows = false;
-            this.dataGridViewOrg.AllowUserToDeleteRows = false;
-            this.dataGridViewOrg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrg.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewOrg.Name = "dataGridViewOrg";
-            this.dataGridViewOrg.ReadOnly = true;
-            this.dataGridViewOrg.RowHeadersWidth = 62;
-            this.dataGridViewOrg.RowTemplate.Height = 28;
-            this.dataGridViewOrg.Size = new System.Drawing.Size(1368, 593);
-            this.dataGridViewOrg.TabIndex = 17;
             this.UserButton.Location = new System.Drawing.Point(9, 479);
             this.UserButton.Margin = new System.Windows.Forms.Padding(2);
             this.UserButton.Name = "UserButton";

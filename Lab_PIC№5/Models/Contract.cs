@@ -15,7 +15,9 @@ namespace Lab_PIC_5.Models
         public Organization Executer { get; set; }
         public Organization Costumer { get; set; }
 
-        public Contract(int idContract, DateTime dateConclusion, DateTime actionDate, LocationCost location, LocationCost cost,
+        public Contract(int idContract, 
+            DateTime dateConclusion, DateTime actionDate, 
+            LocationCost location, LocationCost cost,
             Organization executer, Organization costumer)
         {
             IdContract = idContract;

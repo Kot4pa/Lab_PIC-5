@@ -10,9 +10,9 @@ namespace Lab_PIC_5.Controllers
 {
     internal class ContractService
     {
-        public static List<string[]> ShowContract()
+        public static List<string[]> ShowContract(string filter)
         {
-            List<string[]> contracts = stringMassChencher(ContractRepository.contract);
+            List<string[]> contracts = stringMassChencher(ContractRepository.ShowCont(filter));
             return contracts;
         }
 
@@ -28,14 +28,11 @@ namespace Lab_PIC_5.Controllers
         public static void DeleteContract(string cont)
         {
             foreach (Contract contract in ContractRepository.contract)
-            {
                 if (contract.IdContract == int.Parse(cont))
                 {
                     ContractRepository.Del(contract);
                     break;
                 }
-
-            }
         }
 
         public static List<string[]> stringMassChencher(List<Contract> contracts)
