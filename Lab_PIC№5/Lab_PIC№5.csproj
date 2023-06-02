@@ -53,6 +53,7 @@
     <Compile Include="Data\ActRepository.cs" />
     <Compile Include="Data\AppRepository.cs" />
     <Compile Include="Data\ContractRepository.cs" />
+    <Compile Include="Data\LocationCostReposiroty.cs" />
     <Compile Include="Data\OrgRepository.cs" />
     <Compile Include="Models\Act.cs" />
     <Compile Include="Models\AnimalCard.cs" />
@@ -90,12 +91,6 @@
     <Compile Include="Views\AutorizationForm.Designer.cs">
       <DependentUpon>AutorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ContractEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ContractEdit.Designer.cs">
-      <DependentUpon>ContractEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AutorizationForm.resx">
       <DependentUpon>AutorizationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ContractEdit.resx">
-      <DependentUpon>ContractEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

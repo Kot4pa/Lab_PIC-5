@@ -40,7 +40,7 @@ namespace Lab_PIC_5.Views
                 dateAct.Value = act.Date;
                 FullComboBox();
                 comboBoxOrganization.Text = act.Organization.name;
-                comboBoxContract.Text = act.Contracts.Executer;
+                comboBoxContract.Text = act.Contracts.Executer.ToString();
                 comboBoxApp.Text = act.Application.animalHabiat;
                 ComboBoxAnimalCard.Text = act.AnimalCard.Kind;
             }

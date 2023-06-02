@@ -30,15 +30,12 @@ namespace Lab_PIC_5
         DataSet dsApplication = new DataSet();
         DataSet dsOrganization = new DataSet();
         
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void CreateData()
         {
-            ContractRepository.AddTestContract();
+            ContractTable.Rows.Clear();
+            var cont = ContractRepository.ShowCont(dateTimePicker3.Value.ToString());
+            foreach (var i in cont)
+                ContractTable.Rows.Add(i);
         }
 
         /* -----------------------------------ACT----------------------------------------------------- */
@@ -48,9 +45,7 @@ namespace Lab_PIC_5
             DataGridViewActs.Rows.Clear();
             var actss = ActService.ShowAct(dateTimePickerAct.Value.ToString());
             foreach (var organization in actss)
-            {
                 DataGridViewActs.Rows.Add(organization);
-            }
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -127,13 +122,6 @@ namespace Lab_PIC_5
             }
         }
 
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         /*------------------------------------------------------------------*/
         private void AppDelete_Click(object sender, EventArgs e)
         {
@@ -193,14 +181,21 @@ namespace Lab_PIC_5
             SetDataGridApp();
         }
 
-        private void AddContractButton_Click(object sender, EventArgs e)
+        private void AddButton_Click_1(object sender, EventArgs e)
         {
             AddContractForm contAdd = new AddContractForm();
             contAdd.ShowDialog();
             ShowContract();
         }
 
-        private void DeleteContractButton_Click(object sender, EventArgs e)
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            AddContractForm contAdd = new AddContractForm();
+            contAdd.ShowDialog();
+            ShowContract();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (ContractTable.CurrentRow != null)
             {

@@ -15,14 +15,15 @@ namespace Lab_PIC_5.Controllers
             List<string[]> contracts = stringMassChencher(ContractRepository.contract);
             return contracts;
         }
-        public static void AddContract(Contract cont)
-        {
-            ContractRepository.SaveAdd(cont);
-        }
 
-        public static void EditAct(Contract cont)
+        public static void EditCont(string[] ContData)
         {
-            ContractRepository.SaveContractData(cont);
+            var contData = new Contract(int.Parse(ContData[0]), DateTime.Parse(ContData[1]), DateTime.Parse(ContData[2]),
+                                  LocationCostReposiroty.locationCosts[LocationCostReposiroty.locationCosts.FindIndex(x => x.IdLocation == int.Parse(ContData[3]))],
+                                  LocationCostReposiroty.locationCosts[LocationCostReposiroty.locationCosts.FindIndex(x => x.IdLocation == int.Parse(ContData[4]))],
+                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == ContData[5])],
+                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == ContData[6])]);
+            ContractRepository.SaveContractData(contData);
         }
         public static void DeleteContract(string cont)
         {
@@ -48,9 +49,9 @@ namespace Lab_PIC_5.Controllers
                     contract.DateConclusion.ToString(),
                     contract.ActionDate.ToString(),
                     contract.LocationCost.City,
-                    contract.LocationCost.Cost,
-                    contract.Executer,
-                    contract.Costumer
+                    contract.LocationCost.Cost.ToString(),
+                    contract.Executer.name,
+                    contract.Costumer.name
                 };
                 result.Add(oldContract.ToArray());
             }

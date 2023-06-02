@@ -42,7 +42,7 @@ namespace Lab_PIC_5
                     act.ActNumber.ToString(),
                     act.Date.ToString(),
                     act.Organization.name,
-                    act.Contracts.Executer,
+                    act.Contracts.Executer.name,
                     act.Application.animalHabiat,
                     act.AnimalCard.Kind
                 };

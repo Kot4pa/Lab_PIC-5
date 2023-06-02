@@ -9,27 +9,23 @@ namespace Lab_PIC_5.Data
 {
     class ContractRepository
     {
-        public static List<LocationCost> locationCost = new List<LocationCost>();
-        public static List<Contract> contract = new List<Contract>();
+        public static List<Contract> contract = new List<Contract> { new Contract(1, DateTime.Parse("02.05.2023"), DateTime.Parse("05.05.2023"), 
+                                                                     LocationCostReposiroty.locationCosts[0], LocationCostReposiroty.locationCosts[0], 
+                                                                     OrgRepository.Organizations[0], OrgRepository.Organizations[1]),
+                                                                new Contract(2, DateTime.Parse("12.05.2023"), DateTime.Parse("15.05.2023"), 
+                                                                     LocationCostReposiroty.locationCosts[1], LocationCostReposiroty.locationCosts[1], 
+                                                                     OrgRepository.Organizations[1], OrgRepository.Organizations[1])};
 
-        public static void AddTestContract()
-        {
-            locationCost.AddRange(new List<LocationCost>() { new LocationCost(1, "г. Тюмень", "100"),
-                                                          new LocationCost(2, "г. Тобольск", "200")});
-
-
-            contract.AddRange(new List<Contract>() { new Contract(1, DateTime.Parse("02.05.2023"), DateTime.Parse("05.05.2023"), locationCost[0], locationCost[0], "OOO", "OAO"),
-                                            new Contract(2, DateTime.Parse("12.05.2023"), DateTime.Parse("15.05.2023"), locationCost[1], locationCost[1], "ПАО", "OОO")});
-        }
 
         public static void SaveContractData(Contract cont)
         {
             var index = contract.FindIndex(x => x.IdContract == cont.IdContract);
             contract[index] = cont;
         }
-        public static void SaveAdd(Contract cont)
+        public static List<Contract> ShowCont(string filter)
         {
-            contract.Add(cont);
+            List<Contract> returnCont = contract.Where(x => x.DateConclusion >= DateTime.Parse(filter)).ToList();
+            return returnCont;
         }
         public static void Del(Contract cont)
         {

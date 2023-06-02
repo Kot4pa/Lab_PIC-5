@@ -17,9 +17,62 @@ namespace Lab_PIC_5.Views
 {
     public partial class AddContractForm : Form
     {
+        private bool ContToEdit;
+        private int ContId;
         public AddContractForm()
         {
             InitializeComponent();
+            ContToEdit = false;
+            FillEditor();
+        }
+        public AddContractForm(int id)
+        {
+            InitializeComponent();
+            ContToEdit = true;
+            ContId = id;
+            FillEditor();
+        }
+        private void FillEditor()
+        {
+            if (ContToEdit)
+            {
+                var index = ContractRepository.contract.FindIndex(x => x.IdContract == ContId);
+                Contract cont = ContractRepository.contract[index];
+                dateConclusion.Value = cont.DateConclusion;
+                dateAction.Value = cont.ActionDate;
+                FullComboBox();
+                cityCombo.Text = cont.LocationCost.City;
+                costCombo.Text = cont.LocationCost.Cost.ToString();
+                customerCombo.Text = cont.Costumer.ToString();
+                executerCombo.Text = cont.Executer.ToString();
+            }
+            else
+            {
+                FullComboBox();
+            }
+        }
+
+        private void FullComboBox()
+        {
+            cityCombo.DataSource = new BindingSource(
+                                    LocationCostReposiroty.locationCosts, null);
+            cityCombo.DisplayMember = "City";
+            cityCombo.ValueMember = "IdLocation";
+
+            costCombo.DataSource = new BindingSource(
+                                    LocationCostReposiroty.locationCosts, null);
+            costCombo.DisplayMember = "Cost";
+            costCombo.ValueMember = "IdLocation";
+
+            executerCombo.DataSource = new BindingSource(
+                                    OrgRepository.Organizations, null);
+            executerCombo.DisplayMember = "name";
+            executerCombo.ValueMember = "idOrg";
+
+            customerCombo.DataSource = new BindingSource(
+                                     OrgRepository.Organizations, null);
+            customerCombo.DisplayMember = "name";
+            customerCombo.ValueMember = "idOrg";
         }
 
         private void CancelcontEdit_Click(object sender, EventArgs e)
@@ -29,10 +82,16 @@ namespace Lab_PIC_5.Views
 
         private void OKcontAdd_Click(object sender, EventArgs e)
         {
-            var nloc = new LocationCost(ContractRepository.locationCost.Count + 1, cityText.Text, costText.Text);
-            var ncont = new Contract(ContractRepository.contract.Count + 1, dateConclusion.Value, dateAction.Value, nloc, nloc, executerText.Text, costumerText.Text);
-            ContractService.AddContract(ncont);
-            this.Close();
+            if (ContToEdit)
+            {
+                var cont = new string[] {ContId.ToString(), dateConclusion.Value.ToString(), 
+                                    dateAction.Value.ToString(), cityCombo.SelectedValue.ToString(),
+                                    costCombo.SelectedValue.ToString(), executerCombo.SelectedValue.ToString(),
+                                    customerCombo.SelectedValue.ToString() };
+                ContractService.EditCont(cont);
+            }
+            else
+                MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

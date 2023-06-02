@@ -12,10 +12,11 @@ namespace Lab_PIC_5.Models
         public DateTime DateConclusion { get; set; }
         public DateTime ActionDate { get; set; }
         public LocationCost LocationCost { get; set; }
-        public string Executer { get; set; }
-        public string Costumer { get; set; }
+        public Organization Executer { get; set; }
+        public Organization Costumer { get; set; }
 
-        public Contract(int idContract, DateTime dateConclusion, DateTime actionDate, LocationCost location, LocationCost cost, string executer, string costumer)
+        public Contract(int idContract, DateTime dateConclusion, DateTime actionDate, LocationCost location, LocationCost cost,
+            Organization executer, Organization costumer)
         {
             IdContract = idContract;
             DateConclusion = dateConclusion;
