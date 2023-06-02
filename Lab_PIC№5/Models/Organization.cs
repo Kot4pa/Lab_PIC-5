@@ -8,15 +8,15 @@ namespace Lab_PIC_5.Models
 {
     internal class Organization
     {
-        public int idOrg { get; set; }
-        public string name { get; set; }
-        public string INN { get; set; }
-        public string KPP { get; set; }
-        public string registrationAdress { get; set; }
-        public string type { get; set; }
-        public string status { get; set; }
+        public string idOrg;
+        public string name;
+        public string INN;
+        public string KPP;
+        public string registrationAdress;
+        public string type;
+        public string status;
 
-        public Organization(int IdOrg, string name, string iNN, string kPP, string registrationAdress, string type, string status)
+        public Organization(string IdOrg, string name, string iNN, string kPP, string registrationAdress, string type, string status)
         {
             this.idOrg = IdOrg;
             this.name = name;

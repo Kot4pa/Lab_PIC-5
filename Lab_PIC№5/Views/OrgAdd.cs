@@ -23,7 +23,7 @@ namespace Lab_PIC_5.Views
 
         private void OKorgAdd_Click(object sender, EventArgs e)
         {
-            var org = new Organization(OrgRepository.Organizations.Count+1, name.Text, INN.Text, KPP.Text, AdressReg.Text, Type.Text, Status.Text);
+            var org = new Organization((OrgRepository.Organizations.Count+1).ToString(), name.Text, INN.Text, KPP.Text, AdressReg.Text, Type.Text, Status.Text);
             OrgService.AddOrganization(org);
             this.Close();
         }
