@@ -89,6 +89,8 @@ namespace Lab_PIC_5.Views
             }
             else
             {
+
+
                 var loc = new LocationCost(LocationCostReposiroty.locationCosts.Max(x => x.IdLocation) + 1,
                                             cityCombo.SelectedValue.ToString(), int.Parse(CostText.Text));
                 var cont = new Contract(ContractRepository.contract.Max(x => x.IdContract) + 1,
