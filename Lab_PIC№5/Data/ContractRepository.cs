@@ -22,6 +22,10 @@ namespace Lab_PIC_5.Data
             var index = contract.FindIndex(x => x.IdContract == cont.IdContract);
             contract[index] = cont;
         }
+        //public static void SaveAdd(App app)
+        //{
+        //    Contract(app);
+        //}
         public static List<Contract> ShowCont(string filter)
         {
             List<Contract> returnCont = contract.Where(x => x.DateConclusion >= DateTime.Parse(filter)).ToList();

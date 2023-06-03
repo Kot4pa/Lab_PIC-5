@@ -345,21 +345,21 @@
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(1057, 502);
+            this.EditButton.Location = new System.Drawing.Point(1039, 502);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(75, 23);
+            this.EditButton.Size = new System.Drawing.Size(93, 23);
             this.EditButton.TabIndex = 13;
-            this.EditButton.Text = "button3";
+            this.EditButton.Text = "Изменить";
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(976, 502);
+            this.AddButton.Location = new System.Drawing.Point(938, 502);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.Size = new System.Drawing.Size(95, 23);
             this.AddButton.TabIndex = 12;
-            this.AddButton.Text = "button2";
+            this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click_1);
             // 
@@ -369,7 +369,7 @@
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 11;
-            this.DeleteButton.Text = "button1";
+            this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 

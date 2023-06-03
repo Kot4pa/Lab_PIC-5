@@ -42,7 +42,7 @@ namespace Lab_PIC_5.Views
                 dateAction.Value = cont.ActionDate;
                 FullComboBox();
                 cityCombo.Text = cont.LocationCost.City;
-                costCombo.Text = cont.LocationCost.Cost.ToString();
+                CostText.Text = cont.LocationCost.Cost.ToString();
                 customerCombo.Text = cont.Costumer.ToString();
                 executerCombo.Text = cont.Executer.ToString();
             }
@@ -59,10 +59,7 @@ namespace Lab_PIC_5.Views
             cityCombo.DisplayMember = "City";
             cityCombo.ValueMember = "IdLocation";
 
-            costCombo.DataSource = new BindingSource(
-                                    LocationCostReposiroty.locationCosts, null);
-            costCombo.DisplayMember = "Cost";
-            costCombo.ValueMember = "IdLocation";
+            
 
             executerCombo.DataSource = new BindingSource(
                                     OrgRepository.Organizations, null);
@@ -86,12 +83,23 @@ namespace Lab_PIC_5.Views
             {
                 var cont = new string[] {ContId.ToString(), dateConclusion.Value.ToString(), 
                                     dateAction.Value.ToString(), cityCombo.SelectedValue.ToString(),
-                                    costCombo.SelectedValue.ToString(), executerCombo.SelectedValue.ToString(),
+                                    CostText.Text, executerCombo.SelectedValue.ToString(),
                                     customerCombo.SelectedValue.ToString() };
                 ContractService.EditCont(cont);
             }
             else
-                MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                var loc = new LocationCost(LocationCostReposiroty.locationCosts.Max(x => x.IdLocation) + 1,
+                                            cityCombo.SelectedValue.ToString(), int.Parse(CostText.Text));
+                var cont = new Contract(ContractRepository.contract.Max(x => x.IdContract) + 1,
+                                    dateConclusion.Value, dateAction.Value,
+                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString())],
+                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString())],
+                                    OrgRepository.Organizations[int.Parse(executerCombo.SelectedValue.ToString())],
+                                    OrgRepository.Organizations[int.Parse(customerCombo.SelectedValue.ToString())]);
+                //ContractService.stringMassChencher(cont);
+                this.Close();
+            }
         }
     }
 }
