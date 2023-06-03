@@ -21,7 +21,7 @@ namespace Lab_PIC_5
         private void button1_Click(object sender, EventArgs e)
         {
             string login = loginTextBox.Text;
-            string password = loginTextBox.Text;
+            string password = passwordTextBox.Text;
             if (UserService.CheckUser(login, password))
             {
                 MainForm mainForm = new MainForm();
