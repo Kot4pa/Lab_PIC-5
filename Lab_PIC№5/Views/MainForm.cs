@@ -38,6 +38,7 @@ namespace Lab_PIC_5
                 ContractTable.Rows.Add(i);
         }
 
+
         /* -----------------------------------ACT----------------------------------------------------- */
 
         private void SetDataGridAct()
