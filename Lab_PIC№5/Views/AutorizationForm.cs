@@ -19,8 +19,9 @@ namespace Lab_PIC_5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm mainForm= new MainForm();
+            MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
+            this.Close();
         }
     }
 }

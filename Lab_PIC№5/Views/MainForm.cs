@@ -41,6 +41,7 @@ namespace Lab_PIC_5
             ContractRepository.AddTestContract();
         }
 
+
         /* -----------------------------------ACT----------------------------------------------------- */
 
         private void SetDataGridAct()
