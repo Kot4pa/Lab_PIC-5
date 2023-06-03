@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_PIC_5.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,17 @@ namespace Lab_PIC_5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            this.Close();
+            string login = loginTextBox.Text;
+            string password = loginTextBox.Text;
+            if (UserService.CheckUser(login, password))
+            {
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                this.Close();
+            }
+            else
+                MessageBox.Show("Неверный логин или пароль ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
     }
 }
