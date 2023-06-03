@@ -42,6 +42,8 @@ namespace Lab_PIC_5.Views
 
         private void OKorgEdit_Click(object sender, EventArgs e)
         {
+
+
             var org = new Organization(Convert.ToInt32(OrgId), name.Text, INN.Text, KPP.Text, AdressReg.Text, Type.Text, Status.Text);
             OrgService.EditOrganization(org);
             this.Close();
