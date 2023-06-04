@@ -159,8 +159,6 @@ namespace Lab_PIC_5
         {
             if (dataGridViewOrg.CurrentRow != null)
             {
-                //int IdOrg = Convert.ToInt32(dataGridViewApp.CurrentRow.Cells[0].Value.ToString());
-                //OrgEdit orgEdit = new OrgEdit(Convert.ToInt32(dataGridViewApp.CurrentRow.Cells[0].Value.ToString()));
                 string org = dataGridViewOrg.CurrentRow.Cells[0].Value.ToString();
                 OrgEdit orgEdit = new OrgEdit(org);
                 orgEdit.ShowDialog();

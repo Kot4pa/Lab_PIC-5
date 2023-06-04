@@ -96,11 +96,11 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(16, 15);
+            this.tabControl1.Location = new System.Drawing.Point(18, 19);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1228, 572);
+            this.tabControl1.Size = new System.Drawing.Size(1382, 715);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -112,21 +112,21 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.DataGridViewActs);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1220, 543);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1374, 682);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Акты";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // AddActButton
             // 
-            this.AddActButton.Location = new System.Drawing.Point(848, 501);
+            this.AddActButton.Location = new System.Drawing.Point(954, 626);
             this.AddActButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddActButton.Name = "AddActButton";
-            this.AddActButton.Size = new System.Drawing.Size(117, 36);
+            this.AddActButton.Size = new System.Drawing.Size(132, 45);
             this.AddActButton.TabIndex = 6;
             this.AddActButton.Text = "Добавить";
             this.AddActButton.UseVisualStyleBackColor = true;
@@ -134,10 +134,10 @@
             // 
             // UpdateActButton
             // 
-            this.UpdateActButton.Location = new System.Drawing.Point(972, 501);
+            this.UpdateActButton.Location = new System.Drawing.Point(1094, 626);
             this.UpdateActButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpdateActButton.Name = "UpdateActButton";
-            this.UpdateActButton.Size = new System.Drawing.Size(117, 36);
+            this.UpdateActButton.Size = new System.Drawing.Size(132, 45);
             this.UpdateActButton.TabIndex = 5;
             this.UpdateActButton.Text = "Изменить";
             this.UpdateActButton.UseVisualStyleBackColor = true;
@@ -145,10 +145,10 @@
             // 
             // DeleteActButton
             // 
-            this.DeleteActButton.Location = new System.Drawing.Point(1096, 501);
+            this.DeleteActButton.Location = new System.Drawing.Point(1233, 626);
             this.DeleteActButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteActButton.Name = "DeleteActButton";
-            this.DeleteActButton.Size = new System.Drawing.Size(117, 36);
+            this.DeleteActButton.Size = new System.Drawing.Size(132, 45);
             this.DeleteActButton.TabIndex = 4;
             this.DeleteActButton.Text = "Удалить";
             this.DeleteActButton.UseVisualStyleBackColor = true;
@@ -157,10 +157,10 @@
             // dateTimePickerAct
             // 
             this.dateTimePickerAct.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerAct.Location = new System.Drawing.Point(107, 503);
+            this.dateTimePickerAct.Location = new System.Drawing.Point(120, 629);
             this.dateTimePickerAct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerAct.Name = "dateTimePickerAct";
-            this.dateTimePickerAct.Size = new System.Drawing.Size(127, 22);
+            this.dateTimePickerAct.Size = new System.Drawing.Size(142, 26);
             this.dateTimePickerAct.TabIndex = 2;
             this.dateTimePickerAct.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerAct.ValueChanged += new System.EventHandler(this.dateTimePickerAct_ValueChanged);
@@ -168,9 +168,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 505);
+            this.label1.Location = new System.Drawing.Point(26, 631);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Акты от:";
             // 
@@ -189,7 +189,7 @@
             this.Kontracts,
             this.Application,
             this.animalCard});
-            this.DataGridViewActs.Location = new System.Drawing.Point(5, 6);
+            this.DataGridViewActs.Location = new System.Drawing.Point(6, 8);
             this.DataGridViewActs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DataGridViewActs.MultiSelect = false;
             this.DataGridViewActs.Name = "DataGridViewActs";
@@ -198,7 +198,7 @@
             this.DataGridViewActs.RowHeadersWidth = 51;
             this.DataGridViewActs.RowTemplate.Height = 24;
             this.DataGridViewActs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewActs.Size = new System.Drawing.Size(1208, 475);
+            this.DataGridViewActs.Size = new System.Drawing.Size(1359, 594);
             this.DataGridViewActs.TabIndex = 0;
             // 
             // Id
@@ -246,9 +246,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 78);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -260,71 +260,71 @@
             this.tabPage2.Controls.Add(this.dateTimePicker2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1220, 543);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1374, 682);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Реестр организаций";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1131, 617);
+            this.button5.Location = new System.Drawing.Point(1272, 771);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(117, 36);
+            this.button5.Size = new System.Drawing.Size(132, 45);
             this.button5.TabIndex = 12;
             this.button5.Text = "Добавить";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(972, 501);
+            this.button6.Location = new System.Drawing.Point(1094, 626);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(117, 36);
+            this.button6.Size = new System.Drawing.Size(132, 45);
             this.button6.TabIndex = 11;
             this.button6.Text = "Изменить";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1096, 501);
+            this.button7.Location = new System.Drawing.Point(1233, 626);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(117, 36);
+            this.button7.Size = new System.Drawing.Size(132, 45);
             this.button7.TabIndex = 10;
             this.button7.Text = "Удалить";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(195, 505);
+            this.dateTimePicker2.Location = new System.Drawing.Point(219, 631);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(172, 26);
             this.dateTimePicker2.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 505);
+            this.label2.Location = new System.Drawing.Point(26, 631);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 16);
+            this.label2.Size = new System.Drawing.Size(189, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Реестр организаций от:";
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 6);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 8);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1208, 475);
+            this.dataGridView2.Size = new System.Drawing.Size(1359, 594);
             this.dataGridView2.TabIndex = 7;
             // 
             // tabPage3
@@ -335,19 +335,20 @@
             this.tabPage3.Controls.Add(this.dateTimePicker3);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.ContractTable);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1220, 543);
+            this.tabPage3.Size = new System.Drawing.Size(1374, 682);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Муниципальные контракты";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(1039, 502);
+            this.EditButton.Location = new System.Drawing.Point(1169, 628);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(93, 23);
+            this.EditButton.Size = new System.Drawing.Size(105, 29);
             this.EditButton.TabIndex = 13;
             this.EditButton.Text = "Изменить";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -355,9 +356,10 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(938, 502);
+            this.AddButton.Location = new System.Drawing.Point(1055, 628);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(95, 23);
+            this.AddButton.Size = new System.Drawing.Size(107, 29);
             this.AddButton.TabIndex = 12;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -365,9 +367,10 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(1138, 500);
+            this.DeleteButton.Location = new System.Drawing.Point(1280, 625);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.Size = new System.Drawing.Size(84, 29);
             this.DeleteButton.TabIndex = 11;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -375,19 +378,19 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(229, 498);
+            this.dateTimePicker3.Location = new System.Drawing.Point(258, 622);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(153, 22);
+            this.dateTimePicker3.Size = new System.Drawing.Size(172, 26);
             this.dateTimePicker3.TabIndex = 10;
             this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 502);
+            this.label3.Location = new System.Drawing.Point(18, 628);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 16);
+            this.label3.Size = new System.Drawing.Size(242, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Муниципальные контракты от:";
             // 
@@ -406,14 +409,14 @@
             this.Column7,
             this.Column5,
             this.Column6});
-            this.ContractTable.Location = new System.Drawing.Point(5, 6);
+            this.ContractTable.Location = new System.Drawing.Point(6, 8);
             this.ContractTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ContractTable.Name = "ContractTable";
             this.ContractTable.ReadOnly = true;
             this.ContractTable.RowHeadersWidth = 51;
             this.ContractTable.RowTemplate.Height = 24;
             this.ContractTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ContractTable.Size = new System.Drawing.Size(1208, 475);
+            this.ContractTable.Size = new System.Drawing.Size(1359, 594);
             this.ContractTable.TabIndex = 8;
             // 
             // Column1
@@ -485,20 +488,20 @@
             this.tabPage4.Controls.Add(this.AppEdit);
             this.tabPage4.Controls.Add(this.AppDelete);
             this.tabPage4.Controls.Add(this.dataGridViewApp);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1220, 543);
+            this.tabPage4.Size = new System.Drawing.Size(1374, 682);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // AppAdd
             // 
-            this.AppAdd.Location = new System.Drawing.Point(841, 497);
+            this.AppAdd.Location = new System.Drawing.Point(946, 621);
             this.AppAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AppAdd.Name = "AppAdd";
-            this.AppAdd.Size = new System.Drawing.Size(117, 36);
+            this.AppAdd.Size = new System.Drawing.Size(132, 45);
             this.AppAdd.TabIndex = 16;
             this.AppAdd.Text = "Добавить";
             this.AppAdd.UseVisualStyleBackColor = true;
@@ -506,10 +509,10 @@
             // 
             // AppEdit
             // 
-            this.AppEdit.Location = new System.Drawing.Point(965, 497);
+            this.AppEdit.Location = new System.Drawing.Point(1086, 621);
             this.AppEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AppEdit.Name = "AppEdit";
-            this.AppEdit.Size = new System.Drawing.Size(117, 36);
+            this.AppEdit.Size = new System.Drawing.Size(132, 45);
             this.AppEdit.TabIndex = 15;
             this.AppEdit.Text = "Изменить";
             this.AppEdit.UseVisualStyleBackColor = true;
@@ -517,10 +520,10 @@
             // 
             // AppDelete
             // 
-            this.AppDelete.Location = new System.Drawing.Point(1091, 497);
+            this.AppDelete.Location = new System.Drawing.Point(1227, 621);
             this.AppDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AppDelete.Name = "AppDelete";
-            this.AppDelete.Size = new System.Drawing.Size(117, 36);
+            this.AppDelete.Size = new System.Drawing.Size(132, 45);
             this.AppDelete.TabIndex = 14;
             this.AppDelete.Text = "Удалить";
             this.AppDelete.UseVisualStyleBackColor = true;
@@ -537,7 +540,7 @@
             this.dataGridViewApp.ReadOnly = true;
             this.dataGridViewApp.RowHeadersWidth = 62;
             this.dataGridViewApp.RowTemplate.Height = 28;
-            this.dataGridViewApp.Size = new System.Drawing.Size(1216, 479);
+            this.dataGridViewApp.Size = new System.Drawing.Size(1368, 599);
             this.dataGridViewApp.TabIndex = 0;
             // 
             // tabPage5
@@ -546,10 +549,10 @@
             this.tabPage5.Controls.Add(this.OrgAdd);
             this.tabPage5.Controls.Add(this.OrgEdit);
             this.tabPage5.Controls.Add(this.OrgDelete);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1220, 543);
+            this.tabPage5.Size = new System.Drawing.Size(1374, 682);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -559,21 +562,21 @@
             this.dataGridViewOrg.AllowUserToAddRows = false;
             this.dataGridViewOrg.AllowUserToDeleteRows = false;
             this.dataGridViewOrg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrg.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewOrg.Location = new System.Drawing.Point(3, 4);
             this.dataGridViewOrg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewOrg.Name = "dataGridViewOrg";
             this.dataGridViewOrg.ReadOnly = true;
             this.dataGridViewOrg.RowHeadersWidth = 62;
             this.dataGridViewOrg.RowTemplate.Height = 28;
-            this.dataGridViewOrg.Size = new System.Drawing.Size(1368, 593);
+            this.dataGridViewOrg.Size = new System.Drawing.Size(1375, 610);
             this.dataGridViewOrg.TabIndex = 17;
             // 
             // OrgAdd
             // 
-            this.OrgAdd.Location = new System.Drawing.Point(845, 494);
+            this.OrgAdd.Location = new System.Drawing.Point(951, 618);
             this.OrgAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrgAdd.Name = "OrgAdd";
-            this.OrgAdd.Size = new System.Drawing.Size(117, 36);
+            this.OrgAdd.Size = new System.Drawing.Size(132, 45);
             this.OrgAdd.TabIndex = 16;
             this.OrgAdd.Text = "Добавить";
             this.OrgAdd.UseVisualStyleBackColor = true;
@@ -581,10 +584,10 @@
             // 
             // OrgEdit
             // 
-            this.OrgEdit.Location = new System.Drawing.Point(971, 494);
+            this.OrgEdit.Location = new System.Drawing.Point(1092, 618);
             this.OrgEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrgEdit.Name = "OrgEdit";
-            this.OrgEdit.Size = new System.Drawing.Size(117, 36);
+            this.OrgEdit.Size = new System.Drawing.Size(132, 45);
             this.OrgEdit.TabIndex = 15;
             this.OrgEdit.Text = "Изменить";
             this.OrgEdit.UseVisualStyleBackColor = true;
@@ -592,10 +595,10 @@
             // 
             // OrgDelete
             // 
-            this.OrgDelete.Location = new System.Drawing.Point(1093, 494);
+            this.OrgDelete.Location = new System.Drawing.Point(1230, 618);
             this.OrgDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrgDelete.Name = "OrgDelete";
-            this.OrgDelete.Size = new System.Drawing.Size(117, 36);
+            this.OrgDelete.Size = new System.Drawing.Size(132, 45);
             this.OrgDelete.TabIndex = 14;
             this.OrgDelete.Text = "Удалить";
             this.OrgDelete.UseVisualStyleBackColor = true;
@@ -603,19 +606,19 @@
             // 
             // UserButton
             // 
-            this.UserButton.Location = new System.Drawing.Point(9, 479);
+            this.UserButton.Location = new System.Drawing.Point(10, 599);
             this.UserButton.Margin = new System.Windows.Forms.Padding(2);
             this.UserButton.Name = "UserButton";
-            this.UserButton.Size = new System.Drawing.Size(205, 36);
+            this.UserButton.Size = new System.Drawing.Size(231, 45);
             this.UserButton.TabIndex = 3;
             this.UserButton.Text = "Сменить пользователя";
             this.UserButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1252, 638);
+            this.ClientSize = new System.Drawing.Size(1408, 798);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.UserButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
