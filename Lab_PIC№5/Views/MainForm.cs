@@ -207,5 +207,18 @@ namespace Lab_PIC_5
         {
             ShowContract();
         }
+
+        private void filtrateAppDate(object sender, EventArgs e)
+        {
+        }
+
+        private void filterAppDate_ValueChanged(object sender, EventArgs e)
+        {
+            dsApplication.Tables[0].Rows.Clear();
+            var apps = AppService.FilterByDate(filterAppDate.Value.ToString());
+            foreach (var app in apps)
+                dsApplication.Tables[0].Rows.Add(app);
+            dataGridViewApp.DataSource = dsApplication.Tables[0];
+        }
     }
 }

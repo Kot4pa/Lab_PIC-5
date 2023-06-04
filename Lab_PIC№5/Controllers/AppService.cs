@@ -23,6 +23,11 @@ namespace Lab_PIC_5.Controllers
             AppRepository.Save(app);
         }
 
+        public static List<string[]> FilterByDate(string filter)
+        {
+            return AppRepository.FilterByDate(filter);
+        }
+
         public static void DeleteApplication(int app)
         {
             foreach (App applic in AppRepository.Applicatiions)
@@ -42,7 +47,7 @@ namespace Lab_PIC_5.Controllers
             {
                 var tempApp = new List<string>
                 {
-                    app.date,
+                    app.date.ToString(),
                     app.number.ToString(),
                     app.locality,
                     app.territory,

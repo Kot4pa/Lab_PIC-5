@@ -65,6 +65,9 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.filterAppDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.AppAdd = new System.Windows.Forms.Button();
             this.AppEdit = new System.Windows.Forms.Button();
             this.AppDelete = new System.Windows.Forms.Button();
@@ -484,6 +487,9 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label6);
+            this.tabPage4.Controls.Add(this.filterAppDate);
+            this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.AppAdd);
             this.tabPage4.Controls.Add(this.AppEdit);
             this.tabPage4.Controls.Add(this.AppDelete);
@@ -495,6 +501,35 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(258, 633);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "числа";
+            // 
+            // filterAppDate
+            // 
+            this.filterAppDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.filterAppDate.Location = new System.Drawing.Point(110, 628);
+            this.filterAppDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filterAppDate.Name = "filterAppDate";
+            this.filterAppDate.Size = new System.Drawing.Size(142, 26);
+            this.filterAppDate.TabIndex = 18;
+            this.filterAppDate.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.filterAppDate.ValueChanged += new System.EventHandler(this.filterAppDate_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 630);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Заявки от:";
             // 
             // AppAdd
             // 
@@ -637,6 +672,7 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContractTable)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApp)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrg)).EndInit();
@@ -693,6 +729,9 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker filterAppDate;
+        private System.Windows.Forms.Label label4;
     }
 }
 
