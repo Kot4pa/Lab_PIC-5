@@ -35,9 +35,9 @@ namespace Lab_PIC_5.Data
             Applicatiions.Remove(app);
         }
 
-        public static List<string[]> FilterByDate(string filter)
+        public static List<string[]> FilterByDate(string filter, string filter2)
         {
-            List<App> AppsFilter = Applicatiions.Where(x => x.date >= DateTime.Parse(filter)).ToList();
+            List<App> AppsFilter = Applicatiions.Where(x => x.date >= DateTime.Parse(filter) && x.date <= DateTime.Parse(filter2)).ToList();
             List<string[]> apps = new List<string[]>();
             foreach (App app in AppsFilter)
             {

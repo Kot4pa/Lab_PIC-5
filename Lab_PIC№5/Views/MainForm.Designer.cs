@@ -78,6 +78,8 @@
             this.OrgEdit = new System.Windows.Forms.Button();
             this.OrgDelete = new System.Windows.Forms.Button();
             this.UserButton = new System.Windows.Forms.Button();
+            this.filterAppDate2 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -487,6 +489,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Controls.Add(this.filterAppDate2);
             this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.filterAppDate);
             this.tabPage4.Controls.Add(this.label4);
@@ -507,9 +511,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(258, 633);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 20);
+            this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 19;
-            this.label6.Text = "числа";
+            this.label6.Text = "числа, по:";
             // 
             // filterAppDate
             // 
@@ -527,9 +531,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 630);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Заявки от:";
+            this.label4.Text = "Заявки с:";
             // 
             // AppAdd
             // 
@@ -649,6 +653,26 @@
             this.UserButton.Text = "Сменить пользователя";
             this.UserButton.UseVisualStyleBackColor = true;
             // 
+            // filterAppDate2
+            // 
+            this.filterAppDate2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.filterAppDate2.Location = new System.Drawing.Point(348, 630);
+            this.filterAppDate2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filterAppDate2.Name = "filterAppDate2";
+            this.filterAppDate2.Size = new System.Drawing.Size(142, 26);
+            this.filterAppDate2.TabIndex = 20;
+            this.filterAppDate2.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.filterAppDate2.ValueChanged += new System.EventHandler(this.filterAppDate2_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(496, 634);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 20);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "число";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -732,6 +756,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker filterAppDate;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker filterAppDate2;
     }
 }
 

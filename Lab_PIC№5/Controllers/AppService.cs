@@ -23,9 +23,9 @@ namespace Lab_PIC_5.Controllers
             AppRepository.Save(app);
         }
 
-        public static List<string[]> FilterByDate(string filter)
+        public static List<string[]> FilterByDate(string filter, string filter2)
         {
-            return AppRepository.FilterByDate(filter);
+            return AppRepository.FilterByDate(filter, filter2);
         }
 
         public static void DeleteApplication(int app)
