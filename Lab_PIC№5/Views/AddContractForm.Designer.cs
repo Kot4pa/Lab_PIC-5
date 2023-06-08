@@ -38,10 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cityCombo = new System.Windows.Forms.ComboBox();
             this.customerCombo = new System.Windows.Forms.ComboBox();
             this.executerCombo = new System.Windows.Forms.ComboBox();
             this.CostText = new System.Windows.Forms.TextBox();
+            this.cityCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label6
@@ -134,14 +134,6 @@
             this.label5.TabIndex = 40;
             this.label5.Text = "Исполнитель:";
             // 
-            // cityCombo
-            // 
-            this.cityCombo.FormattingEnabled = true;
-            this.cityCombo.Location = new System.Drawing.Point(143, 68);
-            this.cityCombo.Name = "cityCombo";
-            this.cityCombo.Size = new System.Drawing.Size(200, 24);
-            this.cityCombo.TabIndex = 41;
-            // 
             // customerCombo
             // 
             this.customerCombo.FormattingEnabled = true;
@@ -164,6 +156,14 @@
             this.CostText.Name = "CostText";
             this.CostText.Size = new System.Drawing.Size(202, 22);
             this.CostText.TabIndex = 45;
+            // 
+            // cityCombo
+            // 
+            this.cityCombo.FormattingEnabled = true;
+            this.cityCombo.Location = new System.Drawing.Point(143, 68);
+            this.cityCombo.Name = "cityCombo";
+            this.cityCombo.Size = new System.Drawing.Size(200, 24);
+            this.cityCombo.TabIndex = 41;
             // 
             // AddContractForm
             // 
@@ -203,9 +203,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cityCombo;
         private System.Windows.Forms.ComboBox customerCombo;
         private System.Windows.Forms.ComboBox executerCombo;
         private System.Windows.Forms.TextBox CostText;
+        private System.Windows.Forms.ComboBox cityCombo;
     }
 }

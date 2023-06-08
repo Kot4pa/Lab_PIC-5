@@ -113,15 +113,7 @@ namespace Lab_PIC_5
             }
             dataGridViewApp.DataSource = dsApplication.Tables[0];
         }
-        private void ShowContract()
-        {
-            ContractTable.Rows.Clear();
-            var contract = ContractService.ShowContract(dateTimePicker3.Value.ToString());
-            foreach (var i in contract)
-            {
-                ContractTable.Rows.Add(i);
-            }
-        }
+        
 
         /*------------------------------------------------------------------*/
         private void AppDelete_Click(object sender, EventArgs e)
@@ -182,6 +174,15 @@ namespace Lab_PIC_5
             SetDataGridApp();
         }
 
+        private void ShowContract()
+        {
+            ContractTable.Rows.Clear();
+            var contract = ContractService.ShowContract(dateTimePicker3.Value.ToString());
+            foreach (var i in contract)
+            {
+                ContractTable.Rows.Add(i);
+            }
+        }
         private void AddButton_Click_1(object sender, EventArgs e)
         {
             AddContractForm contAdd = new AddContractForm();
@@ -191,7 +192,7 @@ namespace Lab_PIC_5
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            AddContractForm contAdd = new AddContractForm(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
+            AddContractForm contAdd = new AddContractForm(int.Parse(ContractTable.CurrentRow.Cells[0].Value.ToString()));
             contAdd.ShowDialog();
             ShowContract();
         }
@@ -207,6 +208,13 @@ namespace Lab_PIC_5
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
         {
+            ShowContract();
+        }
+
+        private void ContractTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            AddContractForm contAdd = new AddContractForm();
+            contAdd.ShowDialog();
             ShowContract();
         }
     }
