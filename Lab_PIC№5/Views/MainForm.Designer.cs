@@ -388,6 +388,7 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(172, 26);
             this.dateTimePicker3.TabIndex = 10;
+            this.dateTimePicker3.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label3
@@ -423,6 +424,7 @@
             this.ContractTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ContractTable.Size = new System.Drawing.Size(1359, 594);
             this.ContractTable.TabIndex = 8;
+            this.ContractTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ContractTable_CellMouseDoubleClick);
             // 
             // Column1
             // 
@@ -645,7 +647,7 @@
             // 
             // UserButton
             // 
-            this.UserButton.Location = new System.Drawing.Point(10, 599);
+            this.UserButton.Location = new System.Drawing.Point(20, 591);
             this.UserButton.Margin = new System.Windows.Forms.Padding(2);
             this.UserButton.Name = "UserButton";
             this.UserButton.Size = new System.Drawing.Size(231, 45);
@@ -725,7 +727,6 @@
         private System.Windows.Forms.DataGridView ContractTable;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button UserButton;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

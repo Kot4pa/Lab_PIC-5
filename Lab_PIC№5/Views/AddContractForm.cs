@@ -42,7 +42,7 @@ namespace Lab_PIC_5.Views
                 dateAction.Value = cont.ActionDate;
                 FullComboBox();
                 cityCombo.Text = cont.LocationCost.City;
-                CostText.Text = cont.LocationCost.Cost.ToString();
+                CostText.Text = cont.Cost.ToString();
                 customerCombo.Text = cont.Costumer.ToString();
                 executerCombo.Text = cont.Executer.ToString();
             }
@@ -89,19 +89,18 @@ namespace Lab_PIC_5.Views
             }
             else
             {
-
-
-                var loc = new LocationCost(LocationCostReposiroty.locationCosts.Max(x => x.IdLocation) + 1,
-                                            cityCombo.SelectedValue.ToString(), int.Parse(CostText.Text));
-                var cont = new Contract(ContractRepository.contract.Max(x => x.IdContract) + 1,
+                //var loc = new LocationCost(LocationCostReposiroty.locationCosts.Max(x => x.IdLocation) + 1,
+                //                            cityCombo.SelectedValue.ToString());
+                var id = ContractRepository.contract.Max(x => x.IdContract) + 1;
+                var cont = new Contract(id,
                                     dateConclusion.Value, dateAction.Value,
-                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString())],
-                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString())],
-                                    OrgRepository.Organizations[int.Parse(executerCombo.SelectedValue.ToString())],
-                                    OrgRepository.Organizations[int.Parse(customerCombo.SelectedValue.ToString())]);
-                //ContractService.stringMassChencher(cont);
-                this.Close();
+                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString()) - 1],
+                                    int.Parse(CostText.Text),
+                                    OrgRepository.Organizations[int.Parse(executerCombo.SelectedValue.ToString())- 1],
+                                    OrgRepository.Organizations[int.Parse(customerCombo.SelectedValue.ToString()) - 1]);
+                ContractService.AddContract(cont);
             }
+            this.Close();
         }
     }
 }

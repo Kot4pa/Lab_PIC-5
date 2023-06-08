@@ -26,6 +26,7 @@ namespace Lab_PIC_5
             {
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
+                
                 this.Close();
             }
             else

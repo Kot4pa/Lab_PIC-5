@@ -10,13 +10,11 @@ namespace Lab_PIC_5.Models
     {
         public int IdLocation { get; set; }
         public string City { get; set; }
-        public int Cost { get; set; }
 
-        public LocationCost(int idLocation, string city, int cost)
+        public LocationCost(int idLocation, string city)
         {
             IdLocation = idLocation;
             City = city;
-            Cost = cost;
         }
     }
 }

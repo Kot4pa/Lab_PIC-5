@@ -18,21 +18,27 @@ namespace Lab_PIC_5.Controllers
 
         public static void EditCont(string[] ContData)
         {
-            var contData = new Contract(int.Parse(ContData[0]), DateTime.Parse(ContData[1]), DateTime.Parse(ContData[2]),
+            var conData = new Contract(int.Parse(ContData[0]), 
+                                  DateTime.Parse(ContData[1]), DateTime.Parse(ContData[2]),
                                   LocationCostReposiroty.locationCosts[LocationCostReposiroty.locationCosts.FindIndex(x => x.IdLocation == int.Parse(ContData[3]))],
-                                  LocationCostReposiroty.locationCosts[LocationCostReposiroty.locationCosts.FindIndex(x => x.IdLocation == int.Parse(ContData[4]))],
+                                  int.Parse(ContData[4]),
                                   OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(ContData[5]))],
                                   OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(ContData[6]))]);
-            ContractRepository.SaveContractData(contData);
+            ContractRepository.EditContractData(conData);
         }
         public static void DeleteContract(string cont)
         {
             foreach (Contract contract in ContractRepository.contract)
                 if (contract.IdContract == int.Parse(cont))
                 {
-                    ContractRepository.Del(contract);
+                    ContractRepository.DeleteContract(contract);
                     break;
                 }
+        }
+
+        public static void AddContract(Contract cont)
+        {
+            ContractRepository.SaveAdd(cont);
         }
 
         public static List<string[]> stringMassChencher(List<Contract> contracts)
@@ -46,7 +52,7 @@ namespace Lab_PIC_5.Controllers
                     contract.DateConclusion.ToString(),
                     contract.ActionDate.ToString(),
                     contract.LocationCost.City,
-                    contract.LocationCost.Cost.ToString(),
+                    contract.Cost.ToString(),
                     contract.Executer.name,
                     contract.Costumer.name
                 };
