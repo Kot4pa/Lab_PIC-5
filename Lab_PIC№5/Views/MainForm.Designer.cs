@@ -77,7 +77,6 @@
             this.OrgAdd = new System.Windows.Forms.Button();
             this.OrgEdit = new System.Windows.Forms.Button();
             this.OrgDelete = new System.Windows.Forms.Button();
-            this.UserButton = new System.Windows.Forms.Button();
             this.filterAppDate2 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -647,13 +646,6 @@
             // 
             // UserButton
             // 
-            this.UserButton.Location = new System.Drawing.Point(20, 591);
-            this.UserButton.Margin = new System.Windows.Forms.Padding(2);
-            this.UserButton.Name = "UserButton";
-            this.UserButton.Size = new System.Drawing.Size(231, 45);
-            this.UserButton.TabIndex = 3;
-            this.UserButton.Text = "Сменить пользователя";
-            this.UserButton.UseVisualStyleBackColor = true;
             // 
             // filterAppDate2
             // 
@@ -681,7 +673,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1408, 798);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.UserButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
