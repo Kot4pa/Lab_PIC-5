@@ -43,8 +43,8 @@ namespace Lab_PIC_5.Views
                 FullComboBox();
                 cityCombo.Text = cont.LocationCost.City;
                 CostText.Text = cont.Cost.ToString();
-                customerCombo.Text = cont.Costumer.ToString();
-                executerCombo.Text = cont.Executer.ToString();
+                executerCombo.Text = cont.Executer.name;
+                customerCombo.Text = cont.Costumer.name;
             }
             else
             {

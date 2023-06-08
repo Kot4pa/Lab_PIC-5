@@ -57,13 +57,6 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.ContractTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.filterAppDate2 = new System.Windows.Forms.DateTimePicker();
@@ -79,6 +72,11 @@
             this.OrgAdd = new System.Windows.Forms.Button();
             this.OrgEdit = new System.Windows.Forms.Button();
             this.OrgDelete = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -402,13 +400,12 @@
             this.ContractTable.AllowUserToDeleteRows = false;
             this.ContractTable.AllowUserToResizeColumns = false;
             this.ContractTable.AllowUserToResizeRows = false;
+            this.ContractTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ContractTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ContractTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column7,
             this.Column5,
             this.Column6});
             this.ContractTable.Location = new System.Drawing.Point(5, 6);
@@ -422,69 +419,6 @@
             this.ContractTable.Size = new System.Drawing.Size(1208, 475);
             this.ContractTable.TabIndex = 8;
             this.ContractTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ContractTable_CellMouseDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 75.75759F;
-            this.Column1.HeaderText = "Номер контракта";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 85.40144F;
-            this.Column2.HeaderText = "Дата заключения";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 141;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 94.00158F;
-            this.Column3.HeaderText = "Дата действия";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 155;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 101.671F;
-            this.Column4.HeaderText = "Город";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 168;
-            // 
-            // Column7
-            // 
-            this.Column7.FillWeight = 108.5103F;
-            this.Column7.HeaderText = "Цена";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 179;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 114.6095F;
-            this.Column5.HeaderText = "Заказчик";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 189;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 120.0486F;
-            this.Column6.HeaderText = "Исполнитель";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 198;
             // 
             // tabPage4
             // 
@@ -662,6 +596,46 @@
             this.OrgDelete.UseVisualStyleBackColor = true;
             this.OrgDelete.Click += new System.EventHandler(this.OrgDelete_Click);
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 75.75759F;
+            this.Column1.HeaderText = "Номер контракта";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 85.40144F;
+            this.Column2.HeaderText = "Дата заключения";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 94.00158F;
+            this.Column3.HeaderText = "Дата действия";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 114.6095F;
+            this.Column5.HeaderText = "Заказчик";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 120.0486F;
+            this.Column6.HeaderText = "Исполнитель";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -729,13 +703,6 @@
         private System.Windows.Forms.Button OrgAdd;
         private System.Windows.Forms.Button OrgEdit;
         private System.Windows.Forms.Button OrgDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button AddButton;
@@ -745,6 +712,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker filterAppDate2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
 

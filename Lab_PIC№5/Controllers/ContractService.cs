@@ -51,8 +51,6 @@ namespace Lab_PIC_5.Controllers
                     contract.IdContract.ToString(),
                     contract.DateConclusion.ToString(),
                     contract.ActionDate.ToString(),
-                    contract.LocationCost.City,
-                    contract.Cost.ToString(),
                     contract.Executer.name,
                     contract.Costumer.name
                 };
