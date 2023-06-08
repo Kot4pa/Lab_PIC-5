@@ -113,15 +113,6 @@ namespace Lab_PIC_5
             }
             dataGridViewApp.DataSource = dsApplication.Tables[0];
         }
-        private void ShowContract()
-        {
-            ContractTable.Rows.Clear();
-            var contract = ContractService.ShowContract(dateTimePicker3.Value.ToString());
-            foreach (var i in contract)
-            {
-                ContractTable.Rows.Add(i);
-            }
-        }
 
         /*------------------------------------------------------------------*/
         private void AppDelete_Click(object sender, EventArgs e)
