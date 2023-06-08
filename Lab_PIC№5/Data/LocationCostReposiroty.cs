@@ -10,9 +10,9 @@ namespace Lab_PIC_5.Data
 {
     class LocationCostReposiroty
     {
-        public static List<LocationCost> locationCosts = new List<LocationCost>
-        { new LocationCost(1, "г. Тюмень"), 
-            new LocationCost(2, "г. Тобольск"),
-            new LocationCost(3, "г. Сургут")};
+        public static List<Location> locationCosts = new List<Location>
+        { new Location(1, "г. Тюмень"), 
+            new Location(2, "г. Тобольск"),
+            new Location(3, "г. Сургут")};
     }
 }

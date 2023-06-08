@@ -210,7 +210,7 @@ namespace Lab_PIC_5
 
         private void ContractTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            AddContractForm contAdd = new AddContractForm();
+            AddContractForm contAdd = new AddContractForm(int.Parse(ContractTable.CurrentRow.Cells[0].Value.ToString()));
             contAdd.ShowDialog();
             ShowContract();
         }
