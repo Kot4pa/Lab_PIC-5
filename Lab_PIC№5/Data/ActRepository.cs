@@ -25,25 +25,25 @@ namespace Lab_PIC_5.Data
 
         public static List<AnimalCard> animalCards = new List<AnimalCard>
         {
-            new AnimalCard(1, "Собака", "Женский", "Лабрадор", "Большой", "Длинная", "Рыжий",
+            new AnimalCard(1, "Собака", "Женский", "Лабрадор", 40, "Длинная", "Рыжий",
                             "Висячие", "Длинный", "", "Метка 2",
                             LocationCostReposiroty.locationCosts[0],
                             acts[0],
                             null),
 
-            new AnimalCard(2, "Кот", "Мужской", "Британская", "Средний", "Короткая", "Черный",
+            new AnimalCard(2, "Кот", "Мужской", "Британская", 30, "Короткая", "Черный",
                             "Прямые", "Короткий", "", "Метка 1",
                             LocationCostReposiroty.locationCosts[0],
                             acts[1],
                             null),
 
-            new AnimalCard(4, "Собака", "Женский", "Немецкая овчарка", "Большой", "Длинная", "Черно-серый",
+            new AnimalCard(4, "Собака", "Женский", "Немецкая овчарка", 50, "Длинная", "Черно-серый",
                             "Висячие", "Длинный", "", "Метка 4",
                             LocationCostReposiroty.locationCosts[1],
                             acts[2],
                             null),
                         
-            new AnimalCard(3, "Кот", "Мужской", "Сиамская", "Маленький", "Короткая", "Серый",
+            new AnimalCard(3, "Кот", "Мужской", "Сиамская", 25, "Короткая", "Серый",
                             "Прямые", "Длинный", "", "Метка 3",
                             LocationCostReposiroty.locationCosts[0],
                             acts[2],

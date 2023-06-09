@@ -13,7 +13,7 @@ namespace Lab_PIC_5.Models
         public string Category { get; set; }
         public string Gender { get; set; }
         public string Breed { get; set; }
-        public string Size { get; set; }
+        public int Size { get; set; }
         public string FurType { get; set; }
         public string Color { set; get; }
         public string Ears { set; get; }
@@ -25,7 +25,7 @@ namespace Lab_PIC_5.Models
         public Bitmap Sad { get; set; }
 
     public AnimalCard(int idAnimalCard, string category, string gender,
-        string breed, string size, string furType, string color, string ears, string tail,
+        string breed, int size, string furType, string color, string ears, string tail,
         string spicialSigns, string identificationLabel, Location locality, Act actCapture, Bitmap sad)
         {
             IdAnimalCard = idAnimalCard;
