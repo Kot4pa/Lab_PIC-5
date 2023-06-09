@@ -10,9 +10,9 @@ namespace Lab_PIC_5.Controllers
 {
     internal class ContractService
     {
-        public static List<string[]> ShowContract(string filter)
+        public static List<string[]> ShowContract(string filter1, string filter2)
         {
-            List<string[]> contracts = stringMassChencher(ContractRepository.ShowCont(filter));
+            List<string[]> contracts = stringMassChencher(ContractRepository.ShowCont(filter1, filter2));
             return contracts;
         }
 

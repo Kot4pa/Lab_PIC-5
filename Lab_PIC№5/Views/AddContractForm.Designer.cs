@@ -233,7 +233,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "AddContractForm";
-            this.Text = "AddContractForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

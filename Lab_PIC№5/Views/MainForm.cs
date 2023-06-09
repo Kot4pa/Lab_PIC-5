@@ -29,11 +29,11 @@ namespace Lab_PIC_5
         }
         DataSet dsApplication = new DataSet();
         DataSet dsOrganization = new DataSet();
-        
+
         private void CreateData()
         {
             ContractTable.Rows.Clear();
-            var cont = ContractRepository.ShowCont(dateTimePicker3.Value.ToString());
+            var cont = ContractRepository.ShowCont(dateTimePicker3.Value.ToString(), dateTimePicker1.Value.ToString());
             foreach (var i in cont)
                 ContractTable.Rows.Add(i);
         }
@@ -175,7 +175,7 @@ namespace Lab_PIC_5
         private void ShowContract()
         {
             ContractTable.Rows.Clear();
-            var contract = ContractService.ShowContract(dateTimePicker3.Value.ToString());
+            var contract = ContractService.ShowContract(dateTimePicker3.Value.ToString(), dateTimePicker1.Value.ToString());
             foreach (var i in contract)
             {
                 ContractTable.Rows.Add(i);
@@ -232,6 +232,11 @@ namespace Lab_PIC_5
             foreach (var app in apps)
                 dsApplication.Tables[0].Rows.Add(app);
             dataGridViewApp.DataSource = dsApplication.Tables[0];
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            ShowContract();
         }
     }
 }
