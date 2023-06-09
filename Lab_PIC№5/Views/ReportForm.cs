@@ -1,4 +1,5 @@
 ﻿using Lab_PIC_5.Controllers;
+using Lab_PIC_5.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +20,11 @@ namespace Lab_PIC_5.Views
             GenereteReport();
         }
 
-        private void GenereteReport()
+        public void GenereteReport()
         {
-            ReportService.GenereteReport(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+            var reports = ReportService.GenereteReport(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+            foreach (var rep in reports)
+                dataGridViewR.Rows.Add(rep);
         }
     }
 }

@@ -8,11 +8,11 @@ namespace Lab_PIC_5.Models
 {
     class Report
     {
-        DateTime DateStart { get; set; }
-        DateTime DateFinish { get; set; }
-        Location Loc { get; set; }
-        int CountAnumals { get; set; }
-        int Sum { get; set; }
+        public DateTime DateStart { get; set; }
+        public DateTime DateFinish { get; set; }
+        public Location Loc { get; set; }
+        public int CountAnumals { get; set; }
+        public int Sum { get; set; }
 
         public Report(DateTime dateStart, DateTime dateFinish, Location loc, int countAnumals, int sum)
         {

@@ -9,9 +9,23 @@ namespace Lab_PIC_5.Controllers
 {
     class ReportService
     {
-        public static void GenereteReport(DateTime start, DateTime finish)
+        public static List<string[]> GenereteReport(DateTime start, DateTime finish)
         {
-            ReportRepository.GenereteReport(start, finish);
+            var rep =  ReportRepository.GenereteReport(start, finish);
+            List<string[]> otvRep = new List<string[]>();
+            foreach (var item in rep)
+            {
+                var old = new string[]
+                {
+                    //item.DateStart.ToString(),
+                    //item.DateFinish.ToString(),
+                    item.Loc.ToString(),
+                    item.CountAnumals.ToString(),
+                    item.Sum.ToString()
+                };
+                otvRep.Add(old);
+            }
+            return otvRep;
         }
     }
 }

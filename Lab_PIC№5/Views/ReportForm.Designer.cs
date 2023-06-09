@@ -36,13 +36,13 @@ namespace Lab_PIC_5.Views
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewR = new System.Windows.Forms.DataGridView();
             this.НС = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ЗЗ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ОЖ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.С = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxSum = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewR)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerStart
@@ -104,27 +104,27 @@ namespace Lab_PIC_5.Views
             this.label1.TabIndex = 3;
             this.label1.Text = "Дата начала";
             // 
-            // dataGridView
+            // dataGridViewR
             // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.AllowUserToResizeColumns = false;
-            this.dataGridView.AllowUserToResizeRows = false;
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewR.AllowUserToAddRows = false;
+            this.dataGridViewR.AllowUserToDeleteRows = false;
+            this.dataGridViewR.AllowUserToResizeColumns = false;
+            this.dataGridViewR.AllowUserToResizeRows = false;
+            this.dataGridViewR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.НС,
             this.ЗЗ,
             this.ОЖ,
             this.С});
-            this.dataGridView.Location = new System.Drawing.Point(12, 60);
-            this.dataGridView.MultiSelect = false;
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersVisible = false;
-            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(477, 222);
-            this.dataGridView.TabIndex = 7;
+            this.dataGridViewR.Location = new System.Drawing.Point(12, 60);
+            this.dataGridViewR.MultiSelect = false;
+            this.dataGridViewR.Name = "dataGridViewR";
+            this.dataGridViewR.ReadOnly = true;
+            this.dataGridViewR.RowHeadersVisible = false;
+            this.dataGridViewR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewR.Size = new System.Drawing.Size(477, 222);
+            this.dataGridViewR.TabIndex = 7;
             // 
             // НС
             // 
@@ -158,13 +158,13 @@ namespace Lab_PIC_5.Views
             this.textBoxSum.Size = new System.Drawing.Size(100, 20);
             this.textBoxSum.TabIndex = 8;
             // 
-            // Report
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 332);
             this.Controls.Add(this.textBoxSum);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.dataGridViewR);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -172,10 +172,10 @@ namespace Lab_PIC_5.Views
             this.Controls.Add(this.comboBoxSity);
             this.Controls.Add(this.dateTimePickerEnd);
             this.Controls.Add(this.dateTimePickerStart);
-            this.Name = "Report";
+            this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отчёт";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,7 +190,7 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dataGridViewR;
         private System.Windows.Forms.DataGridViewTextBoxColumn НС;
         private System.Windows.Forms.DataGridViewTextBoxColumn ЗЗ;
         private System.Windows.Forms.DataGridViewTextBoxColumn ОЖ;
