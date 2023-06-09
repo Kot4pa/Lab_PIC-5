@@ -42,6 +42,7 @@
             this.executerCombo = new System.Windows.Forms.ComboBox();
             this.CostText = new System.Windows.Forms.TextBox();
             this.cityCombo = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -154,7 +155,7 @@
             // 
             this.CostText.Location = new System.Drawing.Point(143, 100);
             this.CostText.Name = "CostText";
-            this.CostText.Size = new System.Drawing.Size(202, 22);
+            this.CostText.Size = new System.Drawing.Size(200, 22);
             this.CostText.TabIndex = 45;
             // 
             // cityCombo
@@ -162,14 +163,26 @@
             this.cityCombo.FormattingEnabled = true;
             this.cityCombo.Location = new System.Drawing.Point(143, 68);
             this.cityCombo.Name = "cityCombo";
-            this.cityCombo.Size = new System.Drawing.Size(200, 24);
+            this.cityCombo.Size = new System.Drawing.Size(108, 24);
             this.cityCombo.TabIndex = 41;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(257, 68);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 24);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 231);
+            this.ClientSize = new System.Drawing.Size(354, 231);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CostText);
             this.Controls.Add(this.customerCombo);
             this.Controls.Add(this.executerCombo);
@@ -207,5 +220,6 @@
         private System.Windows.Forms.ComboBox executerCombo;
         private System.Windows.Forms.TextBox CostText;
         private System.Windows.Forms.ComboBox cityCombo;
+        private System.Windows.Forms.Button button1;
     }
 }
