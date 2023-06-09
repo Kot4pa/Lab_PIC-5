@@ -131,6 +131,12 @@
     <Compile Include="Views\OrgEdit.Designer.cs">
       <DependentUpon>OrgEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\ActEdit.resx">
       <DependentUpon>ActEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OrgEdit.resx">
       <DependentUpon>OrgEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
