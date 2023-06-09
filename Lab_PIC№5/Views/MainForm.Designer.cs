@@ -53,6 +53,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
@@ -79,8 +81,6 @@
             this.OrgAdd = new System.Windows.Forms.Button();
             this.OrgEdit = new System.Windows.Forms.Button();
             this.OrgDelete = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -268,7 +268,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 62);
             this.pictureBox1.TabIndex = 7;
@@ -286,7 +286,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1220, 555);
+            this.tabPage2.Size = new System.Drawing.Size(1220, 543);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Реестр организаций";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -366,6 +366,25 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Муниципальные контракты";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(425, 498);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
+            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 10, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(393, 498);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "до:";
             // 
             // EditButton
             // 
@@ -499,9 +518,9 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1220, 555);
+            this.tabPage4.Size = new System.Drawing.Size(1220, 543);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Реест заявок";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -609,9 +628,9 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1220, 555);
+            this.tabPage5.Size = new System.Drawing.Size(1220, 543);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = "Реестр организаций";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // dataGridViewOrg
@@ -660,24 +679,6 @@
             this.OrgDelete.Text = "Удалить";
             this.OrgDelete.UseVisualStyleBackColor = true;
             this.OrgDelete.Click += new System.EventHandler(this.OrgDelete_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(425, 498);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
-            this.dateTimePicker1.TabIndex = 17;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(393, 498);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "до:";
             // 
             // MainForm
             // 

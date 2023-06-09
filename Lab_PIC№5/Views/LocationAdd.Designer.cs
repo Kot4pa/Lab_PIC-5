@@ -82,7 +82,6 @@
             this.Controls.Add(this.CancelcontEdit);
             this.Controls.Add(this.OKcontAdd);
             this.Name = "LocationAdd";
-            this.Text = "LocationAdd";
             this.ResumeLayout(false);
             this.PerformLayout();
 

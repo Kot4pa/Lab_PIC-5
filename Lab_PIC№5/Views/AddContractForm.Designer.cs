@@ -76,19 +76,19 @@
             // 
             this.dateConclusion.Location = new System.Drawing.Point(143, 12);
             this.dateConclusion.Name = "dateConclusion";
-            this.dateConclusion.Size = new System.Drawing.Size(200, 22);
+            this.dateConclusion.Size = new System.Drawing.Size(209, 22);
             this.dateConclusion.TabIndex = 32;
             // 
             // dateAction
             // 
             this.dateAction.Location = new System.Drawing.Point(143, 40);
             this.dateAction.Name = "dateAction";
-            this.dateAction.Size = new System.Drawing.Size(200, 22);
+            this.dateAction.Size = new System.Drawing.Size(209, 22);
             this.dateAction.TabIndex = 33;
             // 
             // CancelcontEdit
             // 
-            this.CancelcontEdit.Location = new System.Drawing.Point(223, 187);
+            this.CancelcontEdit.Location = new System.Drawing.Point(232, 186);
             this.CancelcontEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CancelcontEdit.Name = "CancelcontEdit";
             this.CancelcontEdit.Size = new System.Drawing.Size(120, 34);
@@ -99,7 +99,7 @@
             // 
             // OKcontAdd
             // 
-            this.OKcontAdd.Location = new System.Drawing.Point(97, 187);
+            this.OKcontAdd.Location = new System.Drawing.Point(106, 187);
             this.OKcontAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OKcontAdd.Name = "OKcontAdd";
             this.OKcontAdd.Size = new System.Drawing.Size(120, 34);
@@ -140,7 +140,7 @@
             this.customerCombo.FormattingEnabled = true;
             this.customerCombo.Location = new System.Drawing.Point(143, 158);
             this.customerCombo.Name = "customerCombo";
-            this.customerCombo.Size = new System.Drawing.Size(200, 24);
+            this.customerCombo.Size = new System.Drawing.Size(209, 24);
             this.customerCombo.TabIndex = 44;
             // 
             // executerCombo
@@ -148,14 +148,14 @@
             this.executerCombo.FormattingEnabled = true;
             this.executerCombo.Location = new System.Drawing.Point(143, 128);
             this.executerCombo.Name = "executerCombo";
-            this.executerCombo.Size = new System.Drawing.Size(200, 24);
+            this.executerCombo.Size = new System.Drawing.Size(209, 24);
             this.executerCombo.TabIndex = 43;
             // 
             // CostText
             // 
             this.CostText.Location = new System.Drawing.Point(143, 100);
             this.CostText.Name = "CostText";
-            this.CostText.Size = new System.Drawing.Size(200, 22);
+            this.CostText.Size = new System.Drawing.Size(209, 22);
             this.CostText.TabIndex = 45;
             // 
             // cityCombo
@@ -171,7 +171,7 @@
             this.button1.Location = new System.Drawing.Point(257, 68);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 24);
+            this.button1.Size = new System.Drawing.Size(95, 24);
             this.button1.TabIndex = 46;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 231);
+            this.ClientSize = new System.Drawing.Size(364, 231);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CostText);
             this.Controls.Add(this.customerCombo);
@@ -198,7 +198,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddContractForm";
-            this.Text = "AddContractForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

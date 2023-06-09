@@ -233,5 +233,10 @@ namespace Lab_PIC_5
                 dsApplication.Tables[0].Rows.Add(app);
             dataGridViewApp.DataSource = dsApplication.Tables[0];
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            ShowContract();
+        }
     }
 }
