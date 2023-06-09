@@ -52,6 +52,7 @@
     <Compile Include="Controllers\ContractService.cs" />
     <Compile Include="Controllers\OrgService.cs" />
     <Compile Include="Controllers\PreveligeService.cs" />
+    <Compile Include="Controllers\ReportService.cs" />
     <Compile Include="Controllers\UserService.cs" />
     <Compile Include="Data\ActRepository.cs" />
     <Compile Include="Data\AnimalRepository.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Data\ContractRepository.cs" />
     <Compile Include="Data\LocationCostReposiroty.cs" />
     <Compile Include="Data\OrgRepository.cs" />
+    <Compile Include="Data\ReportRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Models\Act.cs" />
     <Compile Include="Models\AnimalCard.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\LocationCost.cs" />
     <Compile Include="Models\Organization.cs" />
+    <Compile Include="Models\Report.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Views\ActEdit.cs">
@@ -131,6 +134,12 @@
     <Compile Include="Views\OrgEdit.Designer.cs">
       <DependentUpon>OrgEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\ActEdit.resx">
       <DependentUpon>ActEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OrgEdit.resx">
       <DependentUpon>OrgEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
