@@ -71,7 +71,6 @@ namespace Lab_PIC_5.Views
             // 
             // OK
             // 
-            this.OK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.OK.Location = new System.Drawing.Point(93, 215);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
