@@ -79,6 +79,12 @@
     <Compile Include="Views\AddContractForm.Designer.cs">
       <DependentUpon>AddContractForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AnimalCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AnimalCard.Designer.cs">
+      <DependentUpon>AnimalCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddContractForm.resx">
       <DependentUpon>AddContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AnimalCard.resx">
+      <DependentUpon>AnimalCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AppAdd.resx">
       <DependentUpon>AppAdd.cs</DependentUpon>

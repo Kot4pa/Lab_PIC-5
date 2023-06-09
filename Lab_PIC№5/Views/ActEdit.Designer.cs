@@ -120,6 +120,7 @@ namespace Lab_PIC_5.Views
             // 
             // ComboBoxAnimalCard
             // 
+            this.ComboBoxAnimalCard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxAnimalCard.FormattingEnabled = true;
             this.ComboBoxAnimalCard.Location = new System.Drawing.Point(131, 127);
             this.ComboBoxAnimalCard.Name = "ComboBoxAnimalCard";
@@ -128,6 +129,7 @@ namespace Lab_PIC_5.Views
             // 
             // comboBoxOrganization
             // 
+            this.comboBoxOrganization.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOrganization.FormattingEnabled = true;
             this.comboBoxOrganization.Location = new System.Drawing.Point(131, 46);
             this.comboBoxOrganization.Name = "comboBoxOrganization";
@@ -136,6 +138,7 @@ namespace Lab_PIC_5.Views
             // 
             // comboBoxContract
             // 
+            this.comboBoxContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxContract.FormattingEnabled = true;
             this.comboBoxContract.Location = new System.Drawing.Point(131, 73);
             this.comboBoxContract.Name = "comboBoxContract";
@@ -144,6 +147,7 @@ namespace Lab_PIC_5.Views
             // 
             // comboBoxApp
             // 
+            this.comboBoxApp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxApp.FormattingEnabled = true;
             this.comboBoxApp.Location = new System.Drawing.Point(131, 100);
             this.comboBoxApp.Name = "comboBoxApp";

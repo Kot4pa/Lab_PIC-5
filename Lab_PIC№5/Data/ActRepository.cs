@@ -24,6 +24,11 @@ namespace Lab_PIC_5.Data
             acts[index] = actData;
         }
 
+        public static void Save(Act A)
+        {
+            acts.Add(A);
+        }
+
         public static void Delete(int choosedAct)
         {
             var index = acts.FindIndex(x => x.ActNumber == choosedAct);

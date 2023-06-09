@@ -18,17 +18,31 @@ namespace Lab_PIC_5
 
         public static void EditAct(string[] takedActData)
         {
-            var actData = new Act(int.Parse(takedActData[0]), DateTime.Parse(takedActData[1]), 
-                                  OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(takedActData[2]))],
-                                  ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(takedActData[3]))],
-                                  AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(takedActData[4]))],
-                                  ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(takedActData[5]))]);
+            var actData = new Act(
+                int.Parse(takedActData[0]), 
+                DateTime.Parse(takedActData[1]), 
+                OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(takedActData[2]))],
+                ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(takedActData[3]))],
+                AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(takedActData[4]))],
+                ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(takedActData[5]))]);
             ActRepository.SaveActData(actData);
         }
 
         public static void DeleteAct(int choosedAct)
         {
             ActRepository.Delete(choosedAct);
+        }
+
+        public static void Save(string[] A)
+        {
+            var actData = new Act(
+               ActRepository.acts.Max(x => x.ActNumber) + 1,
+               DateTime.Parse(A[1]),
+               OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(A[2]))],
+               ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(A[3]))],
+               AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(A[4]))],
+               ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(A[5]))]);
+            ActRepository.Save(actData);
         }
 
         private AnimalCard FindAnimalCard(int idAnimalCard)
@@ -47,8 +61,8 @@ namespace Lab_PIC_5
                     act.ActNumber.ToString(),
                     act.Date.ToString(),
                     act.Organization.name,
-                    act.Contracts.Executer.name,
-                    act.Application.animalHabiat,
+                    act.Contracts.IdContract.ToString(),
+                    act.Application.number.ToString(),
                     act.AnimalCard.Kind
                 };
                 result.Add(oldAct.ToArray());

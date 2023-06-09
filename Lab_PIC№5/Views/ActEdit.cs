@@ -40,8 +40,8 @@ namespace Lab_PIC_5.Views
                 dateAct.Value = act.Date;
                 FullComboBox();
                 comboBoxOrganization.Text = act.Organization.name;
-                comboBoxContract.Text = act.Contracts.Executer.ToString();
-                comboBoxApp.Text = act.Application.animalHabiat;
+                comboBoxContract.Text = act.Contracts.IdContract.ToString();
+                comboBoxApp.Text = act.Application.number.ToString();
                 ComboBoxAnimalCard.Text = act.AnimalCard.Kind;
             }
             else
@@ -59,12 +59,12 @@ namespace Lab_PIC_5.Views
 
             comboBoxContract.DataSource = new BindingSource(
                     ContractRepository.contract, null);
-            comboBoxContract.DisplayMember = "Executer";
+            comboBoxContract.DisplayMember = "IdContract";
             comboBoxContract.ValueMember = "IdContract";
 
             comboBoxApp.DataSource = new BindingSource(
                     AppRepository.Applicatiions, null);
-            comboBoxApp.DisplayMember = "animalHabiat";
+            comboBoxApp.DisplayMember = "number";
             comboBoxApp.ValueMember = "number";
 
             ComboBoxAnimalCard.DataSource = new BindingSource(
@@ -74,15 +74,20 @@ namespace Lab_PIC_5.Views
         }
 
         private void OK_Click(object sender, EventArgs e)
-        { 
+        {
             if (actToEdit)
             {
-                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(), 
+                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
                                     comboBoxContract.SelectedValue.ToString(), comboBoxApp.SelectedValue.ToString(), ComboBoxAnimalCard.SelectedValue.ToString() };
                 ActService.EditAct(act);
             }
             else
-                MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
+                                    comboBoxContract.SelectedValue.ToString(), comboBoxApp.SelectedValue.ToString(), ComboBoxAnimalCard.SelectedValue.ToString() };
+                var anim = new AnimalCardForm(act);
+                anim.ShowDialog();
+            }
         }
     }
 }
