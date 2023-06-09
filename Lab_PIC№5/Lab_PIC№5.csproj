@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ActService.cs" />
+    <Compile Include="Controllers\AnimalCardService.cs" />
     <Compile Include="Controllers\AppService.cs" />
     <Compile Include="Controllers\ContractService.cs" />
     <Compile Include="Controllers\OrgService.cs" />
     <Compile Include="Controllers\PreveligeService.cs" />
     <Compile Include="Controllers\UserService.cs" />
     <Compile Include="Data\ActRepository.cs" />
+    <Compile Include="Data\AnimalRepository.cs" />
     <Compile Include="Data\AppRepository.cs" />
     <Compile Include="Data\ContractRepository.cs" />
     <Compile Include="Data\LocationCostReposiroty.cs" />

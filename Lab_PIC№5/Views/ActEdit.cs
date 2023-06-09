@@ -1,4 +1,5 @@
-﻿using Lab_PIC_5.Data;
+﻿using Lab_PIC_5.Controllers;
+using Lab_PIC_5.Data;
 using Lab_PIC_5.Models;
 using System;
 using System.Collections.Generic;
@@ -82,10 +83,36 @@ namespace Lab_PIC_5.Views
             }
             else
             {
-                var act = new string[] {numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(), 
+                var act = new string[] {numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
                     dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
-                var anim = new AnimalCardForm(act);
-                anim.ShowDialog();
+
+                int kolD = int.Parse(act[0]) > 0 ? 1 : 0;
+                int kol = int.Parse(act[1]) > 0 ? 1 + kolD : 0 + kolD;
+                bool flag = true;
+                Dictionary<int, string> animalDictionary = new Dictionary<int, string>() { { 0, "Собака" }, { 1, "Кот" } };
+                List<string[]> listAnimals = new List<string[]>();
+
+                for (int i = 0; i < kol; i++)
+                {
+                    var animForm = new AnimalCardForm(animalDictionary[i]);
+                    DialogResult otvet = animForm.ShowDialog();
+                    if (otvet == DialogResult.OK)
+                    {
+                        listAnimals.Add(animForm.returnAnime);
+                    }
+                    if (otvet == DialogResult.Cancel)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if (flag)
+                {
+                    ActService.Save(act);
+                    foreach (var animal in listAnimals)
+                        AnimalCardService.AddAnimalCard(animal);
+                }
             }
         }
     }

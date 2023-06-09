@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lab_PIC_5.Controllers;
+using Lab_PIC_5.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +14,33 @@ namespace Lab_PIC_5.Views
 {
     public partial class AnimalCardForm : Form
     {
-        private string[] allAct;
-        public AnimalCardForm(string[] act)
+        private int actId;
+        public string[] returnAnime;
+        public AnimalCardForm(string act)
         {
             InitializeComponent();
-            allAct = act;
+            GITLER.Text = act;
+            actId = (ActRepository.acts.Max(x => x.ActNumber));
+            InicilisateAll();
+        }
+
+        private void InicilisateAll()
+        {
+            God.Text = "Акт:" + actId;
+            comboBoxLocation.DataSource = new BindingSource(
+                                    LocationCostReposiroty.locationCosts, null);
+            comboBoxLocation.DisplayMember = "City";
+            comboBoxLocation.ValueMember = "IdLocation";
         }
 
         private void OK_Click(object sender, EventArgs e)
         {
-            ActService.Save(allAct);
-
+            var otp = new string[] { textBoxKategori.Text, textBoxGender.Text,
+                                    textBoxPoroda.Text, numericUpDownSize.Value.ToString(),
+                                    textBoxFurType.Text, textBoxColor.Text, textBoxEars.Text,
+                                    textBoxTail.Text, textBoxSpicialSigns.Text, textBoxIdentificationLabel.Text,
+                                    comboBoxLocation.SelectedValue.ToString(), actId.ToString(),null};
+            returnAnime = otp;
         }
     }
 }
