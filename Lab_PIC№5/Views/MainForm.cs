@@ -64,7 +64,8 @@ namespace Lab_PIC_5
 
         private void DeleteActButton_Click(object sender, EventArgs e)
         {
-
+            ActService.DeleteAct(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
+            SetDataGridAct();
         }
 
         private void dateTimePickerAct_ValueChanged(object sender, EventArgs e)

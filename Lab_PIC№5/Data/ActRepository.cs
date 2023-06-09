@@ -24,6 +24,12 @@ namespace Lab_PIC_5.Data
             acts[index] = actData;
         }
 
+        public static void Delete(int choosedAct)
+        {
+            var index = acts.FindIndex(x => x.ActNumber == choosedAct);
+            acts.RemoveAt(index);
+        }
+
         public static List<Act> ShowAct(string filter)
         {
             List<Act> returnAct = acts.Where(x => x.Date >= DateTime.Parse(filter)).ToList();

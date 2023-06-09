@@ -26,6 +26,11 @@ namespace Lab_PIC_5
             ActRepository.SaveActData(actData);
         }
 
+        public static void DeleteAct(int choosedAct)
+        {
+            ActRepository.Delete(choosedAct);
+        }
+
         private AnimalCard FindAnimalCard(int idAnimalCard)
         {
             var index = ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == idAnimalCard);
