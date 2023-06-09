@@ -24,6 +24,7 @@ namespace Lab_PIC_5.Views
             InitializeComponent();
             ContToEdit = false;
             FillEditor();
+            this.Refresh();
         }
         public AddContractForm(int id)
         {
@@ -31,6 +32,7 @@ namespace Lab_PIC_5.Views
             ContToEdit = true;
             ContId = id;
             FillEditor();
+            this.Refresh();
         }
         private void FillEditor()
         {
@@ -52,7 +54,7 @@ namespace Lab_PIC_5.Views
             }
         }
 
-        private void FullComboBox()
+        public void FullComboBox()
         {
             cityCombo.DataSource = new BindingSource(
                                     LocationCostReposiroty.locationCosts, null);
@@ -89,8 +91,6 @@ namespace Lab_PIC_5.Views
             }
             else
             {
-                //var loc = new LocationCost(LocationCostReposiroty.locationCosts.Max(x => x.IdLocation) + 1,
-                //                            cityCombo.SelectedValue.ToString());
                 var id = ContractRepository.contract.Max(x => x.IdContract) + 1;
                 var cont = new Contract(id,
                                     dateConclusion.Value, dateAction.Value,
@@ -101,6 +101,13 @@ namespace Lab_PIC_5.Views
                 ContractService.AddContract(cont);
             }
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LocationAdd locationAdd = new LocationAdd();
+            locationAdd.Show();
+            
         }
     }
 }
