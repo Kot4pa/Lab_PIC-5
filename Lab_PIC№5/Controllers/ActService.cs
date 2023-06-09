@@ -63,7 +63,7 @@ namespace Lab_PIC_5
                     act.Organization.name,
                     act.Contracts.IdContract.ToString(),
                     act.Application.number.ToString(),
-                    act.AnimalCard.Kind
+                    act.AnimalCard.Category
                 };
                 result.Add(oldAct.ToArray());
             }

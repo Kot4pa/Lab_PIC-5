@@ -42,7 +42,7 @@ namespace Lab_PIC_5.Views
                 comboBoxOrganization.Text = act.Organization.name;
                 comboBoxContract.Text = act.Contracts.IdContract.ToString();
                 comboBoxApp.Text = act.Application.number.ToString();
-                ComboBoxAnimalCard.Text = act.AnimalCard.Kind;
+                ComboBoxAnimalCard.Text = act.AnimalCard.Category;
             }
             else
             {
@@ -69,7 +69,7 @@ namespace Lab_PIC_5.Views
 
             ComboBoxAnimalCard.DataSource = new BindingSource(
                     ActRepository.animalCards, null);
-            ComboBoxAnimalCard.DisplayMember = "Kind";
+            ComboBoxAnimalCard.DisplayMember = "Category";
             ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
         }
 
