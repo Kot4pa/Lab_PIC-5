@@ -19,7 +19,7 @@ namespace Lab_PIC_5.Controllers
                 {
                     //item.DateStart.ToString(),
                     //item.DateFinish.ToString(),
-                    item.Loc.ToString(),
+                    item.Loc.City,
                     item.CountAnumals.ToString(),
                     item.Sum.ToString()
                 };
