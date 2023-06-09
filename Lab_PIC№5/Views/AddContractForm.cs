@@ -24,7 +24,6 @@ namespace Lab_PIC_5.Views
             InitializeComponent();
             ContToEdit = false;
             FillEditor();
-            this.Refresh();
         }
         public AddContractForm(int id)
         {
@@ -32,7 +31,6 @@ namespace Lab_PIC_5.Views
             ContToEdit = true;
             ContId = id;
             FillEditor();
-            this.Refresh();
         }
         private void FillEditor()
         {
@@ -107,7 +105,6 @@ namespace Lab_PIC_5.Views
         {
             LocationAdd locationAdd = new LocationAdd();
             locationAdd.Show();
-            
         }
     }
 }
