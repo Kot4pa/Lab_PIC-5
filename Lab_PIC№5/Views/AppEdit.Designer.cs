@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppEdit));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,141 +50,176 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 25);
+            this.label1.Location = new System.Drawing.Point(39, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(156, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Дата подачи";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 84);
+            this.label2.Location = new System.Drawing.Point(41, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(213, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "Населенный пункт";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 138);
+            this.label3.Location = new System.Drawing.Point(41, 183);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(143, 35);
             this.label3.TabIndex = 2;
             this.label3.Text = "Территория";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 190);
+            this.label4.Location = new System.Drawing.Point(41, 256);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 20);
+            this.label4.Size = new System.Drawing.Size(316, 35);
             this.label4.TabIndex = 3;
             this.label4.Text = "Место обитания животного";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 251);
+            this.label5.Location = new System.Drawing.Point(41, 328);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 20);
+            this.label5.Size = new System.Drawing.Size(251, 35);
             this.label5.TabIndex = 4;
             this.label5.Text = "Срочность исполнения";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 310);
+            this.label6.Location = new System.Drawing.Point(41, 397);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(168, 20);
+            this.label6.Size = new System.Drawing.Size(236, 35);
             this.label6.TabIndex = 5;
             this.label6.Text = "Описание животного";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 449);
+            this.label7.Location = new System.Drawing.Point(41, 618);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(174, 20);
+            this.label7.Size = new System.Drawing.Size(248, 35);
             this.label7.TabIndex = 6;
             this.label7.Text = "Категория заявителя";
             // 
             // date
             // 
-            this.date.Location = new System.Drawing.Point(324, 25);
+            this.date.BackColor = System.Drawing.Color.Cornsilk;
+            this.date.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.date.Location = new System.Drawing.Point(468, 44);
+            this.date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(354, 26);
+            this.date.Size = new System.Drawing.Size(510, 36);
             this.date.TabIndex = 7;
             // 
             // loc
             // 
-            this.loc.Location = new System.Drawing.Point(324, 84);
+            this.loc.BackColor = System.Drawing.Color.Cornsilk;
+            this.loc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loc.Location = new System.Drawing.Point(470, 112);
+            this.loc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loc.Name = "loc";
-            this.loc.Size = new System.Drawing.Size(354, 26);
+            this.loc.Size = new System.Drawing.Size(510, 36);
             this.loc.TabIndex = 8;
             // 
             // territory
             // 
-            this.territory.Location = new System.Drawing.Point(324, 138);
+            this.territory.BackColor = System.Drawing.Color.Cornsilk;
+            this.territory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.territory.Location = new System.Drawing.Point(470, 183);
+            this.territory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.territory.Name = "territory";
-            this.territory.Size = new System.Drawing.Size(354, 26);
+            this.territory.Size = new System.Drawing.Size(510, 36);
             this.territory.TabIndex = 9;
             // 
             // animalHabbiat
             // 
-            this.animalHabbiat.Location = new System.Drawing.Point(324, 190);
+            this.animalHabbiat.BackColor = System.Drawing.Color.Cornsilk;
+            this.animalHabbiat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.animalHabbiat.Location = new System.Drawing.Point(470, 256);
+            this.animalHabbiat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.animalHabbiat.Name = "animalHabbiat";
-            this.animalHabbiat.Size = new System.Drawing.Size(354, 26);
+            this.animalHabbiat.Size = new System.Drawing.Size(510, 36);
             this.animalHabbiat.TabIndex = 10;
             // 
             // urgency
             // 
-            this.urgency.Location = new System.Drawing.Point(324, 251);
+            this.urgency.BackColor = System.Drawing.Color.Cornsilk;
+            this.urgency.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.urgency.Location = new System.Drawing.Point(470, 328);
+            this.urgency.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.urgency.Name = "urgency";
-            this.urgency.Size = new System.Drawing.Size(354, 26);
+            this.urgency.Size = new System.Drawing.Size(510, 36);
             this.urgency.TabIndex = 11;
             // 
             // descrip
             // 
-            this.descrip.Location = new System.Drawing.Point(324, 307);
+            this.descrip.BackColor = System.Drawing.Color.Cornsilk;
+            this.descrip.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descrip.Location = new System.Drawing.Point(470, 392);
+            this.descrip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.descrip.Multiline = true;
             this.descrip.Name = "descrip";
-            this.descrip.Size = new System.Drawing.Size(354, 120);
+            this.descrip.Size = new System.Drawing.Size(510, 207);
             this.descrip.TabIndex = 12;
             // 
             // categoryApp
             // 
-            this.categoryApp.Location = new System.Drawing.Point(324, 449);
+            this.categoryApp.BackColor = System.Drawing.Color.Cornsilk;
+            this.categoryApp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.categoryApp.Location = new System.Drawing.Point(470, 618);
+            this.categoryApp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.categoryApp.Name = "categoryApp";
-            this.categoryApp.Size = new System.Drawing.Size(354, 26);
+            this.categoryApp.Size = new System.Drawing.Size(510, 36);
             this.categoryApp.TabIndex = 13;
             // 
             // OkAppEdit
             // 
-            this.OkAppEdit.Location = new System.Drawing.Point(94, 552);
+            this.OkAppEdit.BackColor = System.Drawing.Color.Cornsilk;
+            this.OkAppEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.OkAppEdit.Location = new System.Drawing.Point(166, 712);
+            this.OkAppEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OkAppEdit.Name = "OkAppEdit";
-            this.OkAppEdit.Size = new System.Drawing.Size(132, 53);
+            this.OkAppEdit.Size = new System.Drawing.Size(191, 93);
             this.OkAppEdit.TabIndex = 14;
             this.OkAppEdit.Text = "OK";
-            this.OkAppEdit.UseVisualStyleBackColor = true;
+            this.OkAppEdit.UseVisualStyleBackColor = false;
             this.OkAppEdit.Click += new System.EventHandler(this.OkAppEdit_Click);
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(546, 552);
+            this.Cancel.BackColor = System.Drawing.Color.Cornsilk;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cancel.Location = new System.Drawing.Point(756, 712);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(132, 53);
+            this.Cancel.Size = new System.Drawing.Size(191, 93);
             this.Cancel.TabIndex = 15;
             this.Cancel.Text = "Отмена";
-            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // AppEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 643);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(1106, 858);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OkAppEdit);
             this.Controls.Add(this.categoryApp);
@@ -200,6 +236,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AppEdit";
             this.Text = "Изменение заявки на отлов";
             this.ResumeLayout(false);
