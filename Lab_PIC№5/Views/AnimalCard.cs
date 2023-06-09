@@ -35,12 +35,26 @@ namespace Lab_PIC_5.Views
 
         private void OK_Click(object sender, EventArgs e)
         {
-            var otp = new string[] { textBoxKategori.Text, textBoxGender.Text,
-                                    textBoxPoroda.Text, numericUpDownSize.Value.ToString(),
-                                    textBoxFurType.Text, textBoxColor.Text, textBoxEars.Text,
-                                    textBoxTail.Text, textBoxSpicialSigns.Text, textBoxIdentificationLabel.Text,
-                                    comboBoxLocation.SelectedValue.ToString(), actId.ToString(),null};
-            returnAnime = otp;
+            if (ChekOtvet())
+            {
+                var otp = new string[] { textBoxKategori.Text, textBoxGender.Text,
+                                        textBoxPoroda.Text, numericUpDownSize.Value.ToString(),
+                                        textBoxFurType.Text, textBoxColor.Text, textBoxEars.Text,
+                                        textBoxTail.Text, textBoxSpicialSigns.Text, textBoxIdentificationLabel.Text,
+                                        comboBoxLocation.SelectedValue.ToString(), actId.ToString(),null};
+                returnAnime = otp;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        private bool ChekOtvet()
+        {
+            if (textBoxPoroda.Text == "")
+            {
+                MessageBox.Show("Вы не ввели породу ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }

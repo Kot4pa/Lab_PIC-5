@@ -75,45 +75,61 @@ namespace Lab_PIC_5.Views
 
         private void OK_Click(object sender, EventArgs e)
         {
-            if (actToEdit)
-            {
-                var act = new string[] {actId.ToString(), numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
-                    dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
-                ActService.EditAct(act);
-            }
-            else
-            {
-                var act = new string[] {numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
-                    dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
-
-                int kolD = int.Parse(act[0]) > 0 ? 1 : 0;
-                int kol = int.Parse(act[1]) > 0 ? 1 + kolD : 0 + kolD;
-                bool flag = true;
-                Dictionary<int, string> animalDictionary = new Dictionary<int, string>() { { 0, "Собака" }, { 1, "Кот" } };
-                List<string[]> listAnimals = new List<string[]>();
-
-                for (int i = 0; i < kol; i++)
+            if (ChekOtvet())
+                if (actToEdit)
                 {
-                    var animForm = new AnimalCardForm(animalDictionary[i]);
-                    DialogResult otvet = animForm.ShowDialog();
-                    if (otvet == DialogResult.OK)
-                    {
-                        listAnimals.Add(animForm.returnAnime);
-                    }
-                    if (otvet == DialogResult.Cancel)
-                    {
-                        flag = false;
-                        break;
-                    }
-                }
+                    var act = new string[] {actId.ToString(), numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
+                        dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
+                    ActService.EditAct(act);
+                    this.DialogResult = DialogResult.OK;
 
-                if (flag)
-                {
-                    ActService.Save(act);
-                    foreach (var animal in listAnimals)
-                        AnimalCardService.AddAnimalCard(animal);
                 }
+                else
+                {
+                    var act = new string[] {numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
+                        dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
+
+                    int kolD = int.Parse(act[0]) > 0 ? 1 : 0;
+                    int kol = int.Parse(act[1]) > 0 ? 1 + kolD : 0 + kolD;
+                    bool flag = true;
+                    Dictionary<int, string> animalDictionary = new Dictionary<int, string>() { { 0, "Собака" }, { 1, "Кот" } };
+                    List<string[]> listAnimals = new List<string[]>();
+
+                    for (int i = 0; i < kol; i++)
+                    {
+                        var animForm = new AnimalCardForm(animalDictionary[i]);
+                        DialogResult otvet = animForm.ShowDialog();
+                        if (otvet == DialogResult.OK)
+                        {
+                            listAnimals.Add(animForm.returnAnime);
+                        }
+                        if (otvet == DialogResult.Cancel)
+                        {
+                            flag = false;
+                            break;
+                        }
+                    }
+
+                    if (flag)
+                    {
+                        ActService.Save(act);
+                        foreach (var animal in listAnimals)
+                            AnimalCardService.AddAnimalCard(animal);
+                        this.DialogResult = DialogResult.OK;
+
+                    }
+                    this.DialogResult = DialogResult.OK;
+                }
+        }
+
+        private bool ChekOtvet()
+        {
+            if (numericUpDownDog.Value == 0 & numericUpDownCat.Value == 0)
+            {
+                MessageBox.Show("Вы не выбрали ни одного животного", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
+            return true;
         }
     }
 }
