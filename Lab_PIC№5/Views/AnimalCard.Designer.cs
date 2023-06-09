@@ -30,6 +30,7 @@ namespace Lab_PIC_5.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimalCardForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxFurType = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -76,218 +77,270 @@ namespace Lab_PIC_5.Views
             this.groupBox1.Controls.Add(this.textBoxKategori);
             this.groupBox1.Controls.Add(this.textBoxPoroda);
             this.groupBox1.Controls.Add(this.textBoxGender);
-            this.groupBox1.Location = new System.Drawing.Point(12, 41);
+            this.groupBox1.Location = new System.Drawing.Point(26, 110);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 152);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.groupBox1.Size = new System.Drawing.Size(433, 410);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Характеристики животного";
             // 
             // textBoxFurType
             // 
-            this.textBoxFurType.Location = new System.Drawing.Point(93, 122);
+            this.textBoxFurType.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxFurType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxFurType.Location = new System.Drawing.Point(202, 329);
+            this.textBoxFurType.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxFurType.Name = "textBoxFurType";
-            this.textBoxFurType.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFurType.Size = new System.Drawing.Size(212, 36);
             this.textBoxFurType.TabIndex = 20;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 125);
+            this.label12.Location = new System.Drawing.Point(13, 336);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.Size = new System.Drawing.Size(103, 35);
             this.label12.TabIndex = 19;
             this.label12.Text = "Шерсть";
             // 
             // numericUpDownSize
             // 
-            this.numericUpDownSize.Location = new System.Drawing.Point(93, 94);
+            this.numericUpDownSize.BackColor = System.Drawing.Color.OldLace;
+            this.numericUpDownSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownSize.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.numericUpDownSize.Location = new System.Drawing.Point(202, 254);
+            this.numericUpDownSize.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.numericUpDownSize.Name = "numericUpDownSize";
-            this.numericUpDownSize.Size = new System.Drawing.Size(100, 20);
+            this.numericUpDownSize.Size = new System.Drawing.Size(217, 39);
             this.numericUpDownSize.TabIndex = 18;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 94);
+            this.label11.Location = new System.Drawing.Point(13, 254);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.Size = new System.Drawing.Size(90, 35);
             this.label11.TabIndex = 17;
             this.label11.Text = "Размер";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 68);
+            this.label7.Location = new System.Drawing.Point(13, 184);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.Size = new System.Drawing.Size(88, 35);
             this.label7.TabIndex = 15;
             this.label7.Text = "Порода";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 42);
+            this.label9.Location = new System.Drawing.Point(13, 114);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 13);
+            this.label9.Size = new System.Drawing.Size(53, 35);
             this.label9.TabIndex = 14;
             this.label9.Text = "Пол";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 16);
+            this.label10.Location = new System.Drawing.Point(13, 44);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.Size = new System.Drawing.Size(133, 35);
             this.label10.TabIndex = 13;
             this.label10.Text = "Категория";
             // 
             // textBoxKategori
             // 
-            this.textBoxKategori.Location = new System.Drawing.Point(93, 13);
+            this.textBoxKategori.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxKategori.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxKategori.Location = new System.Drawing.Point(202, 35);
+            this.textBoxKategori.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxKategori.Name = "textBoxKategori";
-            this.textBoxKategori.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKategori.Size = new System.Drawing.Size(212, 36);
             this.textBoxKategori.TabIndex = 10;
             // 
             // textBoxPoroda
             // 
-            this.textBoxPoroda.Location = new System.Drawing.Point(93, 65);
+            this.textBoxPoroda.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxPoroda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPoroda.Location = new System.Drawing.Point(202, 175);
+            this.textBoxPoroda.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxPoroda.Name = "textBoxPoroda";
-            this.textBoxPoroda.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPoroda.Size = new System.Drawing.Size(212, 36);
             this.textBoxPoroda.TabIndex = 12;
             // 
             // textBoxGender
             // 
-            this.textBoxGender.Location = new System.Drawing.Point(93, 39);
+            this.textBoxGender.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGender.Location = new System.Drawing.Point(202, 105);
+            this.textBoxGender.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Size = new System.Drawing.Size(100, 20);
+            this.textBoxGender.Size = new System.Drawing.Size(212, 36);
             this.textBoxGender.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(218, 109);
+            this.label3.Location = new System.Drawing.Point(472, 294);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(81, 35);
             this.label3.TabIndex = 5;
             this.label3.Text = "Хвост";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 83);
+            this.label2.Location = new System.Drawing.Point(472, 224);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(59, 35);
             this.label2.TabIndex = 4;
             this.label2.Text = "Уши";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 57);
+            this.label1.Location = new System.Drawing.Point(472, 154);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(80, 35);
             this.label1.TabIndex = 3;
             this.label1.Text = "Окрас";
             // 
             // textBoxTail
             // 
-            this.textBoxTail.Location = new System.Drawing.Point(313, 106);
+            this.textBoxTail.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxTail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTail.Location = new System.Drawing.Point(679, 285);
+            this.textBoxTail.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxTail.Name = "textBoxTail";
-            this.textBoxTail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTail.Size = new System.Drawing.Size(212, 36);
             this.textBoxTail.TabIndex = 2;
             // 
             // textBoxEars
             // 
-            this.textBoxEars.Location = new System.Drawing.Point(313, 80);
+            this.textBoxEars.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxEars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEars.Location = new System.Drawing.Point(679, 215);
+            this.textBoxEars.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxEars.Name = "textBoxEars";
-            this.textBoxEars.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEars.Size = new System.Drawing.Size(212, 36);
             this.textBoxEars.TabIndex = 1;
             // 
             // textBoxColor
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(313, 54);
+            this.textBoxColor.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxColor.Location = new System.Drawing.Point(679, 145);
+            this.textBoxColor.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.Size = new System.Drawing.Size(100, 20);
+            this.textBoxColor.Size = new System.Drawing.Size(212, 36);
             this.textBoxColor.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 222);
+            this.label4.Location = new System.Drawing.Point(39, 598);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 13);
+            this.label4.Size = new System.Drawing.Size(197, 35);
             this.label4.TabIndex = 2;
             this.label4.Text = "Особые приметы";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 248);
+            this.label5.Location = new System.Drawing.Point(39, 668);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 13);
+            this.label5.Size = new System.Drawing.Size(314, 35);
             this.label5.TabIndex = 3;
             this.label5.Text = "Идентификационная метка";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 276);
+            this.label6.Location = new System.Drawing.Point(39, 744);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 13);
+            this.label6.Size = new System.Drawing.Size(213, 35);
             this.label6.TabIndex = 4;
             this.label6.Text = "Населённый пункт";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 322);
+            this.label8.Location = new System.Drawing.Point(39, 866);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 13);
+            this.label8.Size = new System.Drawing.Size(320, 35);
             this.label8.TabIndex = 6;
             this.label8.Text = "Материалы с места отлова";
             // 
             // Cancel
             // 
+            this.Cancel.BackColor = System.Drawing.Color.Cornsilk;
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel.Location = new System.Drawing.Point(356, 385);
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Cancel.Location = new System.Drawing.Point(771, 1036);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.Size = new System.Drawing.Size(162, 61);
             this.Cancel.TabIndex = 7;
             this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.UseVisualStyleBackColor = false;
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(275, 384);
+            this.OK.BackColor = System.Drawing.Color.Cornsilk;
+            this.OK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.OK.Location = new System.Drawing.Point(595, 1034);
+            this.OK.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(75, 23);
+            this.OK.Size = new System.Drawing.Size(162, 61);
             this.OK.TabIndex = 8;
             this.OK.Text = "OK";
-            this.OK.UseVisualStyleBackColor = true;
+            this.OK.UseVisualStyleBackColor = false;
             this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
             // God
             // 
             this.God.AutoSize = true;
-            this.God.Location = new System.Drawing.Point(12, 9);
+            this.God.Location = new System.Drawing.Point(26, 24);
+            this.God.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.God.Name = "God";
-            this.God.Size = new System.Drawing.Size(28, 13);
+            this.God.Size = new System.Drawing.Size(70, 35);
             this.God.TabIndex = 9;
             this.God.Text = "Акт:";
             // 
             // textBoxIdentificationLabel
             // 
-            this.textBoxIdentificationLabel.Location = new System.Drawing.Point(169, 245);
+            this.textBoxIdentificationLabel.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxIdentificationLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxIdentificationLabel.Location = new System.Drawing.Point(367, 660);
+            this.textBoxIdentificationLabel.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxIdentificationLabel.Name = "textBoxIdentificationLabel";
-            this.textBoxIdentificationLabel.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIdentificationLabel.Size = new System.Drawing.Size(212, 36);
             this.textBoxIdentificationLabel.TabIndex = 11;
             // 
             // textBoxSpicialSigns
             // 
-            this.textBoxSpicialSigns.Location = new System.Drawing.Point(169, 219);
+            this.textBoxSpicialSigns.BackColor = System.Drawing.Color.OldLace;
+            this.textBoxSpicialSigns.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSpicialSigns.Location = new System.Drawing.Point(367, 590);
+            this.textBoxSpicialSigns.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxSpicialSigns.Name = "textBoxSpicialSigns";
-            this.textBoxSpicialSigns.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSpicialSigns.Size = new System.Drawing.Size(212, 36);
             this.textBoxSpicialSigns.TabIndex = 10;
             // 
             // imageList1
@@ -299,34 +352,41 @@ namespace Lab_PIC_5.Views
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(21, 285);
+            this.label13.Location = new System.Drawing.Point(46, 766);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.Size = new System.Drawing.Size(0, 35);
             this.label13.TabIndex = 12;
             // 
             // comboBoxLocation
             // 
+            this.comboBoxLocation.BackColor = System.Drawing.Color.OldLace;
+            this.comboBoxLocation.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.comboBoxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLocation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxLocation.FormattingEnabled = true;
-            this.comboBoxLocation.Location = new System.Drawing.Point(169, 276);
+            this.comboBoxLocation.Location = new System.Drawing.Point(367, 744);
+            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxLocation.Size = new System.Drawing.Size(258, 43);
             this.comboBoxLocation.TabIndex = 13;
             // 
             // GITLER
             // 
             this.GITLER.AutoSize = true;
-            this.GITLER.Location = new System.Drawing.Point(169, 8);
+            this.GITLER.Location = new System.Drawing.Point(367, 21);
+            this.GITLER.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.GITLER.Name = "GITLER";
-            this.GITLER.Size = new System.Drawing.Size(25, 13);
+            this.GITLER.Size = new System.Drawing.Size(65, 35);
             this.GITLER.TabIndex = 14;
             this.GITLER.Text = "Кот";
             // 
             // AnimalCardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 420);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(959, 1130);
             this.Controls.Add(this.GITLER);
             this.Controls.Add(this.comboBoxLocation);
             this.Controls.Add(this.label13);
@@ -346,6 +406,9 @@ namespace Lab_PIC_5.Views
             this.Controls.Add(this.textBoxColor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.Name = "AnimalCardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Карточка животного";
