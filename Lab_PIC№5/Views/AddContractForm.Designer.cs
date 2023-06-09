@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 231);
+            this.ClientSize = new System.Drawing.Size(354, 231);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CostText);
             this.Controls.Add(this.customerCombo);

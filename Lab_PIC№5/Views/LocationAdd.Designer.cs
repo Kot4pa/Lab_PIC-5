@@ -36,9 +36,9 @@
             // 
             // CityText
             // 
-            this.CityText.Location = new System.Drawing.Point(61, 12);
+            this.CityText.Location = new System.Drawing.Point(67, 12);
             this.CityText.Name = "CityText";
-            this.CityText.Size = new System.Drawing.Size(142, 22);
+            this.CityText.Size = new System.Drawing.Size(136, 22);
             this.CityText.TabIndex = 49;
             // 
             // label3
@@ -46,9 +46,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 48;
-            this.label3.Text = "Цена:";
+            this.label3.Text = "Город:";
             // 
             // CancelcontEdit
             // 
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(221, 90);
+            this.ClientSize = new System.Drawing.Size(221, 83);
             this.Controls.Add(this.CityText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CancelcontEdit);

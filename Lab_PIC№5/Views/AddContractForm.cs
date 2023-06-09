@@ -17,8 +17,8 @@ namespace Lab_PIC_5.Views
 {
     public partial class AddContractForm : Form
     {
-        private bool ContToEdit;
-        private int ContId;
+        public bool ContToEdit;
+        public int ContId;
         public AddContractForm()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Lab_PIC_5.Views
             ContId = id;
             FillEditor();
         }
-        private void FillEditor()
+        public void FillEditor()
         {
             if (ContToEdit)
             {
@@ -47,27 +47,20 @@ namespace Lab_PIC_5.Views
                 customerCombo.Text = cont.Costumer.name;
             }
             else
-            {
                 FullComboBox();
-            }
         }
 
         public void FullComboBox()
         {
-            cityCombo.DataSource = new BindingSource(
-                                    LocationCostReposiroty.locationCosts, null);
+            cityCombo.DataSource = new BindingSource(LocationCostReposiroty.locationCosts, null);
             cityCombo.DisplayMember = "City";
             cityCombo.ValueMember = "IdLocation";
 
-            
-
-            executerCombo.DataSource = new BindingSource(
-                                    OrgRepository.Organizations, null);
+            executerCombo.DataSource = new BindingSource(OrgRepository.Organizations, null);
             executerCombo.DisplayMember = "name";
             executerCombo.ValueMember = "idOrg";
 
-            customerCombo.DataSource = new BindingSource(
-                                     OrgRepository.Organizations, null);
+            customerCombo.DataSource = new BindingSource(OrgRepository.Organizations, null);
             customerCombo.DisplayMember = "name";
             customerCombo.ValueMember = "idOrg";
         }
@@ -80,25 +73,39 @@ namespace Lab_PIC_5.Views
         private void OKcontAdd_Click(object sender, EventArgs e)
         {
             if (ContToEdit)
-            {
-                var cont = new string[] {ContId.ToString(), dateConclusion.Value.ToString(), 
-                                    dateAction.Value.ToString(), cityCombo.SelectedValue.ToString(),
-                                    CostText.Text, executerCombo.SelectedValue.ToString(),
-                                    customerCombo.SelectedValue.ToString() };
-                ContractService.EditCont(cont);
-            }
+                if (CostText.Text == "")
+                    MessageBox.Show("Вы не указали цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if(!int.TryParse(CostText.Text, out int n))
+                    MessageBox.Show("Вы ввели некоректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    var cont = new string[] 
+                    {
+                        ContId.ToString(), dateConclusion.Value.ToString(),
+                                dateAction.Value.ToString(), cityCombo.SelectedValue.ToString(),
+                                CostText.Text, executerCombo.SelectedValue.ToString(),
+                                customerCombo.SelectedValue.ToString() 
+                    };
+                    ContractService.EditCont(cont);
+                    this.Close();
+                }
             else
-            {
-                var id = ContractRepository.contract.Max(x => x.IdContract) + 1;
-                var cont = new Contract(id,
-                                    dateConclusion.Value, dateAction.Value,
-                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString()) - 1],
-                                    int.Parse(CostText.Text),
-                                    OrgRepository.Organizations[int.Parse(executerCombo.SelectedValue.ToString())- 1],
-                                    OrgRepository.Organizations[int.Parse(customerCombo.SelectedValue.ToString()) - 1]);
-                ContractService.AddContract(cont);
-            }
-            this.Close();
+                if (CostText.Text == "")
+                    MessageBox.Show("Вы не указали цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (!int.TryParse(CostText.Text, out int n))
+                    MessageBox.Show("Вы ввели некоректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    var id = ContractRepository.contract.Max(x => x.IdContract) + 1;
+                    var cont = new Contract(id,
+                                        dateConclusion.Value, dateAction.Value,
+                                        LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString()) - 1],
+                                        int.Parse(CostText.Text),
+                                        OrgRepository.Organizations[int.Parse(executerCombo.SelectedValue.ToString()) - 1],
+                                        OrgRepository.Organizations[int.Parse(customerCombo.SelectedValue.ToString()) - 1]);
+                    ContractService.AddContract(cont);
+                    this.Close();
+                }
         }
 
         private void button1_Click(object sender, EventArgs e)
