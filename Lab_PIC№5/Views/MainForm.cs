@@ -45,7 +45,7 @@ namespace Lab_PIC_5
         {
             DataGridViewActs.Rows.Clear();
             var actss = ActService.ShowAct(dateTimePickerAct.Value.ToString());
-            MessageBox.Show("" + AnimalRepository.animalCards.Count);
+            //MessageBox.Show("" + AnimalRepository.animalCards.Count);
             foreach (var organization in actss)
                 DataGridViewActs.Rows.Add(organization);
         }
