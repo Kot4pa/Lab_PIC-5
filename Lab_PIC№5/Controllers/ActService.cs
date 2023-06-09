@@ -19,12 +19,12 @@ namespace Lab_PIC_5
         public static void EditAct(string[] takedActData)
         {
             var actData = new Act(
-                int.Parse(takedActData[0]), 
-                DateTime.Parse(takedActData[1]), 
-                OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(takedActData[2]))],
-                ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(takedActData[3]))],
-                AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(takedActData[4]))],
-                ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(takedActData[5]))]);
+                int.Parse(takedActData[0]),
+                int.Parse(takedActData[1]), int.Parse(takedActData[2]),
+                OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(takedActData[3]))],
+                DateTime.Parse(takedActData[4]), takedActData[5],
+                AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(takedActData[6]))],
+                ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(takedActData[7]))]);
             ActRepository.SaveActData(actData);
         }
 
@@ -37,18 +37,12 @@ namespace Lab_PIC_5
         {
             var actData = new Act(
                ActRepository.acts.Max(x => x.ActNumber) + 1,
-               DateTime.Parse(A[1]),
+               int.Parse(A[0]), int.Parse(A[1]),
                OrgRepository.Organizations[OrgRepository.Organizations.FindIndex(x => x.idOrg == int.Parse(A[2]))],
-               ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(A[3]))],
-               AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(A[4]))],
-               ActRepository.animalCards[ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == int.Parse(A[5]))]);
+               DateTime.Parse(A[3]), A[4],
+               AppRepository.Applicatiions[AppRepository.Applicatiions.FindIndex(x => x.number == int.Parse(A[5]))],
+               ContractRepository.contract[ContractRepository.contract.FindIndex(x => x.IdContract == int.Parse(A[6]))]);
             ActRepository.Save(actData);
-        }
-
-        private AnimalCard FindAnimalCard(int idAnimalCard)
-        {
-            var index = ActRepository.animalCards.FindIndex(x => x.IdAnimalCard == idAnimalCard);
-            return ActRepository.animalCards[index];
         }
 
         private static List<string[]> stringMassChencher(List<Act> acts)
@@ -59,11 +53,13 @@ namespace Lab_PIC_5
                 var oldAct = new List<string>
                 {
                     act.ActNumber.ToString(),
-                    act.Date.ToString(),
+                    act.CountDogs.ToString(),
+                    act.CountCats.ToString(),
                     act.Organization.name,
-                    act.Contracts.IdContract.ToString(),
+                    act.Date.ToString(),
+                    act.TargetCapture,
                     act.Application.number.ToString(),
-                    act.AnimalCard.Category
+                    act.Contracts.IdContract.ToString()
                 };
                 result.Add(oldAct.ToArray());
             }

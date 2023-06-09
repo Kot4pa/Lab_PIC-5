@@ -21,6 +21,7 @@ namespace Lab_PIC_5.Views
         {
             InitializeComponent();
             actToEdit = false;
+            Isus.Text = "Добавление акта";
             FillEditor();
         }
         public ActEdit(int id)
@@ -28,6 +29,7 @@ namespace Lab_PIC_5.Views
             InitializeComponent();
             actToEdit = true;
             actId = id;
+            Isus.Text = "Редактирование акта";
             FillEditor();
         }
 
@@ -37,12 +39,14 @@ namespace Lab_PIC_5.Views
             {
                 var index = ActRepository.acts.FindIndex(x => x.ActNumber == actId);
                 Act act = ActRepository.acts[index];
+                numericUpDownDog.Value = act.CountDogs;
+                numericUpDownCat.Value = act.CountCats;
                 dateAct.Value = act.Date;
+                textBoxTarget.Text = act.TargetCapture;
                 FullComboBox();
                 comboBoxOrganization.Text = act.Organization.name;
                 comboBoxContract.Text = act.Contracts.IdContract.ToString();
                 comboBoxApp.Text = act.Application.number.ToString();
-                ComboBoxAnimalCard.Text = act.AnimalCard.Category;
             }
             else
             {
@@ -66,25 +70,20 @@ namespace Lab_PIC_5.Views
                     AppRepository.Applicatiions, null);
             comboBoxApp.DisplayMember = "number";
             comboBoxApp.ValueMember = "number";
-
-            ComboBoxAnimalCard.DataSource = new BindingSource(
-                    ActRepository.animalCards, null);
-            ComboBoxAnimalCard.DisplayMember = "Category";
-            ComboBoxAnimalCard.ValueMember = "IdAnimalCard";
         }
 
         private void OK_Click(object sender, EventArgs e)
         {
             if (actToEdit)
             {
-                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
-                                    comboBoxContract.SelectedValue.ToString(), comboBoxApp.SelectedValue.ToString(), ComboBoxAnimalCard.SelectedValue.ToString() };
+                var act = new string[] {actId.ToString(), numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
+                    dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
                 ActService.EditAct(act);
             }
             else
             {
-                var act = new string[] {actId.ToString(), dateAct.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
-                                    comboBoxContract.SelectedValue.ToString(), comboBoxApp.SelectedValue.ToString(), ComboBoxAnimalCard.SelectedValue.ToString() };
+                var act = new string[] {numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(), 
+                    dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
                 var anim = new AnimalCardForm(act);
                 anim.ShowDialog();
             }
