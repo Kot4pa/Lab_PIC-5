@@ -291,7 +291,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1374, 700);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Реестр отчётов";
+            this.tabPage2.Text = "Отчёт";
             // 
             // button5
             // 
