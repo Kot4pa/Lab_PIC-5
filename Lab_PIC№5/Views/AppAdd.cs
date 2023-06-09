@@ -22,7 +22,7 @@ namespace Lab_PIC_5.Views
 
         private void OkAppAdd_Click(object sender, EventArgs e)
         {
-            var app = new App(date.Text, AppRepository.Applicatiions.Count + 1, loc.Text, territory.Text, animalHabbiat.Text, urgency.Text, descrip.Text, categoryApp.Text);
+            var app = new App(DateTime.Parse(date.Text), AppRepository.Applicatiions.Max(x => x.number) + 1, loc.Text, territory.Text, animalHabbiat.Text, urgency.Text, descrip.Text, categoryApp.Text);
             AppService.AddApplication(app);
             this.Close();
         }

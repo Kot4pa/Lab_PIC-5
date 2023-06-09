@@ -42,9 +42,9 @@ namespace Lab_PIC_5.Views
                 dateAction.Value = cont.ActionDate;
                 FullComboBox();
                 cityCombo.Text = cont.LocationCost.City;
-                costCombo.Text = cont.LocationCost.Cost.ToString();
-                customerCombo.Text = cont.Costumer.ToString();
-                executerCombo.Text = cont.Executer.ToString();
+                CostText.Text = cont.Cost.ToString();
+                executerCombo.Text = cont.Executer.name;
+                customerCombo.Text = cont.Costumer.name;
             }
             else
             {
@@ -59,10 +59,7 @@ namespace Lab_PIC_5.Views
             cityCombo.DisplayMember = "City";
             cityCombo.ValueMember = "IdLocation";
 
-            costCombo.DataSource = new BindingSource(
-                                    LocationCostReposiroty.locationCosts, null);
-            costCombo.DisplayMember = "Cost";
-            costCombo.ValueMember = "IdLocation";
+            
 
             executerCombo.DataSource = new BindingSource(
                                     OrgRepository.Organizations, null);
@@ -86,12 +83,24 @@ namespace Lab_PIC_5.Views
             {
                 var cont = new string[] {ContId.ToString(), dateConclusion.Value.ToString(), 
                                     dateAction.Value.ToString(), cityCombo.SelectedValue.ToString(),
-                                    costCombo.SelectedValue.ToString(), executerCombo.SelectedValue.ToString(),
+                                    CostText.Text, executerCombo.SelectedValue.ToString(),
                                     customerCombo.SelectedValue.ToString() };
                 ContractService.EditCont(cont);
             }
             else
-                MessageBox.Show("Кнопка в доработке", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                //var loc = new LocationCost(LocationCostReposiroty.locationCosts.Max(x => x.IdLocation) + 1,
+                //                            cityCombo.SelectedValue.ToString());
+                var id = ContractRepository.contract.Max(x => x.IdContract) + 1;
+                var cont = new Contract(id,
+                                    dateConclusion.Value, dateAction.Value,
+                                    LocationCostReposiroty.locationCosts[int.Parse(cityCombo.SelectedValue.ToString()) - 1],
+                                    int.Parse(CostText.Text),
+                                    OrgRepository.Organizations[int.Parse(executerCombo.SelectedValue.ToString())- 1],
+                                    OrgRepository.Organizations[int.Parse(customerCombo.SelectedValue.ToString()) - 1]);
+                ContractService.AddContract(cont);
+            }
+            this.Close();
         }
     }
 }

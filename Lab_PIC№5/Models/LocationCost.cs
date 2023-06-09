@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Lab_PIC_5.Models
 {
-    class LocationCost
+    public class LocationCost
     {
-        public int IdLocation { get; set; }
-        public string City { get; set; }
-        public int Cost { get; set; }
-
-        public LocationCost(int idLocation, string city, int cost)
+        public int Id { get; set; }
+        public Location Locality { get; set; }
+        public decimal Price { get; set; }
+        public LocationCost(int id, Location locality, decimal price)
         {
-            IdLocation = idLocation;
-            City = city;
-            Cost = cost;
+            Id = id;
+            Locality = locality;
+            Price = price;
         }
     }
 }
