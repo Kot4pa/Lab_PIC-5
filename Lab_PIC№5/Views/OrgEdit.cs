@@ -28,14 +28,16 @@ namespace Lab_PIC_5.Views
             OrgId = id;
             FillOrgEdit();
             name.Items.Clear();
-            name.Items.Add("МКУ 'ЛесПаркХоз'");
-            name.Items.Add("ГосОтлов");
-            name.Items.Add("ПРОО 'Общество защиты животных'");
+            foreach (Organization org in OrgRepository.Organizations)
+            {
+                name.Items.Add(org.name);
+            }
 
             AdressReg.Items.Clear();
-            AdressReg.Items.Add("г. Москва, Ленина 56");
-            AdressReg.Items.Add("г. Москва, Абрамцевская 34");
-            AdressReg.Items.Add("г. Тюмень, Мельникайте 48");
+            foreach (Location loc in LocationCostReposiroty.locationCosts)
+            {
+                AdressReg.Items.Add(loc.City);
+            }
         }
 
         private void FillOrgEdit()
