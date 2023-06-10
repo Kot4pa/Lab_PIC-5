@@ -1,4 +1,5 @@
 ﻿using Lab_PIC_5.Controllers;
+using Lab_PIC_5.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,9 +25,9 @@ namespace Lab_PIC_5
             string password = passwordTextBox.Text;
             if (UserService.CheckUser(login, password))
             {
+                this.Hide();
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
-                
                 this.Close();
             }
             else

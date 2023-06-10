@@ -9,29 +9,21 @@ namespace Lab_PIC_5.Models
     class Role
     {
         public string Name { get; set; }
-        //public PosibilitiesInteractions Posibilitie { get; }
-        //public NameMdels NameMdel { get; }
-        public Dictionary<string, bool> CheckPosibilitis { get; set; }
+        public Dictionary<NameMdels, bool> CheckPosibilitis { get; set; }
 
-        public Role(string name, Dictionary<string, bool> checkPosibilitis)
+        public Role(string name, Dictionary<NameMdels, bool> checkPosibilitis)
         {
             CheckPosibilitis = checkPosibilitis;
             Name = name;
         }
     }
-    
-    //enum PosibilitiesInteractions
-    //{
-    //    View,
-    //    Controll
-    //}
 
-    //enum NameMdels
-    //{
-    //    Act,
-    //    App,
-    //    Contract,
-    //    Org,
-    //    Report
-    //}
+    enum NameMdels
+    {
+        Act,
+        App,
+        Contract,
+        Org,
+        Report
+    }
 }
