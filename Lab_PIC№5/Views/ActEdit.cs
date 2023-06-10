@@ -89,25 +89,34 @@ namespace Lab_PIC_5.Views
                     var act = new string[] {numericUpDownDog.Value.ToString(),numericUpDownCat.Value.ToString(), comboBoxOrganization.SelectedValue.ToString(),
                         dateAct.Value.ToString(), textBoxTarget.Text, comboBoxApp.SelectedValue.ToString(), comboBoxContract.SelectedValue.ToString()};
 
-                    int kolD = int.Parse(act[0]) > 0 ? 1 : 0;
-                    int kol = int.Parse(act[1]) > 0 ? 1 + kolD : 0 + kolD;
+                    bool IsDog = int.Parse(act[0]) > 0 ? true : false;
+                    bool IsCat = int.Parse(act[1]) > 0 ? true : false;
+
                     bool flag = true;
                     Dictionary<int, string> animalDictionary = new Dictionary<int, string>() { { 0, "Собака" }, { 1, "Кот" } };
                     List<string[]> listAnimals = new List<string[]>();
 
-                    for (int i = 0; i < kol; i++)
+                    if (IsDog)
                     {
-                        var animForm = new AnimalCardForm(animalDictionary[i]);
+                        var animForm = new AnimalCardForm("Собака");
                         DialogResult otvet = animForm.ShowDialog();
                         if (otvet == DialogResult.OK)
-                        {
                             listAnimals.Add(animForm.returnAnime);
-                        }
+
                         if (otvet == DialogResult.Cancel)
-                        {
                             flag = false;
-                            break;
-                        }
+                    }
+                    
+                    if (IsCat)
+                    {
+                        var animForm = new AnimalCardForm("Кот");
+                        DialogResult otvet = animForm.ShowDialog();
+                        if (otvet == DialogResult.OK)
+                            listAnimals.Add(animForm.returnAnime);
+
+                        if (otvet == DialogResult.Cancel)
+                            flag = false;
+                        
                     }
 
                     if (flag)
@@ -127,6 +136,11 @@ namespace Lab_PIC_5.Views
             if (numericUpDownDog.Value == 0 & numericUpDownCat.Value == 0)
             {
                 MessageBox.Show("Вы не выбрали ни одного животного", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if(textBoxTarget.Text == "")
+            {
+                MessageBox.Show("Введите цель отлова", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

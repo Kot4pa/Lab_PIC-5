@@ -47,6 +47,7 @@
             this.Kontracts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -81,7 +82,7 @@
             this.OrgDelete = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAnimalCard = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -115,6 +116,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Tan;
+            this.tabPage1.Controls.Add(this.buttonAnimalCard);
             this.tabPage1.Controls.Add(this.AddActButton);
             this.tabPage1.Controls.Add(this.UpdateActButton);
             this.tabPage1.Controls.Add(this.DeleteActButton);
@@ -133,7 +135,7 @@
             // 
             this.AddActButton.BackColor = System.Drawing.Color.Cornsilk;
             this.AddActButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddActButton.Location = new System.Drawing.Point(933, 649);
+            this.AddActButton.Location = new System.Drawing.Point(724, 654);
             this.AddActButton.Name = "AddActButton";
             this.AddActButton.Size = new System.Drawing.Size(132, 45);
             this.AddActButton.TabIndex = 6;
@@ -145,7 +147,7 @@
             // 
             this.UpdateActButton.BackColor = System.Drawing.Color.Cornsilk;
             this.UpdateActButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateActButton.Location = new System.Drawing.Point(1071, 649);
+            this.UpdateActButton.Location = new System.Drawing.Point(862, 654);
             this.UpdateActButton.Name = "UpdateActButton";
             this.UpdateActButton.Size = new System.Drawing.Size(164, 45);
             this.UpdateActButton.TabIndex = 5;
@@ -157,7 +159,7 @@
             // 
             this.DeleteActButton.BackColor = System.Drawing.Color.Cornsilk;
             this.DeleteActButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DeleteActButton.Location = new System.Drawing.Point(1242, 649);
+            this.DeleteActButton.Location = new System.Drawing.Point(1033, 654);
             this.DeleteActButton.Name = "DeleteActButton";
             this.DeleteActButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DeleteActButton.Size = new System.Drawing.Size(132, 45);
@@ -296,6 +298,16 @@
             this.tabPage2.Size = new System.Drawing.Size(1374, 712);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Отчёт";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(81, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -695,15 +707,15 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "до:";
             // 
-            // button1
+            // buttonAnimalCard
             // 
-            this.button1.Location = new System.Drawing.Point(81, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAnimalCard.Location = new System.Drawing.Point(1171, 642);
+            this.buttonAnimalCard.Name = "buttonAnimalCard";
+            this.buttonAnimalCard.Size = new System.Drawing.Size(183, 57);
+            this.buttonAnimalCard.TabIndex = 8;
+            this.buttonAnimalCard.Text = "показать карточку животного";
+            this.buttonAnimalCard.UseVisualStyleBackColor = true;
+            this.buttonAnimalCard.Click += new System.EventHandler(this.buttonAnimalCard_Click);
             // 
             // MainForm
             // 
@@ -795,6 +807,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAnimalCard;
     }
 }
 
