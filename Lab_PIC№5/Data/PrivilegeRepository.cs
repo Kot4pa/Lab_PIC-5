@@ -65,6 +65,14 @@ namespace Lab_PIC_5.Data
                                                                     {NameMdels.Contract, false},
                                                                     {NameMdels.Org, false},
                                                                     {NameMdels.Report, false}
+                                                                }),
+                                    new Role("Admin", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, true},
+                                                                    {NameMdels.App, true},
+                                                                    {NameMdels.Contract, true},
+                                                                    {NameMdels.Org, true},
+                                                                    {NameMdels.Report, true}
                                                                 })
                                     };
 

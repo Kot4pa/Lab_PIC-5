@@ -14,7 +14,8 @@ namespace Lab_PIC_5.Data
                                         new User(1, "UserOtlov", "ot", PrivilegeRepository.rols[0]),
                                         new User(2, "UserBET", "b", PrivilegeRepository.rols[1]),
                                         new User(3, "UserOMCY", "o", PrivilegeRepository.rols[2]),
-                                        new User(4, "User4", "4", PrivilegeRepository.rols[3])
+                                        new User(4, "User4", "4", PrivilegeRepository.rols[3]),
+                                        new User(5, "Admin", "Admin", PrivilegeRepository.rols[7])
                                     };
         public static bool CheckUser(string login, string password)
         {
