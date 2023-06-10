@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonAnimalCard = new System.Windows.Forms.Button();
             this.AddActButton = new System.Windows.Forms.Button();
             this.UpdateActButton = new System.Windows.Forms.Button();
             this.DeleteActButton = new System.Windows.Forms.Button();
@@ -82,7 +83,9 @@
             this.OrgDelete = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.buttonAnimalCard = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -95,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApp)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -112,6 +116,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1382, 748);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -130,6 +135,16 @@
             this.tabPage1.Size = new System.Drawing.Size(1374, 712);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Акты";
+            // 
+            // buttonAnimalCard
+            // 
+            this.buttonAnimalCard.Location = new System.Drawing.Point(1171, 642);
+            this.buttonAnimalCard.Name = "buttonAnimalCard";
+            this.buttonAnimalCard.Size = new System.Drawing.Size(183, 57);
+            this.buttonAnimalCard.TabIndex = 8;
+            this.buttonAnimalCard.Text = "показать карточку животного";
+            this.buttonAnimalCard.UseVisualStyleBackColor = true;
+            this.buttonAnimalCard.Click += new System.EventHandler(this.buttonAnimalCard_Click);
             // 
             // AddActButton
             // 
@@ -285,6 +300,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Tan;
+            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.button6);
@@ -301,7 +319,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(81, 104);
+            this.button1.Location = new System.Drawing.Point(77, 76);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 13;
@@ -707,15 +725,34 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "до:";
             // 
-            // buttonAnimalCard
+            // pictureBox2
             // 
-            this.buttonAnimalCard.Location = new System.Drawing.Point(1171, 642);
-            this.buttonAnimalCard.Name = "buttonAnimalCard";
-            this.buttonAnimalCard.Size = new System.Drawing.Size(183, 57);
-            this.buttonAnimalCard.TabIndex = 8;
-            this.buttonAnimalCard.Text = "показать карточку животного";
-            this.buttonAnimalCard.UseVisualStyleBackColor = true;
-            this.buttonAnimalCard.Click += new System.EventHandler(this.buttonAnimalCard_Click);
+            this.pictureBox2.Location = new System.Drawing.Point(206, 132);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(542, 192);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(353, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(272, 24);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Представте, что тут ничего нет";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(298, 387);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(178, 28);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Работа без вылетов";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -748,6 +785,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApp)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -808,6 +846,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonAnimalCard;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

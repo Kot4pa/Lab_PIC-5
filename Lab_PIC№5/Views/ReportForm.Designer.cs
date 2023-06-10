@@ -41,6 +41,7 @@ namespace Lab_PIC_5.Views
             this.ОЖ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.С = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxSum = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,11 +151,21 @@ namespace Lab_PIC_5.Views
             this.textBoxSum.Size = new System.Drawing.Size(100, 20);
             this.textBoxSum.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(298, 303);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Общая сумма";
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 332);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxSum);
             this.Controls.Add(this.dataGridViewR);
             this.Controls.Add(this.label3);
@@ -186,5 +197,6 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn ОЖ;
         private System.Windows.Forms.DataGridViewTextBoxColumn С;
         private System.Windows.Forms.TextBox textBoxSum;
+        private System.Windows.Forms.Label label4;
     }
 }
