@@ -54,8 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
@@ -81,6 +79,9 @@
             this.OrgAdd = new System.Windows.Forms.Button();
             this.OrgEdit = new System.Windows.Forms.Button();
             this.OrgDelete = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewActs)).BeginInit();
@@ -121,10 +122,10 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.DataGridViewActs);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1374, 700);
+            this.tabPage1.Size = new System.Drawing.Size(1374, 712);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Акты";
             // 
@@ -170,7 +171,7 @@
             this.dateTimePickerAct.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerAct.Location = new System.Drawing.Point(149, 648);
             this.dateTimePickerAct.Name = "dateTimePickerAct";
-            this.dateTimePickerAct.Size = new System.Drawing.Size(142, 43);
+            this.dateTimePickerAct.Size = new System.Drawing.Size(142, 31);
             this.dateTimePickerAct.TabIndex = 2;
             this.dateTimePickerAct.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerAct.ValueChanged += new System.EventHandler(this.dateTimePickerAct_ValueChanged);
@@ -181,7 +182,7 @@
             this.label1.BackColor = System.Drawing.Color.SeaShell;
             this.label1.Location = new System.Drawing.Point(19, 648);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 35);
+            this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Акты от:";
             // 
@@ -282,16 +283,17 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Tan;
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.dateTimePicker2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1374, 700);
+            this.tabPage2.Size = new System.Drawing.Size(1374, 712);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Отчёт";
             // 
@@ -332,7 +334,7 @@
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(304, 644);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(172, 43);
+            this.dateTimePicker2.Size = new System.Drawing.Size(172, 31);
             this.dateTimePicker2.TabIndex = 9;
             // 
             // label2
@@ -341,7 +343,7 @@
             this.label2.BackColor = System.Drawing.Color.SeaShell;
             this.label2.Location = new System.Drawing.Point(26, 644);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 35);
+            this.label2.Size = new System.Drawing.Size(192, 24);
             this.label2.TabIndex = 8;
             this.label2.Text = "Реестр организаций от:";
             // 
@@ -365,30 +367,11 @@
             this.tabPage3.Controls.Add(this.dateTimePicker3);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.ContractTable);
-            this.tabPage3.Location = new System.Drawing.Point(4, 44);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1374, 700);
+            this.tabPage3.Size = new System.Drawing.Size(1374, 712);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Муниципальные контракты";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(425, 498);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
-            this.dateTimePicker1.TabIndex = 17;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 10, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(393, 498);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "до:";
             // 
             // EditButton
             // 
@@ -433,7 +416,7 @@
             this.dateTimePicker3.CalendarTitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dateTimePicker3.Location = new System.Drawing.Point(378, 644);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(172, 43);
+            this.dateTimePicker3.Size = new System.Drawing.Size(172, 31);
             this.dateTimePicker3.TabIndex = 10;
             this.dateTimePicker3.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
@@ -444,7 +427,7 @@
             this.label3.BackColor = System.Drawing.Color.SeaShell;
             this.label3.Location = new System.Drawing.Point(12, 646);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(360, 35);
+            this.label3.Size = new System.Drawing.Size(249, 24);
             this.label3.TabIndex = 9;
             this.label3.Text = "Муниципальные контракты от:";
             // 
@@ -525,9 +508,9 @@
             this.tabPage4.Controls.Add(this.AppEdit);
             this.tabPage4.Controls.Add(this.AppDelete);
             this.tabPage4.Controls.Add(this.dataGridViewApp);
-            this.tabPage4.Location = new System.Drawing.Point(4, 44);
+            this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1374, 700);
+            this.tabPage4.Size = new System.Drawing.Size(1374, 712);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Реестр заявок";
             // 
@@ -535,7 +518,7 @@
             // 
             this.filterAppDate2.Location = new System.Drawing.Point(334, 651);
             this.filterAppDate2.Name = "filterAppDate2";
-            this.filterAppDate2.Size = new System.Drawing.Size(265, 43);
+            this.filterAppDate2.Size = new System.Drawing.Size(265, 31);
             this.filterAppDate2.TabIndex = 20;
             this.filterAppDate2.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.filterAppDate2.ValueChanged += new System.EventHandler(this.filterAppDate2_ValueChanged);
@@ -547,7 +530,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(275, 651);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 35);
+            this.label6.Size = new System.Drawing.Size(37, 24);
             this.label6.TabIndex = 19;
             this.label6.Text = " по:";
             // 
@@ -559,7 +542,7 @@
             this.filterAppDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.filterAppDate.Location = new System.Drawing.Point(127, 651);
             this.filterAppDate.Name = "filterAppDate";
-            this.filterAppDate.Size = new System.Drawing.Size(142, 43);
+            this.filterAppDate.Size = new System.Drawing.Size(142, 31);
             this.filterAppDate.TabIndex = 18;
             this.filterAppDate.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.filterAppDate.ValueChanged += new System.EventHandler(this.filterAppDate_ValueChanged);
@@ -571,7 +554,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(12, 651);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 35);
+            this.label4.Size = new System.Drawing.Size(75, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Заявки с:";
             // 
@@ -637,9 +620,9 @@
             this.tabPage5.Controls.Add(this.OrgAdd);
             this.tabPage5.Controls.Add(this.OrgEdit);
             this.tabPage5.Controls.Add(this.OrgDelete);
-            this.tabPage5.Location = new System.Drawing.Point(4, 44);
+            this.tabPage5.Location = new System.Drawing.Point(4, 32);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1374, 700);
+            this.tabPage5.Size = new System.Drawing.Size(1374, 712);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Реестр организаций";
             // 
@@ -692,6 +675,35 @@
             this.OrgDelete.Text = "Удалить";
             this.OrgDelete.UseVisualStyleBackColor = false;
             this.OrgDelete.Click += new System.EventHandler(this.OrgDelete_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(425, 498);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 10, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(393, 498);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "до:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(81, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -782,6 +794,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kontracts;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
 
