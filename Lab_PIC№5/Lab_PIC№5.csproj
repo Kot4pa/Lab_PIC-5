@@ -60,6 +60,7 @@
     <Compile Include="Data\ContractRepository.cs" />
     <Compile Include="Data\LocationCostReposiroty.cs" />
     <Compile Include="Data\OrgRepository.cs" />
+    <Compile Include="Data\PrivilegeRepository.cs" />
     <Compile Include="Data\ReportRepository.cs" />
     <Compile Include="Data\UserRepository.cs" />
     <Compile Include="Models\Act.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Models\Report.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserSessia.cs" />
     <Compile Include="Views\ActEdit.cs">
       <SubType>Form</SubType>
     </Compile>

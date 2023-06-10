@@ -37,6 +37,16 @@ namespace Lab_PIC_5
             foreach (var i in cont)
                 ContractTable.Rows.Add(i);
         }
+        private bool CheckPrivilege(NameMdels model)
+        {
+            if (!PreveligeService.SetPrivilege(model))
+            {
+                MessageBox.Show("Нюхай БЭБРУ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+            return true;
+        }
 
 
         /* -----------------------------------ACT----------------------------------------------------- */
@@ -51,9 +61,12 @@ namespace Lab_PIC_5
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            ActEdit editWindow = new ActEdit();
-            editWindow.ShowDialog();
-            SetDataGridAct();
+            if (CheckPrivilege(NameMdels.Act)) 
+            {
+                ActEdit editWindow = new ActEdit();
+                editWindow.ShowDialog();
+                SetDataGridAct();
+            }
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
