@@ -164,6 +164,7 @@ namespace Lab_PIC_5.Views
             this.textBoxKategori.Location = new System.Drawing.Point(202, 35);
             this.textBoxKategori.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxKategori.Name = "textBoxKategori";
+            this.textBoxKategori.ReadOnly = true;
             this.textBoxKategori.Size = new System.Drawing.Size(212, 24);
             this.textBoxKategori.TabIndex = 10;
             // 

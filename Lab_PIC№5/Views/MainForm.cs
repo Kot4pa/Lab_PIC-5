@@ -72,7 +72,7 @@ namespace Lab_PIC_5
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             if (CheckPrivilege(NameMdels.Act))
-                if (dataGridViewApp.CurrentRow != null)
+                if (DataGridViewActs.CurrentRow != null)
                 {
                     ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
                     editWindow.ShowDialog();
@@ -83,10 +83,30 @@ namespace Lab_PIC_5
         private void DeleteActButton_Click(object sender, EventArgs e)
         {
             if (CheckPrivilege(NameMdels.Act))
-                if (dataGridViewApp.CurrentRow != null)
+                if (DataGridViewActs.CurrentRow != null)
                 {
                     ActService.DeleteAct(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
                     SetDataGridAct();
+                }
+        }
+        private void buttonAnimalCard_Click(object sender, EventArgs e)
+        {
+            if (CheckPrivilege(NameMdels.Act))
+                if (DataGridViewActs.CurrentRow != null)
+                {
+                    bool IsDog = int.Parse(DataGridViewActs.CurrentRow.Cells[1].Value.ToString()) > 0 ? true : false;
+                    bool IsCat = int.Parse(DataGridViewActs.CurrentRow.Cells[2].Value.ToString()) > 0 ? true : false;
+
+                    if (IsDog)
+                    {
+                        AnimalCardForm otvet = new AnimalCardForm(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()), "Собака");
+                        otvet.ShowDialog();
+                    }
+                    if (IsCat)
+                    {
+                        AnimalCardForm otvet = new AnimalCardForm(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()), "Кот");
+                        otvet.ShowDialog();
+                    }
                 }
         }
 
@@ -286,5 +306,6 @@ namespace Lab_PIC_5
                 rep.ShowDialog();
             }
         }
+
     }
 }
