@@ -107,7 +107,7 @@ namespace Lab_PIC_5.Views
                             flag = false;
                     }
                     
-                    if (IsCat)
+                    if (IsCat & flag)
                     {
                         var animForm = new AnimalCardForm("Кот");
                         DialogResult otvet = animForm.ShowDialog();

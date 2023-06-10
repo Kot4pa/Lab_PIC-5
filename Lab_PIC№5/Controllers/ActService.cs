@@ -56,7 +56,7 @@ namespace Lab_PIC_5
                     act.CountDogs.ToString(),
                     act.CountCats.ToString(),
                     act.Organization.name,
-                    act.Date.ToString(),
+                    act.Date.ToShortDateString(),
                     act.TargetCapture,
                     act.Application.number.ToString(),
                     act.Contracts.IdContract.ToString()

@@ -29,7 +29,6 @@ namespace Lab_PIC_5.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimalCardForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxFurType = new System.Windows.Forms.TextBox();
@@ -57,7 +56,6 @@ namespace Lab_PIC_5.Views
             this.God = new System.Windows.Forms.Label();
             this.textBoxIdentificationLabel = new System.Windows.Forms.TextBox();
             this.textBoxSpicialSigns = new System.Windows.Forms.TextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxLocation = new System.Windows.Forms.ComboBox();
             this.GITLER = new System.Windows.Forms.Label();
@@ -99,7 +97,7 @@ namespace Lab_PIC_5.Views
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 213);
+            this.label12.Location = new System.Drawing.Point(12, 206);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(72, 24);
@@ -113,14 +111,24 @@ namespace Lab_PIC_5.Views
             this.numericUpDownSize.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.numericUpDownSize.Location = new System.Drawing.Point(204, 161);
             this.numericUpDownSize.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.numericUpDownSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownSize.Name = "numericUpDownSize";
             this.numericUpDownSize.Size = new System.Drawing.Size(217, 27);
             this.numericUpDownSize.TabIndex = 18;
+            this.numericUpDownSize.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 161);
+            this.label11.Location = new System.Drawing.Point(12, 164);
             this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 24);
@@ -130,7 +138,7 @@ namespace Lab_PIC_5.Views
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 128);
+            this.label7.Location = new System.Drawing.Point(12, 128);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 24);
@@ -140,7 +148,7 @@ namespace Lab_PIC_5.Views
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 86);
+            this.label9.Location = new System.Drawing.Point(12, 86);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 24);
@@ -150,7 +158,7 @@ namespace Lab_PIC_5.Views
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 44);
+            this.label10.Location = new System.Drawing.Point(12, 44);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 24);
@@ -251,7 +259,7 @@ namespace Lab_PIC_5.Views
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 388);
+            this.label4.Location = new System.Drawing.Point(22, 380);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 24);
@@ -261,7 +269,7 @@ namespace Lab_PIC_5.Views
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 430);
+            this.label5.Location = new System.Drawing.Point(22, 422);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(217, 24);
@@ -271,7 +279,7 @@ namespace Lab_PIC_5.Views
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(43, 464);
+            this.label6.Location = new System.Drawing.Point(22, 467);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 24);
@@ -281,12 +289,13 @@ namespace Lab_PIC_5.Views
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(43, 519);
+            this.label8.Location = new System.Drawing.Point(22, 538);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(223, 24);
             this.label8.TabIndex = 6;
             this.label8.Text = "Материалы с места отлова";
+            this.label8.Visible = false;
             // 
             // Cancel
             // 
@@ -328,7 +337,7 @@ namespace Lab_PIC_5.Views
             // 
             this.textBoxIdentificationLabel.BackColor = System.Drawing.Color.OldLace;
             this.textBoxIdentificationLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxIdentificationLabel.Location = new System.Drawing.Point(371, 422);
+            this.textBoxIdentificationLabel.Location = new System.Drawing.Point(251, 422);
             this.textBoxIdentificationLabel.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxIdentificationLabel.Name = "textBoxIdentificationLabel";
             this.textBoxIdentificationLabel.Size = new System.Drawing.Size(212, 24);
@@ -338,17 +347,11 @@ namespace Lab_PIC_5.Views
             // 
             this.textBoxSpicialSigns.BackColor = System.Drawing.Color.OldLace;
             this.textBoxSpicialSigns.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSpicialSigns.Location = new System.Drawing.Point(371, 380);
+            this.textBoxSpicialSigns.Location = new System.Drawing.Point(251, 380);
             this.textBoxSpicialSigns.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxSpicialSigns.Name = "textBoxSpicialSigns";
             this.textBoxSpicialSigns.Size = new System.Drawing.Size(212, 24);
             this.textBoxSpicialSigns.TabIndex = 10;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // label13
             // 
@@ -366,10 +369,10 @@ namespace Lab_PIC_5.Views
             this.comboBoxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLocation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxLocation.FormattingEnabled = true;
-            this.comboBoxLocation.Location = new System.Drawing.Point(371, 464);
+            this.comboBoxLocation.Location = new System.Drawing.Point(251, 464);
             this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(258, 31);
+            this.comboBoxLocation.Size = new System.Drawing.Size(212, 31);
             this.comboBoxLocation.TabIndex = 13;
             // 
             // GITLER
@@ -449,7 +452,6 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.NumericUpDown numericUpDownSize;
         private System.Windows.Forms.TextBox textBoxIdentificationLabel;
         private System.Windows.Forms.TextBox textBoxSpicialSigns;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBoxLocation;
         private System.Windows.Forms.Label GITLER;

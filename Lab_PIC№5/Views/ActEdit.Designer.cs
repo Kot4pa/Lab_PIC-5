@@ -57,7 +57,7 @@ namespace Lab_PIC_5.Views
             this.label1.Location = new System.Drawing.Point(26, 310);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 35);
+            this.label1.Size = new System.Drawing.Size(53, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Дата";
             // 
@@ -93,7 +93,7 @@ namespace Lab_PIC_5.Views
             this.label2.Location = new System.Drawing.Point(26, 229);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 35);
+            this.label2.Size = new System.Drawing.Size(103, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "Организация";
             // 
@@ -103,7 +103,7 @@ namespace Lab_PIC_5.Views
             this.label3.Location = new System.Drawing.Point(26, 514);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 35);
+            this.label3.Size = new System.Drawing.Size(102, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "Контракты";
             // 
@@ -113,7 +113,7 @@ namespace Lab_PIC_5.Views
             this.label4.Location = new System.Drawing.Point(26, 441);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 35);
+            this.label4.Size = new System.Drawing.Size(57, 24);
             this.label4.TabIndex = 9;
             this.label4.Text = "Заявка";
             // 
@@ -126,9 +126,9 @@ namespace Lab_PIC_5.Views
             this.dateAct.Location = new System.Drawing.Point(283, 294);
             this.dateAct.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.dateAct.Name = "dateAct";
-            this.dateAct.Size = new System.Drawing.Size(250, 43);
+            this.dateAct.Size = new System.Drawing.Size(250, 31);
             this.dateAct.TabIndex = 11;
-            this.dateAct.Value = new System.DateTime(2023, 5, 29, 1, 20, 48, 0);
+            this.dateAct.Value = new System.DateTime(2023, 6, 10, 0, 0, 0, 0);
             // 
             // comboBoxOrganization
             // 
@@ -140,7 +140,7 @@ namespace Lab_PIC_5.Views
             this.comboBoxOrganization.Location = new System.Drawing.Point(283, 220);
             this.comboBoxOrganization.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.comboBoxOrganization.Name = "comboBoxOrganization";
-            this.comboBoxOrganization.Size = new System.Drawing.Size(250, 43);
+            this.comboBoxOrganization.Size = new System.Drawing.Size(250, 31);
             this.comboBoxOrganization.TabIndex = 13;
             // 
             // comboBoxContract
@@ -153,7 +153,7 @@ namespace Lab_PIC_5.Views
             this.comboBoxContract.Location = new System.Drawing.Point(283, 506);
             this.comboBoxContract.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.comboBoxContract.Name = "comboBoxContract";
-            this.comboBoxContract.Size = new System.Drawing.Size(251, 43);
+            this.comboBoxContract.Size = new System.Drawing.Size(251, 31);
             this.comboBoxContract.TabIndex = 14;
             // 
             // comboBoxApp
@@ -166,7 +166,7 @@ namespace Lab_PIC_5.Views
             this.comboBoxApp.Location = new System.Drawing.Point(283, 434);
             this.comboBoxApp.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.comboBoxApp.Name = "comboBoxApp";
-            this.comboBoxApp.Size = new System.Drawing.Size(251, 43);
+            this.comboBoxApp.Size = new System.Drawing.Size(251, 31);
             this.comboBoxApp.TabIndex = 15;
             // 
             // label5
@@ -175,7 +175,7 @@ namespace Lab_PIC_5.Views
             this.label5.Location = new System.Drawing.Point(26, 371);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 35);
+            this.label5.Size = new System.Drawing.Size(104, 24);
             this.label5.TabIndex = 16;
             this.label5.Text = "Цель отлова";
             // 
@@ -186,7 +186,7 @@ namespace Lab_PIC_5.Views
             this.textBoxTarget.Location = new System.Drawing.Point(283, 364);
             this.textBoxTarget.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBoxTarget.Name = "textBoxTarget";
-            this.textBoxTarget.Size = new System.Drawing.Size(251, 36);
+            this.textBoxTarget.Size = new System.Drawing.Size(251, 24);
             this.textBoxTarget.TabIndex = 17;
             // 
             // R
@@ -195,7 +195,7 @@ namespace Lab_PIC_5.Views
             this.R.Location = new System.Drawing.Point(26, 159);
             this.R.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.R.Name = "R";
-            this.R.Size = new System.Drawing.Size(212, 35);
+            this.R.Size = new System.Drawing.Size(149, 24);
             this.R.TabIndex = 20;
             this.R.Text = "Количество кошек";
             // 
@@ -205,7 +205,7 @@ namespace Lab_PIC_5.Views
             this.label7.Location = new System.Drawing.Point(26, 89);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 35);
+            this.label7.Size = new System.Drawing.Size(143, 24);
             this.label7.TabIndex = 21;
             this.label7.Text = "Количество собак";
             // 
@@ -215,7 +215,7 @@ namespace Lab_PIC_5.Views
             this.Isus.Location = new System.Drawing.Point(133, 24);
             this.Isus.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Isus.Name = "Isus";
-            this.Isus.Size = new System.Drawing.Size(64, 35);
+            this.Isus.Size = new System.Drawing.Size(44, 24);
             this.Isus.TabIndex = 22;
             this.Isus.Text = "Акт";
             // 
@@ -225,7 +225,7 @@ namespace Lab_PIC_5.Views
             this.numericUpDownDog.Location = new System.Drawing.Point(403, 86);
             this.numericUpDownDog.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.numericUpDownDog.Name = "numericUpDownDog";
-            this.numericUpDownDog.Size = new System.Drawing.Size(136, 43);
+            this.numericUpDownDog.Size = new System.Drawing.Size(136, 31);
             this.numericUpDownDog.TabIndex = 23;
             // 
             // numericUpDownCat
@@ -234,12 +234,12 @@ namespace Lab_PIC_5.Views
             this.numericUpDownCat.Location = new System.Drawing.Point(402, 150);
             this.numericUpDownCat.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.numericUpDownCat.Name = "numericUpDownCat";
-            this.numericUpDownCat.Size = new System.Drawing.Size(136, 43);
+            this.numericUpDownCat.Size = new System.Drawing.Size(136, 31);
             this.numericUpDownCat.TabIndex = 24;
             // 
             // ActEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 35F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(555, 662);
