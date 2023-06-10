@@ -41,7 +41,7 @@ namespace Lab_PIC_5
         {
             if (!PreveligeService.SetPrivilege(model))
             {
-                MessageBox.Show("Нюхай БЭБРУ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("У вас недостаточно прав!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return false;
             }
