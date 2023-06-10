@@ -280,8 +280,11 @@ namespace Lab_PIC_5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ReportForm rep = new ReportForm();
-            rep.ShowDialog();
+            if (CheckPrivilege(NameMdels.Report))
+            {
+                ReportForm rep = new ReportForm();
+                rep.ShowDialog();
+            }
         }
     }
 }
