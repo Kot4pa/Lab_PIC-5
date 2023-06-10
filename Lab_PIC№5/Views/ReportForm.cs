@@ -23,8 +23,13 @@ namespace Lab_PIC_5.Views
         public void GenereteReport()
         {
             var reports = ReportService.GenereteReport(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+            int sum = 0;
             foreach (var rep in reports)
+            {
                 dataGridViewR.Rows.Add(rep);
+                sum += int.Parse(rep[3]);
+            }
+            textBoxSum.Text = sum.ToString();
         }
     }
 }

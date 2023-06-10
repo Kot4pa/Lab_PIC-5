@@ -12,13 +12,15 @@ namespace Lab_PIC_5.Models
         public DateTime DateFinish { get; set; }
         public Location Loc { get; set; }
         public int CountAnumals { get; set; }
+        public int Close { get; set; }
         public int Sum { get; set; }
 
-        public Report(DateTime dateStart, DateTime dateFinish, Location loc, int countAnumals, int sum)
+        public Report(DateTime dateStart, DateTime dateFinish, Location loc, int close, int countAnumals, int sum)
         {
             DateStart = dateStart;
             DateFinish = dateFinish;
             Loc = loc;
+            Close = close;
             CountAnumals = countAnumals;
             Sum = sum;
         }

@@ -13,14 +13,15 @@ namespace Lab_PIC_5.Data
         public static List<Report> GenereteReport(DateTime start, DateTime finish)
         {
             foreach (var loc in LocationCostReposiroty.locationCosts)
-            {
-                foreach (var act in ActRepository.acts) 
+            { 
+                var allSity = ActRepository.acts.Where(x => x.Application.locality == loc.City);
+                int summ = 0;
+                foreach (var act in allSity)
                 {
-                    if (act.Application.locality == loc.City)
-                    {
-                        reports.Add( new Report(start, finish, loc, act.Sum, act.Contracts.Cost));
-                    }
-                } 
+                    summ += act.Contracts.Cost;
+                }
+                if (summ != 0)
+                    reports.Add( new Report(start, finish, loc, allSity.Count(), allSity.Sum(x => x.Sum), summ));
             }
             return reports;
         }

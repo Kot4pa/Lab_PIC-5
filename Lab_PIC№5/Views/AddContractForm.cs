@@ -75,6 +75,8 @@ namespace Lab_PIC_5.Views
             if (ContToEdit)
                 if (CostText.Text == "")
                     MessageBox.Show("Вы не указали цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if(int.Parse(CostText.Text) == 0)
+                    MessageBox.Show("Вы не можете указать цену раной 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else if(!int.TryParse(CostText.Text, out int n))
                     MessageBox.Show("Вы ввели некоректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -92,8 +94,10 @@ namespace Lab_PIC_5.Views
             else
                 if (CostText.Text == "")
                     MessageBox.Show("Вы не указали цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (int.Parse(CostText.Text) == 0)
+                    MessageBox.Show("Вы не можете указать цену раной 0.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else if (!int.TryParse(CostText.Text, out int n))
-                    MessageBox.Show("Вы ввели некоректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Вы ввели некоректную цену.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     var id = ContractRepository.contract.Max(x => x.IdContract) + 1;
