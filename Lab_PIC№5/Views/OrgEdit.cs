@@ -20,6 +20,7 @@ namespace Lab_PIC_5.Views
         public OrgEdit()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public OrgEdit(string id)
@@ -28,14 +29,16 @@ namespace Lab_PIC_5.Views
             OrgId = id;
             FillOrgEdit();
             name.Items.Clear();
-            name.Items.Add("МКУ 'ЛесПаркХоз'");
-            name.Items.Add("ГосОтлов");
-            name.Items.Add("ПРОО 'Общество защиты животных'");
+            foreach (Organization org in OrgRepository.Organizations)
+            {
+                name.Items.Add(org.name);
+            }
 
             AdressReg.Items.Clear();
-            AdressReg.Items.Add("г. Москва, Ленина 56");
-            AdressReg.Items.Add("г. Москва, Абрамцевская 34");
-            AdressReg.Items.Add("г. Тюмень, Мельникайте 48");
+            foreach (Location loc in LocationCostReposiroty.locationCosts)
+            {
+                AdressReg.Items.Add(loc.City);
+            }
         }
 
         private void FillOrgEdit()
@@ -62,6 +65,11 @@ namespace Lab_PIC_5.Views
         private void CancelOrgEdit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void OrgEdit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Lab_PIC_5.Views
         public LocationAdd()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void OKcontAdd_Click(object sender, EventArgs e)

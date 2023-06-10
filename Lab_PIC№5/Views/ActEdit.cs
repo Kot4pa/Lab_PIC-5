@@ -21,6 +21,7 @@ namespace Lab_PIC_5.Views
         public ActEdit()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             actToEdit = false;
             Isus.Text = "Добавление акта";
             FillEditor();

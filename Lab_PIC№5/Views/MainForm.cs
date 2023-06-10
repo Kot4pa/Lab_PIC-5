@@ -19,6 +19,7 @@ namespace Lab_PIC_5
         public MainForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             CreateData();
             SetDataGridAct();
             ShowContract();
@@ -319,6 +320,11 @@ namespace Lab_PIC_5
                 tabControl1.SelectedTab = tabPage1;
                 OpenReport();
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

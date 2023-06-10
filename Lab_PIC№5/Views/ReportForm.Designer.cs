@@ -199,6 +199,7 @@ namespace Lab_PIC_5.Views
             this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отчёт";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
