@@ -34,7 +34,6 @@ namespace Lab_PIC_5.Views
             this.comboBoxSity = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewR = new System.Windows.Forms.DataGridView();
             this.НС = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +50,7 @@ namespace Lab_PIC_5.Views
             this.dateTimePickerStart.Name = "dateTimePickerStart";
             this.dateTimePickerStart.Size = new System.Drawing.Size(119, 20);
             this.dateTimePickerStart.TabIndex = 0;
+            this.dateTimePickerStart.ValueChanged += new System.EventHandler(this.dateTimePickerStart_ValueChanged);
             // 
             // dateTimePickerEnd
             // 
@@ -58,6 +58,7 @@ namespace Lab_PIC_5.Views
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(119, 20);
             this.dateTimePickerEnd.TabIndex = 1;
+            this.dateTimePickerEnd.ValueChanged += new System.EventHandler(this.dateTimePickerStart_ValueChanged);
             // 
             // comboBoxSity
             // 
@@ -85,15 +86,6 @@ namespace Lab_PIC_5.Views
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Город";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(332, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Сгенерировать";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -165,7 +157,6 @@ namespace Lab_PIC_5.Views
             this.ClientSize = new System.Drawing.Size(494, 332);
             this.Controls.Add(this.textBoxSum);
             this.Controls.Add(this.dataGridViewR);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -188,7 +179,6 @@ namespace Lab_PIC_5.Views
         private System.Windows.Forms.ComboBox comboBoxSity;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewR;
         private System.Windows.Forms.DataGridViewTextBoxColumn НС;

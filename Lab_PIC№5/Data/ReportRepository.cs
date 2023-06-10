@@ -12,9 +12,10 @@ namespace Lab_PIC_5.Data
         public static List<Report> reports = new List<Report>();
         public static List<Report> GenereteReport(DateTime start, DateTime finish)
         {
+            reports = new List<Report>();
             foreach (var loc in LocationCostReposiroty.locationCosts)
             { 
-                var allSity = ActRepository.acts.Where(x => x.Application.locality == loc.City);
+                var allSity = ActRepository.acts.Where(x => x.Application.locality == loc.City & x.Date >= start & x.Date <= finish);
                 int summ = 0;
                 foreach (var act in allSity)
                 {

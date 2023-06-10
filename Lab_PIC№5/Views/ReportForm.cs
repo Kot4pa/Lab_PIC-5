@@ -22,6 +22,7 @@ namespace Lab_PIC_5.Views
 
         public void GenereteReport()
         {
+            dataGridViewR.Rows.Clear();
             var reports = ReportService.GenereteReport(dateTimePickerStart.Value, dateTimePickerEnd.Value);
             int sum = 0;
             foreach (var rep in reports)
@@ -30,6 +31,11 @@ namespace Lab_PIC_5.Views
                 sum += int.Parse(rep[3]);
             }
             textBoxSum.Text = sum.ToString();
+        }
+
+        private void dateTimePickerStart_ValueChanged(object sender, EventArgs e)
+        {
+            GenereteReport();
         }
     }
 }
