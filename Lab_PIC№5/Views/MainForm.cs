@@ -71,15 +71,23 @@ namespace Lab_PIC_5
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
-            editWindow.ShowDialog();
-            SetDataGridAct();
+            if (CheckPrivilege(NameMdels.Act))
+                if (dataGridViewApp.CurrentRow != null)
+                {
+                    ActEdit editWindow = new ActEdit(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
+                    editWindow.ShowDialog();
+                    SetDataGridAct();
+                }
         }
 
         private void DeleteActButton_Click(object sender, EventArgs e)
         {
-            ActService.DeleteAct(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
-            SetDataGridAct();
+            if (CheckPrivilege(NameMdels.Act))
+                if (dataGridViewApp.CurrentRow != null)
+                {
+                    ActService.DeleteAct(int.Parse(DataGridViewActs.CurrentRow.Cells[0].Value.ToString()));
+                    SetDataGridAct();
+                }
         }
 
         private void dateTimePickerAct_ValueChanged(object sender, EventArgs e)
@@ -131,58 +139,68 @@ namespace Lab_PIC_5
         /*------------------------------------------------------------------*/
         private void AppDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridViewApp.CurrentRow != null)
-            {
-                int app = Convert.ToInt32(dataGridViewApp.CurrentRow.Cells[1].Value.ToString());
-                AppService.DeleteApplication(app);
-                SetDataGridApp();
-            }
+            if (CheckPrivilege(NameMdels.App))
+                if (dataGridViewApp.CurrentRow != null)
+                {
+                    int app = Convert.ToInt32(dataGridViewApp.CurrentRow.Cells[1].Value.ToString());
+                    AppService.DeleteApplication(app);
+                    SetDataGridApp();
+                }
         }
 
         private void AppEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridViewApp.CurrentRow != null)
-            {
-                string app = dataGridViewApp.CurrentRow.Cells[1].Value.ToString();
-                AppEdit appEdit = new AppEdit(app);
-                appEdit.ShowDialog();
-                SetDataGridApp();
-            }
+            if (CheckPrivilege(NameMdels.App))
+                if (dataGridViewApp.CurrentRow != null)
+                {
+                    string app = dataGridViewApp.CurrentRow.Cells[1].Value.ToString();
+                    AppEdit appEdit = new AppEdit(app);
+                    appEdit.ShowDialog();
+                    SetDataGridApp();
+                }
         }
 
         private void OrgDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridViewOrg.CurrentRow != null)
-            {
-                string org = dataGridViewOrg.CurrentRow.Cells[2].Value.ToString();
-                OrgService.DeleteOrganization(org);
-                SetDataGridOrg();
-            }
+            if (CheckPrivilege(NameMdels.Org))
+                if (dataGridViewOrg.CurrentRow != null)
+                {
+                    string org = dataGridViewOrg.CurrentRow.Cells[2].Value.ToString();
+                    OrgService.DeleteOrganization(org);
+                    SetDataGridOrg();
+                }
         }
 
         private void OrgEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridViewOrg.CurrentRow != null)
-            {
-                string org = dataGridViewOrg.CurrentRow.Cells[0].Value.ToString();
-                OrgEdit orgEdit = new OrgEdit(org);
-                orgEdit.ShowDialog();
-                SetDataGridOrg();
-            }
+            if (CheckPrivilege(NameMdels.Org))
+                if (dataGridViewOrg.CurrentRow != null)
+                {
+                    string org = dataGridViewOrg.CurrentRow.Cells[0].Value.ToString();
+                    OrgEdit orgEdit = new OrgEdit(org);
+                    orgEdit.ShowDialog();
+                    SetDataGridOrg();
+                }
         }
 
         private void OrgAdd_Click(object sender, EventArgs e)
         {
-            OrgAdd orgAdd = new OrgAdd();
-            orgAdd.ShowDialog();
-            SetDataGridOrg();
+            if (CheckPrivilege(NameMdels.Org))
+            {
+                OrgAdd orgAdd = new OrgAdd();
+                orgAdd.ShowDialog();
+                SetDataGridOrg();
+            }
         }
 
         private void AppAdd_Click(object sender, EventArgs e)
         {
-            AppAdd appAdd = new AppAdd();
-            appAdd.ShowDialog();
-            SetDataGridApp();
+            if (CheckPrivilege(NameMdels.App))
+            {
+                AppAdd appAdd = new AppAdd();
+                appAdd.ShowDialog();
+                SetDataGridApp();
+            }
         }
 
         private void ShowContract()
@@ -196,25 +214,33 @@ namespace Lab_PIC_5
         }
         private void AddButton_Click_1(object sender, EventArgs e)
         {
-            AddContractForm contAdd = new AddContractForm();
-            contAdd.ShowDialog();
-            ShowContract();
+            if (CheckPrivilege(NameMdels.Contract))
+            {
+                AddContractForm contAdd = new AddContractForm();
+                contAdd.ShowDialog();
+                ShowContract();
+            }
         }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            AddContractForm contAdd = new AddContractForm(int.Parse(ContractTable.CurrentRow.Cells[0].Value.ToString()));
-            contAdd.ShowDialog();
-            ShowContract();
+            if (CheckPrivilege(NameMdels.Contract))
+                if (ContractTable.CurrentRow != null)
+                {
+                    AddContractForm contAdd = new AddContractForm(int.Parse(ContractTable.CurrentRow.Cells[0].Value.ToString()));
+                    contAdd.ShowDialog();
+                    ShowContract();
+                }
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if (ContractTable.CurrentRow != null)
-            {
-                ContractService.DeleteContract(ContractTable.CurrentRow.Cells[0].Value.ToString());
-                ShowContract();
-            }
+            if (CheckPrivilege(NameMdels.Contract))
+                if (ContractTable.CurrentRow != null)
+                {
+                    ContractService.DeleteContract(ContractTable.CurrentRow.Cells[0].Value.ToString());
+                    ShowContract();
+                }
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
