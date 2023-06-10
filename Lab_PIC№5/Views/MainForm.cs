@@ -300,6 +300,11 @@ namespace Lab_PIC_5
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OpenReport();
+        }
+
+        private void OpenReport()
+        {
             if (CheckPrivilege(NameMdels.Report))
             {
                 ReportForm rep = new ReportForm();
@@ -307,5 +312,13 @@ namespace Lab_PIC_5
             }
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage2)
+            {
+                tabControl1.SelectedTab = tabPage1;
+                OpenReport();
+            }
+        }
     }
 }
