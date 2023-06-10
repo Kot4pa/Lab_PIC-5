@@ -11,7 +11,7 @@ namespace Lab_PIC_5.Data
     {
         public static List<User> users = new List<User>
                                     {
-                                        new User(1, "UserAct", "a", PrivilegeRepository.rols[0]),
+                                        new User(1, "UserOtlov", "ot", PrivilegeRepository.rols[0]),
                                         new User(2, "UserBET", "b", PrivilegeRepository.rols[1]),
                                         new User(3, "UserOMCY", "o", PrivilegeRepository.rols[2]),
                                         new User(4, "User4", "4", PrivilegeRepository.rols[3])
