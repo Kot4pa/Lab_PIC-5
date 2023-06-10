@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Lab_PIC_5.Views
 {
@@ -26,6 +27,15 @@ namespace Lab_PIC_5.Views
             InitializeComponent();
             OrgId = id;
             FillOrgEdit();
+            name.Items.Clear();
+            name.Items.Add("МКУ 'ЛесПаркХоз'");
+            name.Items.Add("ГосОтлов");
+            name.Items.Add("ПРОО 'Общество защиты животных'");
+
+            AdressReg.Items.Clear();
+            AdressReg.Items.Add("г. Москва, Ленина 56");
+            AdressReg.Items.Add("г. Москва, Абрамцевская 34");
+            AdressReg.Items.Add("г. Тюмень, Мельникайте 48");
         }
 
         private void FillOrgEdit()

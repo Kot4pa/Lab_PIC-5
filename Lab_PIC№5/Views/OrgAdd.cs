@@ -19,6 +19,14 @@ namespace Lab_PIC_5.Views
         public OrgAdd()
         {
             InitializeComponent();
+            name.Items.Add("МКУ 'ЛесПаркХоз'");
+            name.Items.Add("ГосОтлов");
+            name.Items.Add("ПРОО 'Общество защиты животных'");
+
+            AdressReg.Items.Clear();
+            AdressReg.Items.Add("г. Москва, Ленина 56");
+            AdressReg.Items.Add("г. Москва, Абрамцевская 34");
+            AdressReg.Items.Add("г. Тюмень, Мельникайте 48");
         }
 
         private void OKorgAdd_Click(object sender, EventArgs e)
