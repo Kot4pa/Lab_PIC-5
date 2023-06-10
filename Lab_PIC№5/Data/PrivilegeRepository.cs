@@ -18,15 +18,55 @@ namespace Lab_PIC_5.Data
                                                                         {NameMdels.Org, false},
                                                                         {NameMdels.Report, false}
                                                                     }),
-                                      new Role("Операто ОМСУ", new Dictionary<NameMdels, bool>()
-                                                                    {
-                                                                        {NameMdels.Act, false},
-                                                                        {NameMdels.App, true},
-                                                                        {NameMdels.Contract, true},
-                                                                        {NameMdels.Org, true},
-                                                                        {NameMdels.Report, true},
-                                                                    })
-                                     };
+                                    new Role("Операто вет. службы", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, false},
+                                                                    {NameMdels.App, false},
+                                                                    {NameMdels.Contract, false},
+                                                                    {NameMdels.Org, true},
+                                                                    {NameMdels.Report, false}
+                                                                }),
+                                    new Role("Операто ОМСУ", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, false},
+                                                                    {NameMdels.App, true},
+                                                                    {NameMdels.Contract, true},
+                                                                    {NameMdels.Org, true},
+                                                                    {NameMdels.Report, true},
+                                                                }),
+                                    new Role("Сотрудник вет. службы", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, false},
+                                                                    {NameMdels.App, false},
+                                                                    {NameMdels.Contract, false},
+                                                                    {NameMdels.Org, false},
+                                                                    {NameMdels.Report, false}
+                                                                }),
+                                    new Role("Сотрудник отлова", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, false},
+                                                                    {NameMdels.App, false},
+                                                                    {NameMdels.Contract, false},
+                                                                    {NameMdels.Org, false},
+                                                                    {NameMdels.Report, false}
+                                                                }),
+                                    new Role("Сотрудник ОМСУ", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, false},
+                                                                    {NameMdels.App, false},
+                                                                    {NameMdels.Contract, false},
+                                                                    {NameMdels.Org, false},
+                                                                    {NameMdels.Report, false}
+                                                                }),
+                                    new Role("Сотрудник приюта", new Dictionary<NameMdels, bool>()
+                                                                {
+                                                                    {NameMdels.Act, false},
+                                                                    {NameMdels.App, false},
+                                                                    {NameMdels.Contract, false},
+                                                                    {NameMdels.Org, false},
+                                                                    {NameMdels.Report, false}
+                                                                })
+                                    };
 
         public static bool SetPrivilege(NameMdels model)
         {
