@@ -20,6 +20,7 @@ namespace Lab_PIC_5.Views
         public AnimalCardForm(string act)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             GITLER.Text = act;
             actId = (ActRepository.acts.Max(x => x.ActNumber)) + 1;
             AnimalToEdit = true;

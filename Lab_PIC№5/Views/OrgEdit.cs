@@ -20,6 +20,7 @@ namespace Lab_PIC_5.Views
         public OrgEdit()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public OrgEdit(string id)
@@ -64,6 +65,11 @@ namespace Lab_PIC_5.Views
         private void CancelOrgEdit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void OrgEdit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

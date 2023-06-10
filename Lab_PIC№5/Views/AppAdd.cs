@@ -18,6 +18,7 @@ namespace Lab_PIC_5.Views
         public AppAdd()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void OkAppAdd_Click(object sender, EventArgs e)

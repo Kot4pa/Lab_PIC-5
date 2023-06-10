@@ -17,6 +17,7 @@ namespace Lab_PIC_5
         public AutorizationForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void button1_Click(object sender, EventArgs e)

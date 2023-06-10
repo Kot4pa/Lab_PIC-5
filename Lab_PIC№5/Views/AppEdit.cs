@@ -21,6 +21,7 @@ namespace Lab_PIC_5.Views
         public AppEdit()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         private string AppNum;
         public AppEdit(string num)

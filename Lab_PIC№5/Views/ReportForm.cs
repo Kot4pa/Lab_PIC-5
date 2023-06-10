@@ -17,6 +17,7 @@ namespace Lab_PIC_5.Views
         public ReportForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             GenereteReport();
         }
 
@@ -36,6 +37,11 @@ namespace Lab_PIC_5.Views
         private void dateTimePickerStart_ValueChanged(object sender, EventArgs e)
         {
             GenereteReport();
+        }
+
+        private void ReportForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

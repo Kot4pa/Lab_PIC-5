@@ -19,6 +19,7 @@ namespace Lab_PIC_5.Views
         public OrgAdd()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             name.Items.Clear();
             foreach (Organization org in OrgRepository.Organizations)
             {

@@ -22,6 +22,7 @@ namespace Lab_PIC_5.Views
         public AddContractForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             ContToEdit = false;
             FillEditor();
         }
